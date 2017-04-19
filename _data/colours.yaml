@@ -1,0 +1,9 @@
+parties:
+  con: "#0F80D6"
+  lab: "#D20004"
+  lib: "#FEAA09"
+  green: "#5EC500"
+  ukip: "#5E0D78"
+  snp: "#FFFF00"
+  plaid: "#337D1E"
+  other: "#C1C1C1"
