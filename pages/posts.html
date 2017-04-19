@@ -1,6 +1,7 @@
 ---
 layout: page
-title: Tagged
+title: Posts
+permalink: posts
 ---
 
 {% assign rawtags = "" %}
@@ -22,9 +23,6 @@ title: Tagged
   {% endif %}
 {% endfor %}
 
-<section class="site-header">
-  <p>All tagged posts will be sorted here.</p>
-</section>
 <section>
   {% for tag in tags %}
   <h3 class="tag-title" id="{{ tag | slugify }}"># {{ tag }}</h3>
