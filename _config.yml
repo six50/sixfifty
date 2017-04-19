@@ -14,6 +14,7 @@ gems:
 exclude:
   - Gemfile
   - Gemfile.lock
+  - README.md
 
 # Third-party services
 # just leave empty to disable it
