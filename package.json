@@ -14,13 +14,20 @@
     "url": "https://github.com/six50/six50/issues"
   },
   "scripts": {
-    "build": "webpack -p"
+    "build": "webpack -p",
+    "dev": "webpack"
   },
   "dependencies": {
+    "document-register-element": "^1.4.1",
+    "prop-types": "^15.5.8",
+    "react": "^15.5.4",
+    "reactive-elements": "^0.6.7"
   },
   "devDependencies": {
-    "react": "^15.5.4",
-    "reactive-elements": "^0.6.7",
+    "babel-loader": "^6.4.1",
+    "babel-preset-env": "^1.4.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
     "webpack": "^2.4.1"
   }
 }

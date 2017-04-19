@@ -1,6 +1,7 @@
 "use strict";
 
 const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
   entry: {
@@ -16,5 +17,17 @@ module.exports = {
       filename: 'common.js',
       minChunks: 2,
     }),
-  ]
+  ],
+  module: {
+    rules: [
+      {
+        test: /\.jsx?$/,
+        exclude: [/node_modules/],
+        use: [{
+          loader: 'babel-loader',
+          options: { presets: ['es2015', 'react'] },
+        }]
+      }
+    ]
+  }
 };

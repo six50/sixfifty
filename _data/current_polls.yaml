@@ -1,0 +1,13 @@
+polls:
+  - name: con
+    percentage: 0.433
+  - name: lab
+    percentage: 0.255
+  - name: lib
+    percentage: 0.107
+  - name: ukip
+    percentage: 0.105
+  - name: other
+    percentage: 0.06
+  - name: green
+    percentage: 0.04
