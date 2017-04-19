@@ -9,19 +9,19 @@ layout: default
       {% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}
 
       {% assign post = page %}
-  		{% if post.tags.size > 0 %}
+      {% if post.tags.size > 0 %}
 
-  		{% assign tags_content = "" %}
-  		{% for post_tag in post.tags %}
-  			{% capture tags_content_temp %}
-  				{{ tags_content }}<a href="{{ site.url }}{{ site.baseurl }}/tagged#{{ post_tag | slugify }}">#{{ post_tag }}</a>
-  			{% endcapture %}
-  			{% assign tags_content = tags_content_temp %}
-  		{% endfor %}
+      {% assign tags_content = "" %}
+      {% for post_tag in post.tags %}
+        {% capture tags_content_temp %}
+          {{ tags_content }}<a href="{{ site.url }}{{ site.baseurl }}/tagged#{{ post_tag | slugify }}">#{{ post_tag }}</a>
+        {% endcapture %}
+        {% assign tags_content = tags_content_temp %}
+      {% endfor %}
 
-  		•	<span class="tags" itemprop="tags">{{ tags_content }}</span>
+      •  <span class="tags" itemprop="tags">{{ tags_content }}</span>
 
-  	  {% endif %}
+      {% endif %}
 
     </p>
   </header>

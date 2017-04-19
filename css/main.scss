@@ -27,15 +27,15 @@ $on-palm:          600px;
 $on-:              800px;
 
 @mixin media-query($device) {
-    @media screen and (max-width: $device) {
-        @content;
-    }
+  @media screen and (max-width: $device) {
+    @content;
+  }
 }
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
-		url(https://fonts.googleapis.com/css?family=Open+Sans),
-    "base",
-    "layout",
-    "syntax-highlighting"
+  url(https://fonts.googleapis.com/css?family=Open+Sans),
+  "base",
+  "layout",
+  "syntax-highlighting"
 ;
