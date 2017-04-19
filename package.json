@@ -1,0 +1,26 @@
+{
+  "name": "six50",
+  "version": "1.0.0",
+  "description": "This repository is a Jekyll site hosted on GitHub Pages. This gives us a framework into which we can create front-end applications and publish blog posts.",
+  "homepage": "https://github.com/six50/six50#readme",
+  "main": "_js/index.js",
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/six50/six50.git"
+  },
+  "bugs": {
+    "url": "https://github.com/six50/six50/issues"
+  },
+  "scripts": {
+    "build": "webpack -p"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "react": "^15.5.4",
+    "reactive-elements": "^0.6.7",
+    "webpack": "^2.4.1"
+  }
+}

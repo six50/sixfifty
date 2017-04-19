@@ -12,5 +12,6 @@
       </div>
     </div>
     {% include google_analytics.html %}
+    <script src="{{ "/assets/bundle.js" | prepend: site.baseurl }}?bust={{ site.time | date: '%s' }}" type="text/javascript" async defer></script>
   </body>
 </html>
