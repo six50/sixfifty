@@ -9,5 +9,12 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, './assets'),
     filename: '[name].js'
-  }
+  },
+  plugins: [
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'common',
+      filename: 'common.js',
+      minChunks: 2,
+    }),
+  ]
 };
