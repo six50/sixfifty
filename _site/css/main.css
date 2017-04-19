@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Droid+Sans);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
 /**
  * Reset some basic elements
  */
@@ -25,7 +25,7 @@ ul {
  * Basic styling
  */
 body {
-  font: 300 16px/1.5 "Droid Sans", sans-serif;
+  font: 300 16px/1.5 "Open Sans", sans-serif;
   color: #333;
   background-color: #fff; }
 
