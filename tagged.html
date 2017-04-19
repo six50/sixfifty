@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: Tagged
 ---
 
@@ -22,25 +22,20 @@ title: Tagged
 	{% endif %}
 {% endfor %}
 
-<div class="home">
-	<section class="site-header">
-		<h1 class="smallcap"><a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a></h1>
-		<p>All tagged posts will be sorted here.</p>
-	</section>
-
-	<section>
-		{% for tag in tags %}
-		<h3 class="tag-title" id="{{ tag | slugify }}"># {{ tag }}</h3>
-		<ul class="post-list">
-			{% for post in site.posts %}
-	    {% if post.tags contains tag %}
-			<li>
-				<a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a> <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %d, %Y" }}</time>
-			</li>
-			{% endif %}
-	    {% endfor %}
-		</ul>
-		{% endfor %}
-	</section>
-
-</div>
+<section class="site-header">
+	<p>All tagged posts will be sorted here.</p>
+</section>
+<section>
+	{% for tag in tags %}
+	<h3 class="tag-title" id="{{ tag | slugify }}"># {{ tag }}</h3>
+	<ul class="post-list">
+		{% for post in site.posts %}
+    {% if post.tags contains tag %}
+		<li>
+			<a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a> <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %d, %Y" }}</time>
+		</li>
+		{% endif %}
+    {% endfor %}
+	</ul>
+	{% endfor %}
+</section>

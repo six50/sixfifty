@@ -2,7 +2,6 @@
  * Site header
  */
 .site-header {
-    border-bottom: 1px solid $grey-color-light;
     margin-top: -2rem;
     max-width: $max-width;
     p {
@@ -10,22 +9,11 @@
     }
 }
 
-.smallcap {
-    font-size: 1.5rem;
-    font-weight: bold;
-
-    a,
-    a:hover {
-        text-decoration: none;
-        letter-spacing: 2px;
-        background-color: #333;
-        color: #eee;
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
-        padding-top: 0.2rem;
-        padding-bottom: 0.2rem;
-    }
+.site-nav {
+    padding-bottom: 10px;
+    border-bottom: 1px solid $grey-color-light;
 }
+
 /**
  * Page content
  */
