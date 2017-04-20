@@ -1,103 +1,103 @@
 election2015:
-  Orkney__Shetland: ld
-  Caithness_Sutherland__Easter_Ross: snp
-  Banff__Buchan: snp
+  Orkney_and_Shetland: ld
+  Caithness_Sutherland_and_Easter_Ross: snp
+  Banff_and_Buchan: snp
   Na_H-Eileanan_An_Iar_Western_Isles: snp
-  Ross_Skye__Lochaber: snp
+  Ross_Skye_and_Lochaber: snp
   Gordon: snp
   Aberdeen_North: snp
-  Inverness_Nairn_Badenoch__Strathspey: snp
-  Aberdeenshire_West__Kincardine: snp
+  Inverness_Nairn_Badenoch_and_Strathspey: snp
+  West_Aberdeenshire_and_Kincardine: snp
   Aberdeen_South: snp
   Stirling: snp
   Moray: snp
   Angus: snp
-  Argyll__Bute: snp
-  Perth__Perthshire_North: snp
+  Argyll_and_Bute: snp
+  Perth_and_North_Perthshire: snp
   Dundee_East: snp
-  Dunbartonshire_West: snp
-  Ochil__South_Perthshire: snp
+  West_Dunbartonshire: snp
+  Ochil_and_South_Perthshire: snp
   Dundee_West: snp
-  Paisley__Renfrewshire_North: snp
-  Cumbernauld_Kilsyth__Kirkintilloch_East: snp
-  Dunfermline__West_Fife: snp
-  Fife_North_East: snp
-  Dunbartonshire_East: snp
+  Paisley_and_Renfrewshire_North: snp
+  Cumbernauld_Kilsyth_and_Kirkintilloch_East: snp
+  Dunfermline_and_West_Fife: snp
+  North_East_Fife: snp
+  East_Dunbartonshire: snp
   Falkirk: snp
   Glenrothes: snp
   Glasgow_North_West: snp
   Glasgow_North_East: snp
-  Kirkcaldy__Cowdenbeath: snp
+  Kirkcaldy_and_Cowdenbeath: snp
   Inverclyde: snp
   Glasgow_North: snp
-  Linlithgow__Falkirk_East: snp
+  Linlithgow_and_East_Falkirk: snp
   Glasgow_South_West: snp
   Glasgow_East: snp
   Edinburgh_West: snp
   Glasgow_Central: snp
-  Airdrie__Shotts: snp
+  Airdrie_and_Shotts: snp
   Edinburgh_East: snp
-  Paisley__Renfrewshire_South: snp
-  Coatbridge_Chryston__Bellshill: snp
+  Paisley_and_Renfrewshire_South: snp
+  Coatbridge_Chryston_and_Bellshill: snp
   Edinburgh_South_West: snp
   East_Lothian: snp
-  Renfrewshire_East: snp
-  Motherwell__Wishaw: snp
-  Edinburgh_North__Leith: snp
-  Ayrshire_North__Arran: snp
+  East_Renfrewshire: snp
+  Motherwell_and_Wishaw: snp
+  Edinburgh_North_and_Leith: snp
+  North_Ayrshire_and_Arran: snp
   Glasgow_South: snp
   Edinburgh_South: lab
-  East_Kilbride_Strathaven__Lesmahagow: snp
-  Lanark__Hamilton_East: snp
-  Berwickshire_Roxburgh__Selkirk: snp
-  Ayrshire_Central: snp
-  Kilmarnock__Loudoun: snp
+  East_Kilbride_Strathaven_and_Lesmahagow: snp
+  Lanark_and_Hamilton_East: snp
+  Berwickshire_Roxburgh_and_Selkirk: snp
+  Central_Ayrshire: snp
+  Kilmarnock_and_Loudoun: snp
   Livingston: snp
-  Ayr_Carrick__Cumnock: snp
-  Rutherglen__Hamilton_West: snp
+  Ayr_Carrick_and_Cumnock: snp
+  Rutherglen_and_Hamilton_West: snp
   Midlothian: snp
-  Dumfries__Galloway: snp
-  Dumfriesshire_Clydesdale__Tweeddale: con
+  Dumfries_and_Galloway: snp
+  Dumfriesshire_Clydesdale_and_Tweeddale: con
   Wansbeck: lab
   Tynemouth: lab
-  Berwick-Upon-Tweed: con
+  Berwick_Upon_Tweed: con
   Blyth_Valley: lab
   South_Shields: lab
-  Newcastle_Upon_Tyne_North: lab
+  North_Newcastle_Upon_Tyne: lab
   Jarrow: lab
   Sunderland_Central: lab
   Hexham: con
-  Tyneside_North: lab
-  Washington__Sunderland_West: lab
-  Newcastle_Upon_Tyne_Central: lab
+  North_Tyneside: lab
+  Washington_and_Sunderland_West: lab
+  Central_Newcastle_Upon_Tyne: lab
   Gateshead: lab
   Easington: lab
   Blaydon: lab
-  Newcastle_Upon_Tyne_East: lab
-  Houghton__Sunderland_South: lab
+  East_Newcastle_Upon_Tyne: lab
+  Houghton_and_Sunderland_South: lab
   Hartlepool: lab
-  Durham_North_West: lab
-  Durham_City_of: lab
+  North_West_Durham: lab
+  City_of_Durham: lab
   Stockton_North: lab
   Redcar: lab
-  Durham_North: lab
+  North_Durham: lab
   Sedgefield: lab
   Middlesbrough: lab
   Bishop_Auckland: lab
   Darlington: lab
-  Middlesbrough_South__Cleveland_East: lab
+  Middlesbrough_South_and_East_Cleveland: lab
   Stockton_South: con
-  Penrith__The_Border: con
+  Penrith_and_The_Border: con
   Workington: lab
   Carlisle: con
   Copeland: lab
-  Westmorland__Lonsdale: ld
-  Morecambe__Lunesdale: con
-  Lancaster__Fleetwood: lab
-  Barrow__Furness: lab
-  Wyre__Preston_North: con
+  Westmorland_and_Lonsdale: ld
+  Morecambe_and_Lunesdale: con
+  Lancaster_and_Fleetwood: lab
+  Barrow_and_Furness: lab
+  Wyre_and_Preston_North: con
   Ribble_Valley: con
-  Blackpool_North__Cleveleys: con
+  Blackpool_North_and_Cleveleys: con
   Blackburn: lab
   Hyndburn: lab
   Blackpool_South: lab
@@ -106,53 +106,53 @@ election2015:
   Pendle: con
   Chorley: lab
   Bolton_North_East: lab
-  Heywood__Middleton: lab
+  Heywood_and_Middleton: lab
   Fylde: con
   Bolton_West: con
   Bury_South: lab
   Burnley: lab
   Wigan: lab
   Bolton_South_East: lab
-  Oldham_West__Royton: lab
-  Lancashire_West: lab
-  Stretford__Urmston: lab
-  Blackley__Broughton: lab
-  Rossendale__Darwen: con
+  Oldham_West_and_Royton: lab
+  West_Lancashire: lab
+  Stretford_and_Urmston: lab
+  Blackley_and_Broughton: lab
+  Rossendale_and_Darwen: con
   South_Ribble: con
   Makerfield: lab
-  Salford__Eccles: lab
+  Salford_and_Eccles: lab
   Ashton-under-Lyne: lab
   Southport: ld
-  St_Helens_North_: lab
+  St_Helens_North: lab
   Manchester_Gorton: lab
   Manchester_Central: lab
   Rochdale: lab
   Liverpool_Walton: lab
   Leigh: lab
-  Wythenshawe__Sale_East: lab
-  Denton__Reddish: lab
+  Wythenshawe_and_Sale_East: lab
+  Denton_and_Reddish: lab
   Sefton_Central: lab
   Knowsley: lab
-  Worsley__Eccles_South: lab
+  Worsley_and_Eccles_South: lab
   Manchester_Withington: lab
-  Oldham_East__Saddleworth: lab
+  Oldham_East_and_Saddleworth: lab
   Liverpool_West_Derby: lab
   Warrington_North: lab
-  Altrincham__Sale_West: con
+  Altrincham_and_Sale_West: con
   Stockport: lab
   Birkenhead: lab
-  St_Helens_South__Whiston: lab
+  St_Helens_South_and_Whiston: lab
   Warrington_South: con
   Cheadle: con
-  Stalybridge__Hyde: lab
+  Stalybridge_and_Hyde: lab
   Bootle: lab
   Liverpool_Wavertree: lab
   Halton: lab
   Tatton: con
   Macclesfield: con
-  Ellesmere_Port__Neston: lab
-  Garston__Halewood: lab
-  Crewe__Nantwich: con
+  Ellesmere_Port_and_Neston: lab
+  Garston_and_Halewood: lab
+  Crewe_and_Nantwich: con
   Congleton: con
   Hazel_Grove: con
   Wallasey: lab
@@ -161,57 +161,57 @@ election2015:
   Wirral_South: lab
   Eddisbury: con
   Wirral_West: lab
-  Chester_City_of: lab
+  City_of_Chester: lab
   East_Londonderry: dup
   Foyle: sdlp
   North_Antrim: dup
   West_Tyrone: sf
   South_Antrim: uup
-  East_Antrim_: dup
+  East_Antrim: dup
   Mid_Ulster: sf
   Belfast_North: dup
-  Fermanagh__South_Tyrone: uup
+  Fermanagh_and_South_Tyrone: uup
   Belfast_West: sf
   Belfast_East: dup
   Belfast_South: sdlp
   North_Down: ind
-  Newry__Armagh: sf
+  Newry_and_Armagh: sf
   Lagan_Valley: dup
   Upper_Bann: dup
   Strangford: dup
   South_Down: sdlp
   Richmond_Yorks: con
-  Skipton__Ripon: con
+  Skipton_and_Ripon: con
   Shipley: con
-  Harrogate__Knaresborough: con
+  Harrogate_and_Knaresborough: con
   Pudsey: con
-  Elmet__Rothwell: con
-  Scarborough__Whitby: con
+  Elmet_and_Rothwell: con
+  Scarborough_and_Whitby: con
   Keighley: con
   Leeds_West: lab
-  Selby__Ainsty: con
+  Selby_and_Ainsty: con
   Bradford_East: lab
-  Normanton_Pontefract__Castleford: lab
+  Normanton_Pontefract_and_Castleford: lab
   York_Outer: con
   Bradford_West: lab
   Leeds_North_West: ld
   York_Central: lab
-  Thirsk__Malton: con
+  Thirsk_and_Malton: con
   Leeds_Central: lab
   Leeds_North_East: lab
   Hemsworth: lab
-  Yorkshire_East: con
+  East_Yorkshire: con
   Bradford_South: lab
   Wakefield: lab
   Leeds_East: lab
-  Haltemprice__Howden: con
-  Batley__Spen: lab
-  Morley__Outwood: con
+  Haltemprice_and_Howden: con
+  Batley_and_Spen: lab
+  Morley_and_Outwood: con
   Doncaster_North: lab
-  Beverley__Holderness: con
+  Beverley_and_Holderness: con
   Halifax: lab
   Dewsbury: lab
-  Wentworth__Dearne: lab
+  Wentworth_and_Dearne: lab
   Hull_North: lab
   Huddersfield: lab
   Rotherham: lab
@@ -221,13 +221,13 @@ election2015:
   Don_Valley: lab
   Hull_East: lab
   Barnsley_Central: lab
-  Sheffield_Brightside__Hillsborough: lab
-  Brigg__Goole: con
+  Sheffield_Brightside_and_Hillsborough: lab
+  Brigg_and_Goole: con
   Colne_Valley: con
   Sheffield_Central: lab
   Sheffield_South_East: lab
-  Hull_West__Hessle: lab
-  Penistone__Stocksbridge: lab
+  Hull_West_and_Hessle: lab
+  Penistone_and_Stocksbridge: lab
   Sheffield_Heeley: lab
   Rother_Valley: lab
   Great_Grimsby: lab
@@ -245,25 +245,25 @@ election2015:
   Newcastle-under-Lyme: lab
   Stoke-on-Trent_South: lab
   Stafford: con
-  Warwickshire_North: con
-  Staffordshire_South: con
+  North_Warwickshire: con
+  South_Staffordshire: con
   Walsall_North: lab
   Aldridge-Brownhills: con
-  Shropshire_North: con
+  North_Shropshire: con
   Wolverhampton_South_West: lab
   Cannock_Chase: con
   Nuneaton: con
   Telford: con
   Walsall_South: lab
   Sutton_Coldfield: con
-  Shrewsbury__Atcham: con
+  Shrewsbury_and_Atcham: con
   Wolverhampton_South_East: lab
   Birmingham_Erdington: lab
   Coventry_North_East: lab
   Dudley_North: lab
   West_Bromwich_East: lab
   Meriden: con
-  Wrekin_The: con
+  The_Wrekin: con
   Warley: lab
   Birmingham_Hodge_Hill: lab
   Coventry_North_West: lab
@@ -277,32 +277,32 @@ election2015:
   Birmingham_Ladywood: lab
   Rugby: con
   Wyre_Forest: con
-  Halesowen__Rowley_Regis: con
+  Halesowen_and_Rowley_Regis: con
   Solihull: con
   Stourbridge: con
   Birmingham_Hall_Green: lab
-  Warwick__Leamington: con
-  Herefordshire_North: con
+  Warwick_and_Leamington: con
+  North_Herefordshire: con
   Birmingham_Northfield: lab
-  Kenilworth__Southam: con
+  Kenilworth_and_Southam: con
   Birmingham_Edgbaston: lab
   Bromsgrove: con
   Redditch: con
   Stratford-on-Avon: con
   Worcester: con
-  Worcestershire_Mid: con
-  Worcestershire_West: con
-  Hereford__Herefordshire_South: con
+  Mid_Worcestershire: con
+  West_Worcestershire: con
+  Hereford_and_South_Herefordshire: con
   High_Peak: con
   Mansfield: lab
-  Derbyshire_North_East: lab
+  North_East_Derbyshire: lab
   Bolsover: lab
   Bassetlaw: lab
   Derbyshire_Dales: con
   Chesterfield: lab
   Sherwood: con
   Newark: con
-  Derbyshire_Mid: con
+  Mid_Derbyshire: con
   Ashfield: lab
   Nottingham_North: lab
   Gainsborough: con
@@ -313,36 +313,36 @@ election2015:
   Derby_South: lab
   Erewash: con
   Nottingham_East: lab
-  Louth__Horncastle: con
-  Derbyshire_South: con
+  Louth_and_Horncastle: con
+  South_Derbyshire: con
   Loughborough: con
   Nottingham_South: lab
   Lincoln: con
-  Leicestershire_North_West: con
+  North_West_Leicestershire: con
   Charnwood: con
   Rushcliffe: con
-  Boston__Skegness: con
+  Boston_and_Skegness: con
   Bosworth: con
   Leicester_East: lab
   Corby: con
-  Sleaford__North_Hykeham: con
+  Sleaford_and_North_Hykeham: con
   Leicester_West: lab
   Kettering: con
-  Rutland__Melton: con
-  South_Holland__The_Deepings: con
-  Leicestershire_South: con
+  Rutland_and_Melton: con
+  South_Holland_and_The_Deepings: con
+  South_Leicestershire: con
   Harborough: con
-  Grantham__Stamford: con
+  Grantham_and_Stamford: con
   Daventry: con
   Leicester_South: lab
   Wellingborough: con
   Northampton_North: con
   Northampton_South: con
-  Northamptonshire_South: con
+  South_Northamptonshire: con
   Delyn: lab
   Ynys_Mon: lab
-  Alyn__Deeside: lab
-  Vale_Of_Clwyd: con
+  Alyn_and_Deeside: lab
+  Vale_of_Clwyd: con
   Aberconwy: con
   Wrexham: lab
   Arfon: pc
@@ -350,10 +350,10 @@ election2015:
   Dwyfor_Meirionnydd: pc
   Clwyd_South: lab
   Montgomeryshire: con
-  Brecon__Radnorshire: con
+  Brecon_and_Radnorshire: con
   Ceredigion: ld
   Blaenau_Gwent: lab
-  Merthyr_Tydfil__Rhymney: lab
+  Merthyr_Tydfil_and_Rhymney: lab
   Torfaen: lab
   Rhondda: lab
   Islwyn: lab
@@ -361,47 +361,47 @@ election2015:
   Cynon_Valley: lab
   Monmouth: con
   Preseli_Pembrokeshire: con
-  Carmarthen_East__Dinefwr: pc
+  Carmarthen_East_and_Dinefwr: pc
   Pontypridd: lab
   Caerphilly: lab
   Llanelli: lab
   Aberavon: lab
   Cardiff_Central: lab
   Newport_East: lab
-  Carmarthen_West__Pembrokeshire_South: con
+  Carmarthen_West_and_South_Pembrokeshire: con
   Swansea_West: lab
   Cardiff_West: lab
   Cardiff_North: con
   Gower: con
   Ogmore: lab
-  Cardiff_South__Penarth: lab
+  Cardiff_South_and_Penarth: lab
   Swansea_East: lab
-  Vale_Of_Glamorgan: con
+  Vale_of_Glamorgan: con
   Newport_West: lab
   Bridgend: lab
-  Norfolk_Mid: con
-  Norfolk_North_West: con
-  Cambridgeshire_North_West: con
+  Mid_Norfolk: con
+  North_West_Norfolk: con
+  North_West_Cambridgeshire: con
   Peterborough: con
-  Cambridgeshire_North_East: con
+  North_East_Cambridgeshire: con
   Broadland: con
   Huntingdon: con
-  Cambridgeshire_South: con
-  Hertfordshire_North_East: con
+  South_Cambridgeshire: con
+  North_East_Hertfordshire: con
   Norwich_North: con
-  Norfolk_North: ld
+  North_Norfolk: ld
   Bedford: con
   Stevenage: con
   Hemel_Hempstead: con
-  Norfolk_South_West: con
+  South_West_Norfolk: con
   Norwich_South: lab
   Great_Yarmouth: con
-  Bedfordshire_North_East: con
-  Hitchin__Harpenden: con
+  North_East_Bedfordshire: con
+  Hitchin_and_Harpenden: con
   St_Albans: con
-  Hertford__Stortford: con
-  Suffolk_West: con
-  Norfolk_South: con
+  Hertford_and_Stortford: con
+  West_Suffolk: con
+  South_Norfolk: con
   Waveney: con
   Luton_South: lab
   Welwyn_Hatfield: con
@@ -413,108 +413,108 @@ election2015:
   Luton_North: lab
   Hertsmere: con
   Harlow: con
-  Cambridgeshire_South_East: con
-  Suffolk_South: con
-  Suffolk_Central__Ipswich_North: con
-  Bedfordshire_Mid: con
+  South_East_Cambridgeshire: con
+  South_Suffolk: con
+  Central_Suffolk_and_North_Ipswich: con
+  Mid_Bedfordshire: con
   Watford: con
   Epping_Forest: con
   Braintree: con
-  Harwich__Essex_North: con
+  Harwich_and_North_Essex: con
   Clacton: ukip
-  Hertfordshire_South_West: con
-  Brentwood__Ongar: con
+  South_West_Hertfordshire: con
+  Brentwood_and_Ongar: con
   Colchester: con
   Witham: con
-  Bedfordshire_South_West: con
+  South_West_Bedfordshire: con
   Saffron_Walden: con
-  Rayleigh__Wickford: con
+  Rayleigh_and_Wickford: con
   Maldon: con
   Chelmsford: con
   Southend_West: con
-  Basildon__Billericay: con
-  Rochford__Southend_East: con
-  Basildon_South__Thurrock_East: con
+  Basildon_and_Billericay: con
+  Rochford_and_Southend_East: con
+  South_Basildon_and_East_Thurrock: con
   Castle_Point: con
   Thurrock: con
   Chipping_Barnet: con
   Hendon: con
   Enfield_Southgate: con
   Harrow_East: con
-  Finchley__Golders_Green: con
+  Finchley_and_Golders_Green: con
   Enfield_North: lab
   Harrow_West: lab
   Brent_Central: lab
   Tottenham: lab
   Edmonton: lab
-  Ruislip_Northwood__Pinner: con
+  Ruislip_Northwood_and_Pinner: con
   Brent_North: lab
   Islington_North: lab
   Walthamstow: lab
-  Chingford__Woodford_Green: con
-  Ealing_Central__Acton: lab
-  Hornsey__Wood_Green: lab
-  Hackney_North__Stoke_Newington: lab
-  Leyton__Wanstead: lab
+  Chingford_and_Woodford_Green: con
+  Ealing_Central_and_Acton: lab
+  Hornsey_and_Wood_Green: lab
+  Hackney_North_and_Stoke_Newington: lab
+  Leyton_and_Wanstead: lab
   Ilford_North: lab
   Ealing_North: lab
-  Hampstead__Kilburn: lab
-  Holborn__St_Pancras: lab
-  Hackney_South__Shoreditch: lab
+  Hampstead_and_Kilburn: lab
+  Holborn_and_St_Pancras: lab
+  Hackney_South_and_Shoreditch: lab
   West_Ham: lab
   Ilford_South: lab
-  Uxbridge__South_Ruislip: con
-  Brentford__Isleworth: lab
+  Uxbridge_and_South_Ruislip: con
+  Brentford_and_Isleworth: lab
   Westminster_North: lab
-  Islington_South__Finsbury: lab
-  Bethnal_Green__Bow: lab
+  Islington_South_and_Finsbury: lab
+  Bethnal_Green_and_Bow: lab
   East_Ham: lab
   Romford: con
   Ealing_Southall: lab
   Kensington: con
-  Cities_Of_London__Westminster: con
-  Poplar__Limehouse: lab
-  Greenwich__Woolwich: lab
+  Cities_of_London_and_Westminster: con
+  Poplar_and_Limehouse: lab
+  Greenwich_and_Woolwich: lab
   Barking: lab
-  Hayes__Harlington: lab
+  Hayes_and_Harlington: lab
   Richmond_Park: con
-  Chelsea__Fulham: con
-  Bermondsey__Old_Southwark: lab
+  Chelsea_and_Fulham: con
+  Bermondsey_and_Old_Southwark: lab
   Lewisham_Deptford: lab
-  Old_Bexley__Sidcup: con
-  Hornchurch__Upminster: con
-  Feltham__Heston: lab
+  Old_Bexley_and_Sidcup: con
+  Hornchurch_and_Upminster: con
+  Feltham_and_Heston: lab
   Hammersmith: lab
   Vauxhall: lab
-  Camberwell__Peckham: lab
+  Camberwell_and_Peckham: lab
   Eltham: lab
-  Dagenham__Rainham: lab
+  Dagenham_and_Rainham: lab
   Putney: con
   Battersea: con
-  Dulwich__West_Norwood: lab
-  Bromley__Chislehurst: con
-  Erith__Thamesmead: lab
+  Dulwich_and_West_Norwood: lab
+  Bromley_and_Chislehurst: con
+  Erith_and_Thamesmead: lab
   Twickenham: con
   Wimbledon: con
   Streatham: lab
   Lewisham_East: lab
-  Bexleyheath__Crayford: con
-  Sutton__Cheam: con
+  Bexleyheath_and_Crayford: con
+  Sutton_and_Cheam: con
   Tooting: lab
-  Lewisham_West__Penge: lab
+  Lewisham_West_and_Penge: lab
   Orpington: con
-  Kingston__Surbiton: con
-  Mitcham__Morden: lab
+  Kingston_and_Surbiton: con
+  Mitcham_and_Morden: lab
   Croydon_North: lab
   Beckenham: con
-  Carshalton__Wallington: ld
+  Carshalton_and_Wallington: ld
   Croydon_Central: con
   Croydon_South: con
   Milton_Keynes_North: con
   Henley: con
   Banbury: con
   Milton_Keynes_South: con
-  Chesham__Amersham: con
+  Chesham_and_Amersham: con
   Buckingham: ind
   Witney: con
   Beaconsfield: con
@@ -522,37 +522,37 @@ election2015:
   Aylesbury: con
   Slough: lab
   Oxford_East: lab
-  Oxford_West__Abingdon: con
-  Runnymede__Weybridge: con
-  Rochester__Strood: con
+  Oxford_West_and_Abingdon: con
+  Runnymede_and_Weybridge: con
+  Rochester_and_Strood: con
   Wantage: con
   Maidenhead: con
   Windsor: con
   Gravesham: con
-  Sittingbourne__Sheppey: con
+  Sittingbourne_and_Sheppey: con
   Reading_East: con
   Spelthorne: con
   Dartford: con
-  Chatham__Aylesford: con
+  Chatham_and_Aylesford: con
   Canterbury: con
   Newbury: con
   Bracknell: con
-  Esher__Walton: con
-  Tonbridge__Malling: con
-  Maidstone__The_Weald: con
-  Gillingham__Rainham: con
-  Thanet_North: con
+  Esher_and_Walton: con
+  Tonbridge_and_Malling: con
+  Maidstone_and_The_Weald: con
+  Gillingham_and_Rainham: con
+  North_Thanet: con
   Reading_West: con
   Surrey_Heath: con
   Sevenoaks: con
   Tunbridge_Wells: con
-  Faversham__Mid_Kent: con
-  Thanet_South: con
-  Hampshire_North_West: con
-  Hampshire_North_East: con
+  Faversham_and_Mid_Kent: con
+  South_Thanet: con
+  North_West_Hampshire: con
+  North_East_Hampshire: con
   Mole_Valley: con
-  Epsom__Ewell: con
-  Surrey_East: con
+  Epsom_and_Ewell: con
+  East_Surrey: con
   Wealden: con
   Ashford: con
   Dover: con
@@ -561,24 +561,24 @@ election2015:
   Guildford: con
   Reigate: con
   Horsham: con
-  Sussex_Mid: con
-  Bexhill__Battle: con
-  Folkestone__Hythe: con
-  Romsey__Southampton_North: con
+  Mid_Sussex: con
+  Bexhill_and_Battle: con
+  Folkestone_and_Hythe: con
+  Romsey_and_Southampton_North: con
   Aldershot: con
-  Surrey_South_West: con
-  Hampshire_East: con
+  South_West_Surrey: con
+  East_Hampshire: con
   Crawley: con
-  Arundel__South_Downs: con
+  Arundel_and_South_Downs: con
   Brighton_Pavilion: grn
   Lewes: con
-  Hastings__Rye: con
+  Hastings_and_Rye: con
   Basingstoke: con
   Winchester: con
   Portsmouth_North: con
   Havant: con
-  Bognor_Regis__Littlehampton: con
-  Worthing_East__Shoreham: con
+  Bognor_Regis_and_Littlehampton: con
+  East_Worthing_and_Shoreham: con
   Brighton_Kemptown: con
   Eastbourne: con
   New_Forest_East: con
@@ -593,59 +593,59 @@ election2015:
   Gosport: con
   New_Forest_West: con
   Fareham: con
-  Isle_Of_Wight: con
+  Isle_of_Wight: con
   Cheltenham: con
   Tewkesbury: con
-  Forest_Of_Dean: con
-  Cotswolds_The: con
+  Forest_of_Dean: con
+  The_Cotswolds: con
   Gloucester: con
-  Thornbury__Yate: con
-  Swindon_North: con
-  Filton__Bradley_Stoke: con
+  Thornbury_and_Yate: con
+  North_Swindon: con
+  Filton_and_Bradley_Stoke: con
   Stroud: con
   Kingswood: con
   Bristol_East: lab
-  Swindon_South: con
+  South_Swindon: con
   Bristol_North_West: con
   Bath: con
-  Somerset_North: con
+  North_Somerset: con
   Bristol_West: lab
-  Wiltshire_North: con
+  North_Wiltshire: con
   Bristol_South: lab
   Chippenham: con
-  Weston-Super-Mare: con
-  Somerset_North_East: con
+  Weston_Super_Mare: con
+  North_East_Somerset: con
   Devizes: con
   Wells: con
-  Wiltshire_South_West: con
+  South_West_Wiltshire: con
   Bournemouth_West: con
-  Bridgwater__West_Somerset: con
-  Somerton__Frome: con
-  Dorset_North: con
+  Bridgwater_and_West_Somerset: con
+  Somerton_and_Frome: con
+  North_Dorset: con
   Salisbury: con
-  Devon_North: con
+  North_Devon: con
   Yeovil: con
-  Dorset_Mid__Poole_North: con
+  Mid_Dorset_and_North_Poole: con
   Bournemouth_East: con
   Taunton_Deane: con
-  Tiverton__Honiton: con
+  Tiverton_and_Honiton: con
   Poole: con
   Christchurch: con
-  Devon_Central: con
-  Devon_East: con
-  Dorset_West: con
-  Devon_West__Torridge: con
+  Central_Devon: con
+  East_Devon: con
+  West_Dorset: con
+  Torridge_and_West_Devon: con
   Exeter: lab
-  Dorset_South: con
-  Cornwall_North: con
+  South_Dorset: con
+  North_Cornwall: con
   Plymouth_Moor_View: con
   Newton_Abbot: con
-  St_Austell__Newquay: con
-  Plymouth_Sutton__Devonport: con
+  St_Austell_and_Newquay: con
+  Plymouth_Sutton_and_Devonport: con
   Torbay: con
-  Camborne__Redruth: con
+  Camborne_and_Redruth: con
   Cornwall_South_East: con
   Devon_South_West: con
   St_Ives: con
-  Truro__Falmouth: con
+  Truro_and_Falmouth: con
   Totnes: con
