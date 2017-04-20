@@ -92,6 +92,6 @@ export default class Logo extends React.Component {
 }
 
 Logo.propTypes = {
-  size: PropTypes.number,
-  data: PropTypes.array
+  data: PropTypes.array,
+  colours: PropTypes.object
 };

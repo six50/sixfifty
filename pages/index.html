@@ -8,6 +8,12 @@ permalink: index.html
     {% include intro.html %}
   </section>
   <section>
+    <sixfifty-map
+      constituencies='{% raw %}{{% endraw %}{{ site.data.constituencies.constituencies | jsonify }}{% raw %}}{% endraw %}'
+      colours='{% raw %}{{% endraw %}{{ site.data.colours.parties | jsonify }}{% raw %}}{% endraw %}'
+    ></sixfifty-map>
+  </section>
+  <section>
     <ul class="post-list">
       {% for post in site.posts %}
       <li>
