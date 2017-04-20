@@ -1,9 +1,9 @@
 # Site settings
-title: "Six50"
+title: "SixFifty"
 description: ""
 baseurl: ""
 url: ""
-author: "Six50"
+author: "SixFifty Contributors"
 
 # Build settings
 kramdown:
