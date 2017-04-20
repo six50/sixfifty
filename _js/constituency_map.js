@@ -5,7 +5,7 @@ import * as Shapes from './constituency_shapes';
 
 export default class ConstituencyMap extends React.Component {
 
-  renderConstituency(constituency, key) {
+  renderConstituency(constituency) {
     const party = this.props.constituencies[constituency];
     const colour = this.props.colours[party] || '#ffffff';
 
@@ -20,7 +20,7 @@ export default class ConstituencyMap extends React.Component {
           fill={colour}
           stroke="#000000"
           strokeWidth="0.5"
-          key={key}
+          key={constituency}
         >
           <title>{this.constituencyName(constituency)}</title>
         </path>
@@ -29,7 +29,7 @@ export default class ConstituencyMap extends React.Component {
       return (
         <polygon
           points={Shapes.HEXAGONS[constituency]}
-          key={key}
+          key={constituency}
           fill={colour}
           stroke="#999999"
           strokeWidth="3"
