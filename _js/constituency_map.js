@@ -713,7 +713,7 @@ export default class ConstituencyMap extends React.Component {
   }
 
   constituencyName(constituency) {
-    return constituency.replace('_', ' ');
+    return constituency.replace(/_/g, ' ').replace(/\s+/g, ' ');
   }
 
 }
