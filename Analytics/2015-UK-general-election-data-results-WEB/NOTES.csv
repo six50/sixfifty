@@ -1,0 +1,27 @@
+Notes
+"These 2015 UK Parliamentary General Election results data have been collated and supplied by Professors Colin Rallings and Michael Thrasher at the Elections Centre, Plymouth University. "
+tblResults
+Forename: The candidate's forename as on the Statement of Persons Nominated (SoPN).
+Surname: The candidate's surname as on the SoPN.
+Description on ballot paper: The party name or description used by the candidate on the ballot paper. 
+Constituency Name: The name of the constituency being contested.
+PANo: Press association number of the constituency.
+Votes: The number of valid votes cast for the candidate.
+Share:  The number of votes polled by the candidate expressed as a percentage of the total valid votes cast.
+Change: The percentage change in the actual or notional share of the vote for the candidate since the 2010 general election. 
+Incumbent: ‘MP’ indicates a member of the previous 2010-15 Parliament. 
+Constituency ID : The Government Statistical Service code attributed to the constituency.
+Region ID: The Government Statistical Service code attributed to the region.
+Constituency type:  The type of constituency (Borough/Burgh or County).
+tblConstituency
+PANo: Press association number of the constituency.
+Constituency Name: The name of the constituency being contested.
+Constituency ID: The Government Statistical Service code attributed to the constituency.
+Constituency Type: The type of constituency (Borough/Burgh or County).
+Electorate: The number of eligible electors who could have voted on polling day.
+Valid Votes: The number of valid votes cast for all candidates standing in that constituency.
+Region ID: The Government Statistical Service code attributed to the region.
+
+
+
+"31/07/2015: Croydon South figures have been updated to reflect a correction made by Croydon Council on the number of votes for Emily Benn (the revised declaration of results now published on Croydon Council’s website  states that Emily Benn received 14,308 votes; the original declaration of results stated 14,038 votes). "
