@@ -1,3 +1,5 @@
+import './index.scss';
+
 import 'document-register-element';
 import 'reactive-elements';
 
