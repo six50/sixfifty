@@ -3,6 +3,7 @@ layout: post
 title:  "Introducing SixFifty"
 date:   2017-04-22 13:00:00 +0100
 tags: sixfifty meta
+intro: What if the general election could be informed by real data and not just speculation?
 ---
 
 _What if the general election could be informed by real data and not just speculation?_
