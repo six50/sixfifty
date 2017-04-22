@@ -1,4 +1,4 @@
-![SixFifty](images/logo-transparent.png)
+![SixFifty](images/logo.png)
 
 # SixFifty
 
