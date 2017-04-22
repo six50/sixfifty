@@ -116,15 +116,25 @@
     }
 }
 
-.copyright {
+.footer {
   margin-top: $spacing-unit;
   font-size: $small-font-size;
+  padding-top: 12px;
+  border-top: 1px solid $grey-color-light;
+
   p {
     color: $grey-color;
     a, a:visited {
       color: $grey-color-dark;
     }
   }
+}
+
+.pull-right {
+  float: right;
+}
+.pull-left {
+  float: left;
 }
 
 /**
