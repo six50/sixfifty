@@ -4,12 +4,7 @@
   <body>
     <div class="page-content">
       {{ content }}
-      <div class="copyright">
-        <p>
-          &copy; {{ site.time | date: '%Y' }}
-          <a href="{{ site.baseurl | prepend: site.url }}" title="{{ site.description }}"><strong>{{ site.title }}</strong></a>
-        </p>
-      </div>
+      {% include footer.html %}
     </div>
     {% include google_analytics.html %}
     <script src="{{ "/assets/common.js" | prepend: site.baseurl }}?bust={{ site.time | date: '%s' }}" type="text/javascript" async defer></script>
