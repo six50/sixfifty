@@ -3,7 +3,10 @@ import 'reactive-elements';
 
 import Logo from './logo';
 import ConstituencyMap from './constituency_map';
+import randomiseLists from './randomise_lists';
 
+
+randomiseLists();
 
 document.registerReact('sixfifty-logo', Logo);
 document.registerReact('sixfifty-map', ConstituencyMap);
