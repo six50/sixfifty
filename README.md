@@ -1,4 +1,4 @@
-![SixFifty](images/logo.png)
+<img src="/six50/sixfifty/raw/master/images/logo.png" alt="SixFifty" style="max-width:100px;">
 
 # SixFifty
 
