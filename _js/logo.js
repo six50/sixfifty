@@ -76,7 +76,7 @@ export default class Logo extends React.Component {
 
   render() {
     return (
-      <div className="site-logo">
+      <div className="logo">
         <svg width={RENDER_SIZE} height={RENDER_SIZE} viewBox="0 0 100 100">
           {this.calculateSectors().map(this.renderSector.bind(this))}
           <circle
