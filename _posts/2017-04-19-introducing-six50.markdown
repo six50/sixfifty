@@ -5,7 +5,7 @@ date:   2017-04-22 13:00:00 +0100
 categories: sixfifty meta
 ---
 
-_What if the General Election could be informed by real data and not just speculation?_
+_What if the general election could be informed by real data and not just speculation?_
 
 This week [97% of MPs voted in support](hansard-results) of holding a general election on June 8th. By calling a snap election, Theresa May is seeking to capitalise on disorganisation in the opposition and to strengthen the mandate for her Brexit strategy. As a result, the country is going to the polls for the third time in two years.
 
