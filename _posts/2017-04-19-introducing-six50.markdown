@@ -13,7 +13,7 @@ If recent revelations in the US and UK have shown us anything, it’s that unbia
 
 We don’t believe it has to be this way. We live in world where "artificial intelligence" and machine learning seem to be everywhere - yet where are these supposedly amazing technologies when it comes to something as useful as political forecasting?
 
-Our goal is rooted in a simple question: if you brought together a group of skilled data scientists, software engineers and experienced political operatives, whose only motivation is to create something truly amazing, that can provide valuable unbiased information to voters, how far could we go?
+Our goal is rooted in a simple question: if you brought together a group of skilled data scientists, software engineers and experienced political operatives, whose only motivation is to create something truly amazing that provides valuable unbiased information to voters, how far could we go?
 
 We draw a great deal of inspiration* from the work of Nate Silver and his team at [FiveThirtyEight](fivethirtyeight). Their approach exemplifies good statistical practice, blending data science and engineering with inferential and political analysis.
 
@@ -31,7 +31,6 @@ _* Why "SixFifty"? The name is a reference to the 650 constituency seats being c
 
 
 
-[fixed-term-act]: http://www.legislation.gov.uk/ukpga/2011/14
 [650-twitter]: https://twitter.com/SixFiftyData
 [hansard-results]: https://hansard.parliament.uk/Commons/2017-04-19/division/BE856226-DD6B-4409-9462-D8D910F942D1/EarlyParliamentaryGeneralElection?outputType=Names
 [fivethirtyeight]: https://fivethirtyeight.com/
