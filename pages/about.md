@@ -19,9 +19,15 @@ We are not:
 - **Affiliated with any political party** – We believe that truly impartial and unbiased sources of information are rare enough.
 
 We are:
-{% for contributor in site.data.contributors.contributors %}
-- {{ contributor.name }}{% if contributor.twitter %} – [@{{ contributor.twitter }}](https://twitter.com/{{ contributor.twitter }}){% endif %}{% if contributor.website %} – <{{ contributor.website }}>{% endif %}
-{% endfor %}
+<ul class="randomise">
+    {% for contributor in site.data.contributors.contributors %}
+        <li>
+            {{ contributor.name }}
+            {% if contributor.twitter %} – <a href="https://twitter.com/{{ contributor.twitter }}">@{{ contributor.twitter }}</a>{% endif %}
+            {% if contributor.website %} – <a href="{{ contributor.website }}">{{ contributor.website }}</a>{% endif %}
+        </li>
+    {% endfor %}
+</ul>
 
 If you would like to get involved, just send an email to [contact@sixfifty.org.uk](mailto:contact@sixfifty.org.uk) introducing yourself, or feel free to send any questions to [@SixFiftyData on Twitter](https://twitter.com/SixFiftyData).
 
