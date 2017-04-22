@@ -1,18 +1,43 @@
 ---
 layout: post
-title:  "Introducing Six50"
-date:   2017-04-19 15:00:21 +0100
-categories: six50 meta
+title:  "Introducing SixFifty"
+date:   2017-04-22 13:00:00 +0100
+categories: sixfifty meta
 ---
 
-It's April 19th, and yesterday Theresa May announced plans for the UK to hold a general election on June 8th. This morning Parliament voted to go ahead with [97% voting in favour](hansard-results), more than the two thirds majority required by the [Fixed-term Parliaments Act 2011](fixed-term-act)
+_What if the General Election could be informed by real data and not just speculation?_
 
-We are a group of data scientists and software engineers who want to bring transparency to the data surrounding this next election.
+This week [97% of MPs voted in support](hansard-results) of holding a general election on June 8th. By calling a snap election, Theresa May has put the whole country on the back foot, not just her political opponents. People across the country are trying to work out who they should vote for.
 
-It's early days, and we don't yet have a concrete direction, but stay tuned and watch out for updates over the next 50 days.
+Unbiased, informed debate can be hard to come by in the national media. Polls used to be at the heart of this discussion, but after failing to accurately predict the 2015 General Election or the 2016 Brexit vote they are now seen as untrustworthy. The latest polling serves as a starting point for speculation, but does not help inform the country about who they should vote for and why.
 
-_If you want to get involved, contact [@john_sandall](john-twitter) on Twitter._
+We don’t believe it has to be this way. We live in world where "artificial intelligence" and machine learning seem to be everywhere - yet, where are these supposedly amazing technologies when it comes to something as useful as political forecasting?
+
+Our goal is rooted in a simple question: if you were to bring together a group of skilled data scientists, software engineers and experienced political operatives, whose only motivation is to create something truly amazing, that can provide valuable unbiased information to voters, how far could we go?
+
+We draw a great deal of inspiration, down to the name we've chosen*, from the work of Nate Silver and his team at [FiveThirtyEight](fivethirtyeight). Their approach exemplifies good statistical practice, blending data science and engineering with inferential and political analysis.
+
+We know that predicting a UK election result is [notoriously difficult](538-wrong). The most common approaches, such as applying the latest poll swing to each constituency, are statistically dubious and wildly inaccurate. Polling data in the UK has been [historically innaccurate](inaccurate-polls) and is [rarely available](ashcroft-polls) at a constituency level. The complexities of modelling a multi-party system plus factors such as the [Shy Tory Effect](shy-tory-factor) compound the problem further.
+
+We hope that by combining best practice with cutting edge algorithms, and by showcasing the datasets we use, we can cut through the partisan noise with some old-fashioned honest and impartial data-driven truth. Furthermore, we will be fully open about our approach, and discuss the challenges and roadblocks along the way.
+
+A better, more informed, political debate awaits.
+
+__If you would like to get involved, please email [contact@sixfifty.org.uk](contact-us) or send us questions [@SixFiftyData](650-twitter) on Twitter.__
+
+---
+
+_* Why "SixFifty"? The name is a reference to the 650 constituency seats being contested, as well as a deferential nod to those at FiveThirtyEight who've [inspired us to come together](first-tweet)._
+
+
 
 [fixed-term-act]: http://www.legislation.gov.uk/ukpga/2011/14
-[john-twitter]: https://twitter.com/john_sandall
+[650-twitter]: https://twitter.com/SixFiftyData
 [hansard-results]: https://hansard.parliament.uk/Commons/2017-04-19/division/BE856226-DD6B-4409-9462-D8D910F942D1/EarlyParliamentaryGeneralElection?outputType=Names
+[fivethirtyeight]: https://fivethirtyeight.com/
+[538-wrong]: https://fivethirtyeight.com/datalab/what-we-got-wrong-in-our-2015-uk-general-election-model/
+[inaccurate-polls]: https://fivethirtyeight.com/features/the-u-k-snap-election-is-riskier-than-it-seems/
+[shy-tory-factor]: https://en.wikipedia.org/wiki/Shy_Tory_Factor
+[first-tweet]: https://twitter.com/John_Sandall/status/854286620064976896
+[ashcroft-polls]: http://lordashcroftpolls.com/
+[contact-us]: contact@sixfifty.org.uk
