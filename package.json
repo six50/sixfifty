@@ -15,7 +15,7 @@
   },
   "scripts": {
     "build": "webpack -p",
-    "dev": "webpack"
+    "dev": "webpack --watch"
   },
   "dependencies": {
     "document-register-element": "^1.4.1",

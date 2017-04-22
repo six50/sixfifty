@@ -1,9 +1,9 @@
 import 'document-register-element';
 import 'reactive-elements';
 
-import Logo from './logo';
-import ConstituencyMap from './constituency_map';
-import randomiseLists from './randomise_lists';
+import Logo from './components/logo/logo';
+import ConstituencyMap from './components/constituency_map/constituency_map';
+import randomiseLists from './utils/randomise_lists';
 
 
 randomiseLists();

@@ -29,5 +29,11 @@ module.exports = {
         }]
       }
     ]
+  },
+  resolve: {
+    extensions: ['.js', '.jsx']
+  },
+  watchOptions: {
+    ignored: /node_moudles/
   }
 };
