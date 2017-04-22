@@ -1,0 +1,15 @@
+results:
+  - name: con
+    percentage: 0.369
+  - name: lab
+    percentage: 0.304
+  - name: ukip
+    percentage: 0.126
+  - name: ld
+    percentage: 0.079
+  - name: snp
+    percentage: 0.047
+  - name: grn
+    percentage: 0.038
+  - name: oth
+    percentage: 0.037
