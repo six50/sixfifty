@@ -19,7 +19,7 @@ We are not:
 - **Affiliated with any political party** – We believe that truly impartial and unbiased sources of information are rare enough.
 
 We are:
-{% for contributor in site.data.contributors.contributors | sort %}
+{% for contributor in site.data.contributors.contributors %}
 - {{ contributor.name }}{% if contributor.twitter %} – [@{{ contributor.twitter }}](https://twitter.com/{{ contributor.twitter }}){% endif %}{% if contributor.website %} – <{{ contributor.website }}>{% endif %}
 {% endfor %}
 
