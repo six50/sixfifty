@@ -9,7 +9,7 @@ _What if the general election could be informed by real data and not just specul
 
 This week [97% of MPs voted in support][hansard-results] of holding a general election on June 8th. By calling a snap election, Theresa May is seeking to capitalise on disorganisation in the opposition and to strengthen the mandate for her Brexit strategy. As a result, the country is going to the polls for the third time in two years.
 
-If recent revelations in the US and UK have shown us anything, it’s that unbiased, informed debate can be hard to come by in the national media. Polls used to be at the heart of this discussion, but after failing to accurately predict the 2015 general election or the 2016 Brexit vote they are now seen as untrustworthy. 
+If recent revelations in the US and UK have shown us anything, it’s that unbiased, informed debate can be hard to come by in the national media. Polls used to be at the heart of this discussion, but after failing to accurately predict the 2015 general election or the 2016 Brexit vote they are now seen as untrustworthy.
 
 We don’t believe it has to be this way. We live in world where "artificial intelligence" and machine learning seem to be everywhere - yet where are these supposedly amazing technologies when it comes to something as useful as political forecasting?
 
