@@ -9,36 +9,18 @@ export default class ConstituencyMap extends React.Component {
     const party = this.props.constituencies[constituency];
     const colour = this.props.colours[party] || '#ffffff';
 
-    if (!Shapes.GEOGRAPHIC_BORDERS[constituency]) {
-      console.log(constituency);
-    }
-
-    if (this.props.geographic) {
-      return (
-        <path
-          d={Shapes.GEOGRAPHIC_BORDERS[constituency]}
-          fill={colour}
-          stroke="#000000"
-          strokeWidth="0.5"
-          key={constituency}
-        >
-          <title>{this.constituencyName(constituency)}</title>
-        </path>
-      );
-    } else {
-      return (
-        <polygon
-          points={Shapes.HEXAGONS[constituency]}
-          key={constituency}
-          fill={colour}
-          stroke="#999999"
-          strokeWidth="3"
-          title="foo"
-        >
-          <title>{this.constituencyName(constituency)}</title>
-        </polygon>
-      );
-    }
+    return (
+      <polygon
+        points={Shapes.HEXAGONS[constituency]}
+        key={constituency}
+        fill={colour}
+        stroke="#999999"
+        strokeWidth="3"
+        title="foo"
+      >
+        <title>{this.constituencyName(constituency)}</title>
+      </polygon>
+    );
   }
 
   renderHexagonalBorder(path, key) {
@@ -55,16 +37,14 @@ export default class ConstituencyMap extends React.Component {
 
   render() {
     const constituencies = Object.keys(Shapes.HEXAGONS);
-    const width = this.props.geographic ? Shapes.GEOGRAPHIC_MAP_WIDTH : Shapes.HEXAGON_MAP_WIDTH;
-    const height = this.props.geographic ? Shapes.GEOGRAPHIC_MAP_HEIGHT : Shapes.HEXAGON_MAP_HEIGHT;
+    const width = Shapes.HEXAGON_MAP_WIDTH;
+    const height = Shapes.HEXAGON_MAP_HEIGHT;
 
     return (
       <div className="constituency-map">
         <svg width="100%" height="100%" viewBox={`0 0 ${width} ${height}`}>
           {constituencies.map(this.renderConstituency.bind(this))}
-          {this.props.geographic ? '' :
-            Shapes.HEXAGON_BORDERS.map(this.renderHexagonalBorder.bind(this))
-          }
+          {Shapes.HEXAGON_BORDERS.map(this.renderHexagonalBorder.bind(this))}
         </svg>
       </div>
     );
@@ -78,6 +58,5 @@ export default class ConstituencyMap extends React.Component {
 
 Map.propTypes = {
   constituencies: PropTypes.object,
-  colours: PropTypes.object,
-  geographic: PropTypes.bool
+  colours: PropTypes.object
 };
