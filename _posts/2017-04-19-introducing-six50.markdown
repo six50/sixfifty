@@ -15,7 +15,7 @@ We don’t believe it has to be this way. We live in world where "artificial int
 
 Our goal is rooted in a simple question: if you brought together a group of skilled data scientists, software engineers and experienced political operatives, whose only motivation is to create something truly amazing that provides valuable unbiased information to voters, how far could we go?
 
-We draw a great deal of inspiration* from the work of Nate Silver and his team at [FiveThirtyEight](fivethirtyeight). Their approach exemplifies good statistical practice, blending data science and engineering with inferential and political analysis.
+We draw a great deal of inspiration[^1] from the work of Nate Silver and his team at [FiveThirtyEight](fivethirtyeight). Their approach exemplifies good statistical practice, blending data science and engineering with inferential and political analysis.
 
 We know that predicting a UK election result is [notoriously difficult](538-wrong). The most common approaches, such as applying the latest poll swing to each constituency, are statistically dubious and wildly inaccurate. Polling data in the UK has been [historically inaccurate](inaccurate-polls) and is [rarely available](ashcroft-polls) at a constituency level. The complexities of modelling a multi-party system plus factors such as the [Shy Tory Effect](shy-tory-factor) compound the problem further.
 
@@ -27,9 +27,7 @@ __If you would like to get involved, please email [contact@sixfifty.org.uk](cont
 
 ---
 
-_* Why "SixFifty"? The name is a reference to the 650 constituency seats being contested, as well as a deferential nod to those at FiveThirtyEight who've [inspired us to come together](first-tweet)._
-
-
+[^1]: Why "SixFifty"? The name is a reference to the 650 constituency seats being contested, as well as a deferential nod to those at FiveThirtyEight who've [inspired us to come together](first-tweet).
 
 [650-twitter]: https://twitter.com/SixFiftyData
 [hansard-results]: https://hansard.parliament.uk/Commons/2017-04-19/division/BE856226-DD6B-4409-9462-D8D910F942D1/EarlyParliamentaryGeneralElection?outputType=Names
