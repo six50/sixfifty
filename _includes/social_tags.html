@@ -1,3 +1,4 @@
+<!-- Facebook Open Graph -->
 <meta property="og:url" content="{{ page.url | prepend: site.baseurl | prepend: site.url }}" />
 <meta property="og:type" content="article" />
 <meta property="og:title" content="{{ page.title }}" />
@@ -5,3 +6,10 @@
 <meta property="og:image" content="{% if page.header_image %}{{ page.header_image | prepend: '/images/header_images/' | prepend: site.baseurl | prepend: site.url }}{% else %}{{ '/images/logo.png' | prepend: site.baseurl | prepend: site.url }}{% endif %}" />
 <meta property="og:site_name" content="SixFifty" />
 <meta property="fb:app_id" content="1665774010103955" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@sixfiftydata" />
+<meta name="twitter:title" content="{{ page.title }}" />
+<meta name="twitter:description" content="{% if page.intro %}{{ page.intro }}{% endif %}" />
+<meta name="twitter:image" content="{% if page.header_image %}{{ page.header_image | prepend: '/images/header_images/' | prepend: site.baseurl | prepend: site.url }}{% else %}{{ '/images/logo.png' | prepend: site.baseurl | prepend: site.url }}{% endif %}" />
