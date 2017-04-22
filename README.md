@@ -1,4 +1,10 @@
-### Six50
+![SixFifty](images/logo-transparent.png)
+
+# SixFifty
+
+We're a team of data scientists, engineers and political experts, dedicated to bringing a rigorous, data-oriented, and impartial view to the 2017 UK general election.
+
+### About this Repository
 
 This repository is a Jekyll site hosted on GitHub Pages. This gives us a framework into which we can create front-end applications and publish blog posts.
 
