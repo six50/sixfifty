@@ -7,17 +7,17 @@ categories: sixfifty meta
 
 _What if the General Election could be informed by real data and not just speculation?_
 
-This week [97% of MPs voted in support](hansard-results) of holding a general election on June 8th. By calling a snap election, Theresa May has put the whole country on the back foot, not just her political opponents. People across the country are trying to work out who they should vote for.
+This week [97% of MPs voted in support](hansard-results) of holding a general election on June 8th. By calling a snap election, Theresa May is seeking to capitalise on disorganisation in the opposition and to strengthen the mandate for her Brexit strategy. As a result, the country is going to the polls for the third time in two years.
 
-Unbiased, informed debate can be hard to come by in the national media. Polls used to be at the heart of this discussion, but after failing to accurately predict the 2015 General Election or the 2016 Brexit vote they are now seen as untrustworthy. The latest polling serves as a starting point for speculation, but does not help inform the country about who they should vote for and why.
+If recent revelations in the US and UK have shown us anything, it’s that unbiased, informed debate can be hard to come by in the national media. Polls used to be at the heart of this discussion, but after failing to accurately predict the 2015 general election or the 2016 Brexit vote they are now seen as untrustworthy. 
 
-We don’t believe it has to be this way. We live in world where "artificial intelligence" and machine learning seem to be everywhere - yet, where are these supposedly amazing technologies when it comes to something as useful as political forecasting?
+We don’t believe it has to be this way. We live in world where "artificial intelligence" and machine learning seem to be everywhere - yet where are these supposedly amazing technologies when it comes to something as useful as political forecasting?
 
-Our goal is rooted in a simple question: if you were to bring together a group of skilled data scientists, software engineers and experienced political operatives, whose only motivation is to create something truly amazing, that can provide valuable unbiased information to voters, how far could we go?
+Our goal is rooted in a simple question: if you brought together a group of skilled data scientists, software engineers and experienced political operatives, whose only motivation is to create something truly amazing, that can provide valuable unbiased information to voters, how far could we go?
 
-We draw a great deal of inspiration, down to the name we've chosen*, from the work of Nate Silver and his team at [FiveThirtyEight](fivethirtyeight). Their approach exemplifies good statistical practice, blending data science and engineering with inferential and political analysis.
+We draw a great deal of inspiration* from the work of Nate Silver and his team at [FiveThirtyEight](fivethirtyeight). Their approach exemplifies good statistical practice, blending data science and engineering with inferential and political analysis.
 
-We know that predicting a UK election result is [notoriously difficult](538-wrong). The most common approaches, such as applying the latest poll swing to each constituency, are statistically dubious and wildly inaccurate. Polling data in the UK has been [historically innaccurate](inaccurate-polls) and is [rarely available](ashcroft-polls) at a constituency level. The complexities of modelling a multi-party system plus factors such as the [Shy Tory Effect](shy-tory-factor) compound the problem further.
+We know that predicting a UK election result is [notoriously difficult](538-wrong). The most common approaches, such as applying the latest poll swing to each constituency, are statistically dubious and wildly inaccurate. Polling data in the UK has been [historically inaccurate](inaccurate-polls) and is [rarely available](ashcroft-polls) at a constituency level. The complexities of modelling a multi-party system plus factors such as the [Shy Tory Effect](shy-tory-factor) compound the problem further.
 
 We hope that by combining best practice with cutting edge algorithms, and by showcasing the datasets we use, we can cut through the partisan noise with some old-fashioned honest and impartial data-driven truth. Furthermore, we will be fully open about our approach, and discuss the challenges and roadblocks along the way.
 
