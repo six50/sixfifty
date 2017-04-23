@@ -20,5 +20,5 @@ exclude:
 
 # Third-party services
 # just leave empty to disable it
-google_analytics:
+google_analytics: UA-97912333-1
 disqus_shortname:
