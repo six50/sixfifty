@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "This repository is a Jekyll site hosted on GitHub Pages. This gives us a framework into which we can create front-end applications and publish blog posts.",
   "homepage": "https://github.com/six50/sixfifty#readme",
-  "main": "_js/index.js",
+  "main": "_frontend/index.js",
   "author": "",
   "license": "ISC",
   "repository": {
@@ -15,7 +15,7 @@
   },
   "scripts": {
     "build": "webpack -p",
-    "dev": "webpack"
+    "dev": "webpack --watch"
   },
   "dependencies": {
     "document-register-element": "^1.4.1",
@@ -28,6 +28,11 @@
     "babel-preset-env": "^1.4.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.0",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "node-sass": "^4.5.2",
+    "sass-loader": "^6.0.3",
+    "style-loader": "^0.16.1",
     "webpack": "^2.4.1"
   }
 }

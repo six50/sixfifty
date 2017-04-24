@@ -1,18 +1,11 @@
 ---
 layout: default
-permalink: index.html
+#permalink: index.html # Drop comment to make this the index page again
 ---
 <div class="home">
   <section class="site-header">
     {% include nav.html %}
     {% include intro.html %}
-  </section>
-  <section>
-    <sixfifty-map
-      constituencies='{% raw %}{{% endraw %}{{ site.data.constituencies.election2015 | jsonify }}{% raw %}}{% endraw %}'
-      colours='{% raw %}{{% endraw %}{{ site.data.colours.parties | jsonify }}{% raw %}}{% endraw %}'
-      geographic='{false}'
-    ></sixfifty-map>
   </section>
   <section>
     <ul class="post-list">

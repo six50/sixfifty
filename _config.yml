@@ -1,7 +1,7 @@
 # Site settings
 title: "SixFifty"
 description: ""
-baseurl: ""
+baseurl: "http://sixfifty.org.uk"
 url: ""
 author: "SixFifty Contributors"
 
@@ -20,5 +20,5 @@ exclude:
 
 # Third-party services
 # just leave empty to disable it
-google_analytics:
+google_analytics: UA-97912333-1
 disqus_shortname:

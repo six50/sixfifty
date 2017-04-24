@@ -2,10 +2,11 @@
 
 const path = require('path');
 const webpack = require('webpack');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
   entry: {
-    index: './_js/index.js',
+    index: './_frontend/index.js',
   },
   output: {
     path: path.resolve(__dirname, './assets'),
@@ -17,6 +18,7 @@ module.exports = {
       filename: 'common.js',
       minChunks: 2,
     }),
+    new ExtractTextPlugin("[name].css")
   ],
   module: {
     rules: [
@@ -27,7 +29,20 @@ module.exports = {
           loader: 'babel-loader',
           options: { presets: ['es2015', 'react'] },
         }]
+      },
+      {
+        test: /\.scss$/,
+        use: ExtractTextPlugin.extract({
+          use: 'css-loader!sass-loader',
+          fallback: 'style-loader'
+        })
       }
     ]
+  },
+  resolve: {
+    extensions: ['.js', '.jsx', 'scss']
+  },
+  watchOptions: {
+    ignored: /node_moudles/
   }
 };
