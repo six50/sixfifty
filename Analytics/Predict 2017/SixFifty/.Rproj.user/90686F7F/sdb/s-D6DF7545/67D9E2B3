@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1493033136813.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "67D9E2B3",
+    "lastKnownWriteTime" : 2317439970668642304,
+    "last_content_update" : 1493033136813,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "9FABF254",
+        "caption" : "ge.results$`2010`",
+        "contentUrl" : "grid_resource/gridviewer.html?env=_rs_no_env&obj=&cache_key=9FABF254",
+        "displayedObservations" : 651,
+        "environment" : "_rs_no_env",
+        "object" : "",
+        "preview" : 0,
+        "totalObservations" : 651,
+        "variables" : 145
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}
