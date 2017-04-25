@@ -19,6 +19,7 @@ We are not:
 - **Affiliated with any political party[^1]** – We believe that truly impartial and unbiased sources of information are rare enough.
 
 We are[^2]:
+
 <ul class="randomise">
     {% for contributor in site.data.contributors.contributors %}
         <li>
@@ -36,6 +37,5 @@ If you would like to get involved, just send an email to [contact@sixfifty.org.u
 [^1]: SixFifty is and will remain wholly independent and neutral with respect to all content, analysis and modelling it produces. Individual contributors may be affiliated with specific parties. We would encourage contributions from across the political spectrum, and if you believe our content is in any way biased please do not hesitate to contact us.
 
 [^2]: This list is randomly ordered on each page load. If you have questions about the project itself, such as how it came about or how we self-organised within hours of the election announcement, please contact [@John_Sandall](https://twitter.com/john_sandall).
-
 
 [datakind]: http://www.datakind.org/chapters/datakind-uk
