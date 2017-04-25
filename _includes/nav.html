@@ -1,9 +1,11 @@
-<p class="site-nav">
+<nav class="site-nav">
   <sixfifty-logo
     data='{% raw %}{{% endraw %}{{ site.data.polls.current | jsonify }}{% raw %}}{% endraw %}'
     colours='{% raw %}{{% endraw %}{{ site.data.colours.parties | jsonify }}{% raw %}}{% endraw %}'
   ></sixfifty-logo>
-    <a href="{{ '/' | prepend: site.baseurl | prepend: site.url }}">SixFifty</a>
-  / <a href="{{ '/about' | prepend: site.baseurl | prepend: site.url }}">About</a>
-  / <a href="{{ '/posts' | prepend: site.baseurl | prepend: site.url }}">Posts</a>
-</p>
+  <ul>
+    <li><a href="{{ '/' | prepend: site.baseurl | prepend: site.url }}">SixFifty</a></li>
+    <li><a href="{{ '/about' | prepend: site.baseurl | prepend: site.url }}">About</a></li>
+    <li><a href="{{ '/posts' | prepend: site.baseurl | prepend: site.url }}">Posts</a></li>
+  </ul>
+</nav>

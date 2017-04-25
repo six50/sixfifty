@@ -27,6 +27,7 @@ body {
     font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
     color: $text-color;
     background-color: $background-color;
+    box-sizing: border-box;
 }
 /**
  * Set `margin-bottom` to maintain vertical rhythm

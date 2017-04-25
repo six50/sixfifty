@@ -2,12 +2,17 @@
 <html>
   {% include head.html %}
   <body>
+    {% include nav.html %}
+
     <div class="page-content">
       {{ content }}
       {% include footer.html %}
     </div>
+
     {% include google_analytics.html %}
+
     <script src="{{ "/assets/common.js" | prepend: site.baseurl }}?bust={{ site.time | date: '%s' }}" type="text/javascript" async defer></script>
     <script src="{{ "/assets/index.js" | prepend: site.baseurl }}?bust={{ site.time | date: '%s' }}" type="text/javascript" async defer></script>
+
   </body>
 </html>

@@ -10,8 +10,42 @@
 }
 
 .site-nav {
-    padding-bottom: 10px;
     border-bottom: 1px solid $grey-color-light;
+    height: $nav-height;
+
+    sixfifty-logo {
+        width: $nav-height;
+        height: $nav-height;
+        float: left;
+    }
+
+    ul {
+        display: inline-block;
+        list-style: none;
+        margin-left: 0;
+
+        li {
+            float: left;
+
+            height: $nav-height;
+            line-height: $nav-height;
+
+            border-left: 1px solid $grey-color-light;
+
+            &:last-child {
+                border-right: 1px solid $grey-color-light;
+            }
+
+            a {
+                display: inline-block;
+                height: 100%;
+                width: 100%;
+
+                padding-left: $nav-item-spacing / 2;
+                padding-right: $nav-item-spacing / 2;
+            }
+        }
+    }
 }
 
 /**
@@ -19,7 +53,7 @@
  */
 .page-content {
     position: relative;
-    padding: $spacing-unit ($spacing-unit * 0.75);
+    padding: ($spacing-unit * 0.5) ($spacing-unit * 0.75);
     margin: 1rem;
     box-sizing: border-box;
     max-width: $max-width;

@@ -1,13 +1,14 @@
-.site-nav .logo {
-  height: 0.875rem;
-  width: 0.875rem;
-
+sixfifty-logo {
   display: inline-block;
-  vertical-align: text-top;
-  margin-right: 2px;
 
-  svg {
-    height: 100%;
-    width: 100%;
+  .logo {
+    max-height: 60%;
+    max-width: 60%;
+    margin: 20% auto;
+
+    svg {
+      height: 100%;
+      width: 100%;
+    }
   }
 }
