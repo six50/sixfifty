@@ -12,8 +12,10 @@ permalink: forecast
     </p>
   </section>
   <section>
-    <!-- TODO: render model visualisation -->
-    <sixfifty-model></sixfifty-model>
+    <sixfifty-model
+      predictions='{% raw %}{{% endraw %}{{ site.data.model_prediction | jsonify }}{% raw %}}{% endraw %}'
+      colours='{% raw %}{{% endraw %}{{ site.data.colours.parties | jsonify }}{% raw %}}{% endraw %}'
+    ></sixfifty-model>
   </section>
   <section>
     <h2>Model performance over time...</h2>
