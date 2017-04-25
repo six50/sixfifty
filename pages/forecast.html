@@ -1,0 +1,31 @@
+---
+layout: default
+permalink: forecast
+---
+<div class="forecast">
+  <header class="post-header">
+    <h1 class="post-title">Election 2017 Forecast</h1>
+  </header>
+  <section>
+    <p>
+      This is a basic explanation of the model and what we're trying to achieve. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </p>
+  </section>
+  <section>
+    <!-- TODO: render model visualisation -->
+  </section>
+  <section>
+    <h2>Model performance over time...</h2>
+    <!-- TODO: render model performance over time... -->
+  </section>
+  <section>
+    <h2>Model updates on the blog...</h2>
+    <ul class="post-list">
+      {% for post in site.posts %}
+      <li>
+        <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a> <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %d, %Y" }}</time>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+</div>
