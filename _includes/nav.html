@@ -1,8 +1,10 @@
 <nav class="site-nav">
-  <sixfifty-logo
-    data='{% raw %}{{% endraw %}{{ site.data.polls.current | jsonify }}{% raw %}}{% endraw %}'
-    colours='{% raw %}{{% endraw %}{{ site.data.colours.parties | jsonify }}{% raw %}}{% endraw %}'
-  ></sixfifty-logo>
+  <a href="{{ '/' | prepend: site.baseurl | prepend: site.url }}">
+    <sixfifty-logo
+      data='{% raw %}{{% endraw %}{{ site.data.polls.current | jsonify }}{% raw %}}{% endraw %}'
+      colours='{% raw %}{{% endraw %}{{ site.data.colours.parties | jsonify }}{% raw %}}{% endraw %}'
+    ></sixfifty-logo>
+  </a>
   <ul>
     <li><a href="{{ '/' | prepend: site.baseurl | prepend: site.url }}">SixFifty</a></li>
     <li><a href="{{ '/about' | prepend: site.baseurl | prepend: site.url }}">About</a></li>
