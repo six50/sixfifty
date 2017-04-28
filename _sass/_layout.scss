@@ -2,7 +2,6 @@
  * Site header
  */
 .site-header {
-    margin-top: -2rem;
     max-width: $max-width;
     p {
       font-size: $small-font-size;
@@ -76,8 +75,13 @@
     a,
     a:hover {
         color: $text-color;
+        font-size: larger;
         font-weight: bold;
         text-decoration: none;
+    }
+
+    a.read-more {
+        font-size: small;
     }
 
     time {
@@ -87,6 +91,15 @@
     @include media-query($on-palm) {
         time {
             display: block;
+            font-size: $small-font-size;
+        }
+    }
+
+    p {
+        font-size: $small-font-size;
+
+        a,
+        a:hover {
             font-size: $small-font-size;
         }
     }
@@ -178,4 +191,8 @@
 .twitter-tweet {
   margin-left: auto;
   margin-right: auto;
+}
+
+.footnotes {
+    font-size: small;
 }
