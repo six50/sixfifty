@@ -16,4 +16,6 @@ Blog posts can be written in the `posts` directory and will be included in the g
 
 ### Deployment
 
+Local changes can be previewed using Jekyll's built-in development server: `bundle exec jekyll serve --baseurl ''`
+
 Currently deployment is two-stage. The first stage is to build the front-end with `npm build`, this will output a JS file to the site build directory, this should be committed. The second stage, which is handled by GitHub, is running the Jekyll build which will add the rest of the files to the site build directory and serve it.
