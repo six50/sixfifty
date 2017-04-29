@@ -14,7 +14,7 @@ Ask a hundred people if they like cats and around 63% will say yes, give or take
 "_Wisdom is the daughter of experience_ ", according to Leonardo da Vinci, and experiencing more responses to our cat question means we can actually make a wiser guess: with a _sample size_ of one thousand people you should find that 600 to 660 of them like cats.
 
 
-### How This Works
+### How this works
 
 First, some terminology. In the first example above, we guessed that 53 to 73 out of 100 people like cats. As a percentage, this is 53% - 73%, or you could also write this as 63% ± 10%. Here, 63% is our _estimate_ and 10% is our _margin of error_.
 
@@ -25,7 +25,7 @@ When we ask 1,000 people, our margin of error is $$ \frac{98}{\sqrt{1000}} $$ = 
 How many people would you need for a 1% margin of error? [Working backwards](https://www.cymath.com/answer.php?q=solve%20N%20%3D%2098%2Fsqrt(M)%20for%20M), $$ N = (\frac{98}{ME})^2 $$, so a 1% error margin gives $$ N = (\frac{98}{1})^2 $$ = 9,604 people.
 
 
-### This Should Work Most Of The Time
+### This should work most of the time
 
 Let’s imagine you roam the country asking strangers on Tinder if they like cats (statistically, it’s an [excellent opening line](http://mashable.com/2016/08/19/best-opening-lines-dating-tinder/#AWeBRvfLrEqY)). Every day you ask 10 strangers, and can expect between 3 and 9 to say yes, but the exact number will change day to day. One day you might get 7, the next day 4, another you might find that all ten people say they like cats.
 
@@ -34,7 +34,7 @@ The formula above calculates a margin of error that's correct 19 times out of 20
 Perhaps a one in twenty chance of being wrong is too uncertain, but one in a hundred might be acceptable? This means using a _99% confidence level_, and the formula becomes $$ \frac{129}{\sqrt{N}} $$ instead. Using this new formula, you’ll find that if you want to conduct your Tinder poll at a 99% confidence level, you can now expect to find between 2 and 10 cat lovers each day.
 
 
-### When It Doesn’t Work So Well
+### When it doesn't work so well
 
 Some towns are dog towns, some towns are cat towns[^2]. Sometimes people will give the answer they think you want to hear, sometimes people later change their minds and decide [they prefer dinosaurs as pets](http://news.nationalgeographic.com/news/2013/06/130619-pets-poll-animals-united-states-nation-dogs-cats/). These are all examples of _sampling bias_, which we'll cover in a future article.
 
