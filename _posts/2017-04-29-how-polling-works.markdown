@@ -2,7 +2,7 @@
 layout: post
 title:  "How Polling Works (And Why It’s Difficult To Do Right)"
 date:   2017-04-29 19:00:00 +0100
-author: dan_howarth
+author: dan-howarth
 tags:   explainer statistics polls politics
 intro:  Elections mean many things – campaign rallies, manifestos, a debate about whether there will be a debate, and, of course, polls.
 excerpt: <em>"Not everything that counts can be counted, and not everything that can be counted counts."</em> <br><br> Elections mean many things – campaign rallies, manifestos, a debate about whether there will be a debate, and, of course, polls. <br><br> Polls generate daily headlines in an election – even, or especially, when they <a href="http://www.bbc.co.uk/news/blogs-the-papers-39682374">contradict each other</a>. Despite failing to accurately predict the result of either the 2015 general election or the Brexit referendum, a new poll can still be front page news. Public trust in opinion polls has plummeted, with one survey finding that <a href="https://www.nationaljournal.com/s/71424/poll-americans-dont-trust-polls">75% of adults don’t trust surveys.</a> <br><br> So, how does polling work? Why is it so difficult to get right in the UK? Our goal is to explain enough essentials to get you through most conversations on election polling, as well as enabling you to cast a critical eye on the headlines that polls generate between now and the election.
