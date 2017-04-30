@@ -2,21 +2,21 @@
 layout: default
 ---
 
-<!-- Look up the author details from the contributors file -->
-{% assign author = site.data.contributors[page.author] %}
-
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post-header">
     <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
     <p class="post-meta">
       <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %d, %Y" }}</time>
-      {% if author %}
-        • <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <span itemprop="name">
-              <a href="{{ author.website }}" target="_blank">{{ author.name }}</a>
-            </span>
+      {% assign authors = page.authors|split:',' %}
+      {% for author_slug in authors %}
+        {% if forloop.first %} • {% endif %}
+        {% assign author = site.data.contributors[author_slug] %}
+        <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <span itemprop="name">
+            <a href="{{ author.website }}" target="_blank">{{ author.name }}</a>{% unless forloop.last %},{% endunless %}
           </span>
-      {% endif %}
+        </span>
+      {% endfor %}
 
       {% assign post = page %}
       {% if post.tags.size > 0 %}
@@ -28,9 +28,7 @@ layout: default
         {% endcapture %}
         {% assign tags_content = tags_content_temp %}
       {% endfor %}
-
-      •  <span class="tags" itemprop="tags">{{ tags_content }}</span>
-
+        •  <span class="tags" itemprop="tags">{{ tags_content }}</span>
       {% endif %}
 
     </p>
