@@ -28,7 +28,6 @@
     @include media-query($on-mobile) {
       time {
         display: block;
-        font-size: $small-font-size;
       }
     }
 
