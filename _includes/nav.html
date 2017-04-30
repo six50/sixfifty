@@ -1,13 +1,13 @@
 <nav class="site-nav">
-  <a href="{{ '/' | prepend: site.baseurl | prepend: site.url }}">
+  <a href="{{ '/' | prepend: site.baseurl }}">
     <sixfifty-logo
       data='{% raw %}{{% endraw %}{{ site.data.polls.current | jsonify }}{% raw %}}{% endraw %}'
       colours='{% raw %}{{% endraw %}{{ site.data.colours.parties | jsonify }}{% raw %}}{% endraw %}'
     ></sixfifty-logo>
   </a>
   <ul>
-    <li><a href="{{ '/' | prepend: site.baseurl | prepend: site.url }}">SixFifty</a></li>
-    <li><a href="{{ '/about' | prepend: site.baseurl | prepend: site.url }}">About</a></li>
-    <li><a href="{{ '/posts' | prepend: site.baseurl | prepend: site.url }}">Posts</a></li>
+    <li><a href="{{ '/' | prepend: site.baseurl }}">SixFifty</a></li>
+    <li><a href="{{ '/about' | prepend: site.baseurl }}">About</a></li>
+    <li><a href="{{ '/posts' | prepend: site.baseurl }}">Posts</a></li>
   </ul>
 </nav>

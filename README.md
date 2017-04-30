@@ -19,7 +19,7 @@ Blog posts can be written in the `posts` directory and will be included in the g
 Local changes to the site HTML and/or blog posts can be previewed using Jekyll's built-in development server:
 
 ```shell
-bundle exec jekyll serve --baseurl=''
+bundle exec jekyll serve
 ```
 
 Changes to Javascript components used for visualisations can be previewed by running the Jekyll server as above, and by instructing Webpack to watch and update the Javascript bundle as you edit:
