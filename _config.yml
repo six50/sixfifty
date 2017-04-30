@@ -1,8 +1,8 @@
 # Site settings
 title: "SixFifty"
 description: ""
-baseurl: ""
-url: "http://sixfifty.org.uk"
+baseurl: "http://sixfifty.org.uk"
+url: ""
 author: "SixFifty Contributors"
 
 # Build settings
