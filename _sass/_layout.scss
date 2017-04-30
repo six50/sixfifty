@@ -1,17 +1,3 @@
-.site-header {
-  max-width: $max-width;
-  border-bottom: 1px solid $grey-color-light;
-  padding-bottom: 1rem;
-}
-
-.site-intro {
-  font-style: italic;
-
-  p {
-    font-size: $small-font-size;
-  }
-}
-
 .page-content {
   position: relative;
   padding: ($spacing-unit * 0.5) ($spacing-unit * 0.75);

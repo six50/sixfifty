@@ -10,8 +10,16 @@
   }
 }
 
+.hidden-mobile {
+  @include hidden-mobile;
+}
+
 @mixin hidden-desktop {
   @media screen and (min-width: ($on-mobile + 1px)) {
     display: none;
   }
+}
+
+.hidden-desktop {
+  @include hidden-desktop;
 }

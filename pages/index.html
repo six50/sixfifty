@@ -3,7 +3,7 @@ layout: default
 permalink: index.html
 ---
 <div class="home">
-  <section class="site-header">
+  <section class="site-header hidden-mobile">
     {% include intro.html %}
   </section>
   <section>
@@ -25,4 +25,8 @@ permalink: index.html
       {% endfor %}
     </ul>
   </section>
+  <div class="hidden-desktop">
+    <h4>About SixFifty</h4>
+    {% include intro.html %}
+  </div>
 </div>
