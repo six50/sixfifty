@@ -2,83 +2,83 @@
  * Site header
  */
 .site-header {
-    max-width: $max-width;
-    border-bottom: 1px solid $grey-color-light;
-    padding-bottom: 1rem;
+  max-width: $max-width;
+  border-bottom: 1px solid $grey-color-light;
+  padding-bottom: 1rem;
 
-    p {
-      font-size: $small-font-size;
-    }
+  p {
+    font-size: $small-font-size;
+  }
 }
 
 .site-nav {
-    border-bottom: 1px solid $grey-color-light;
+  border-bottom: 1px solid $grey-color-light;
+  height: $nav-height;
+
+  sixfifty-logo {
+    width: $nav-height;
     height: $nav-height;
+    float: left;
+  }
 
-    sixfifty-logo {
-        width: $nav-height;
-        height: $nav-height;
-        float: left;
-    }
+  ul {
+    display: inline-block;
+    list-style: none;
+    margin-left: 0;
 
-    ul {
+    li {
+      float: left;
+
+      height: $nav-height;
+      line-height: $nav-height;
+
+      border-left: 1px solid $grey-color-light;
+
+      &:last-child {
+        border-right: 1px solid $grey-color-light;
+      }
+
+      a {
         display: inline-block;
-        list-style: none;
-        margin-left: 0;
+        height: 100%;
+        width: 100%;
 
-        li {
-            float: left;
-
-            height: $nav-height;
-            line-height: $nav-height;
-
-            border-left: 1px solid $grey-color-light;
-
-            &:last-child {
-                border-right: 1px solid $grey-color-light;
-            }
-
-            a {
-                display: inline-block;
-                height: 100%;
-                width: 100%;
-
-                padding-left: $nav-item-spacing / 2;
-                padding-right: $nav-item-spacing / 2;
-            }
-        }
+        padding-left: $nav-item-spacing / 2;
+        padding-right: $nav-item-spacing / 2;
+      }
     }
+  }
 }
 
 /**
  * Intro
  */
 .site-intro {
-    font-style: italic;
+  font-style: italic;
 }
 
 /**
  * Page content
  */
 .page-content {
-    position: relative;
-    padding: ($spacing-unit * 0.5) ($spacing-unit * 0.75);
-    margin: 1rem;
-    box-sizing: border-box;
-    max-width: $max-width;
+  position: relative;
+  padding: ($spacing-unit * 0.5) ($spacing-unit * 0.75);
+  margin: 1rem;
+  box-sizing: border-box;
+  max-width: $max-width;
 }
 /**
  * Pages
  */
 .home {
-    section + section {
-        margin-top: $spacing-unit;
-        max-width: $max-width;
-    }
+  section + section {
+    margin-top: $spacing-unit;
+    max-width: $max-width;
+  }
 }
 
 .tag-title {
-    color: $link-color;
+  color: $link-color;
 }
 
 .pull-right {
@@ -98,15 +98,16 @@
 }
 
 .footer {
-    margin-top: $spacing-unit;
-    font-size: $small-font-size;
-    padding-top: 12px;
-    border-top: 1px solid $grey-color-light;
+  margin-top: $spacing-unit;
+  font-size: $small-font-size;
+  padding-top: 12px;
+  border-top: 1px solid $grey-color-light;
 
-    p {
-      color: $grey-color;
-      a, a:visited {
+  p {
+    color: $grey-color;
+
+    a, a:visited {
       color: $grey-color-dark;
-      }
     }
   }
+}
