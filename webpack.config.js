@@ -12,6 +12,7 @@ module.exports = {
     path: path.resolve(__dirname, './assets'),
     filename: '[name].js'
   },
+  devtool: 'source-map',
   plugins: [
     new webpack.optimize.CommonsChunkPlugin({
       name: 'common',
