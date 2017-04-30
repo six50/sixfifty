@@ -17,6 +17,7 @@ exclude:
   - webpack.config.js
   - package.json
   - README.md
+  - node_modules
 
 # Third-party services
 # just leave empty to disable it
