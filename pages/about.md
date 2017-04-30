@@ -21,11 +21,11 @@ We are not:
 We are[^2]:
 
 <ul class="randomise">
-    {% for contributor in site.data.contributors.contributors %}
+    {% for contributor in site.data.contributors %}
         <li>
-            {{ contributor.name }}
-            {% if contributor.twitter %} – <a href="https://twitter.com/{{ contributor.twitter }}">@{{ contributor.twitter }}</a>{% endif %}
-            {% if contributor.website %} – <a href="{{ contributor.website }}">{{ contributor.website }}</a>{% endif %}
+            {{ contributor[1].name }}
+            {% if contributor[1].twitter %} – <a href="https://twitter.com/{{ contributor[1].twitter }}">@{{ contributor[1].twitter }}</a>{% endif %}
+            {% if contributor[1].website %} – <a href="{{ contributor[1].website }}">{{ contributor[1].website }}</a>{% endif %}
         </li>
     {% endfor %}
 </ul>
