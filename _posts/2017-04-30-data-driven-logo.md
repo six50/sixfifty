@@ -3,7 +3,8 @@ layout: post
 title:  Creating our data-driven logo
 date:   2017-04-22 13:00:00 +0100
 tags:   tech
-intro:  How we designed our logo to promote our data-driven values
+authors: dan-palmer,john-sandall
+intro:   How we designed our logo to promote our data-driven values
 excerpt: We feel that data allows for better decision making, improves policies, and forces us to be more impartial. When thinking about our logo we wanted to make sure it reflected these same values.
 ---
 
@@ -119,6 +120,7 @@ While this is a nice feature on our site, it’s impractical to upload new logos
 
 Without knowing it, we’ve apparently stumbled across the hottest new thing in brand design: the [living logo][living-logo]. Whether it’s [Seagate forging their logo][seagate-logo] from a constantly moving stream of objects stored on Seagate drives, or Google’s new G Dots - “[a dynamic and perpetually moving state of the logo][g-dots]” - brands are looking at ways to move beyond a static logo. In our case, this logo will evolve through time along with the nation’s sentiment about who they’ll be voting for on June 8th. We couldn’t think of anything that’s more emblematic of SixFifty’s mission.
 
+You can see this work and more, and contribute to SixFifty on [GitHub][sixfifty-source].
 
 [sixfifty-source]: https://github.com/six50/sixfifty
 [react]: https://facebook.github.io/react/
