@@ -1,6 +1,3 @@
-/**
- * Site header
- */
 .site-header {
   max-width: $max-width;
   border-bottom: 1px solid $grey-color-light;
@@ -50,16 +47,10 @@
   }
 }
 
-/**
- * Intro
- */
 .site-intro {
   font-style: italic;
 }
 
-/**
- * Page content
- */
 .page-content {
   position: relative;
   padding: ($spacing-unit * 0.5) ($spacing-unit * 0.75);
@@ -67,9 +58,7 @@
   box-sizing: border-box;
   max-width: $max-width;
 }
-/**
- * Pages
- */
+
 .home {
   section + section {
     margin-top: $spacing-unit;
@@ -87,10 +76,6 @@
 .pull-left {
   float: left;
 }
-
-/**
- * Content
- */
 
 .twitter-tweet {
   margin-left: auto;
