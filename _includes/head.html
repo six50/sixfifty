@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="{{ "/assets/index.css" | prepend: site.baseurl }}?bust={{ site.time | date: '%s' }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+  {% include favicon.html %}
   {% include social_tags.html %}
   {% include third_party.html %}
 </head>
