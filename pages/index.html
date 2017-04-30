@@ -7,23 +7,7 @@ permalink: index.html
     {% include intro.html %}
   </section>
   <section>
-    <ul class="post-list">
-      {% for post in site.posts %}
-      <li>
-        <a href="{{ post.url | prepend: site.baseurl }}" class="post-title">
-          {{ post.title }}
-        </a>
-        &nbsp;&nbsp;
-        <time datetime="{{ post.date | date_to_xmlschema }}">
-          {{ post.date | date: "%b %d, %Y" }}
-        </time>
-        <p class="excerpt">{{ post.excerpt }}</p>
-        <a href="{{ post.url | prepend: site.baseurl }}" class="read-more">
-          Read more...
-        </a>
-      </li>
-      {% endfor %}
-    </ul>
+    {% include articles_list.html %}
   </section>
   <div class="hidden-desktop">
     <h4>About SixFifty</h4>
