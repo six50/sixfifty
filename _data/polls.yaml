@@ -1,16 +1,16 @@
 current:
   - name: con
-    percentage: 0.45
+    percentage: 0.462
   - name: lab
-    percentage: 0.26
+    percentage: 0.269
   - name: ld
-    percentage: 0.11
+    percentage: 0.106
   - name: ukip
-    percentage: 0.09
+    percentage: 0.074
   - name: oth
-    percentage: 0.06
+    percentage: 0.060
   - name: grn
-    percentage: 0.03
+    percentage: 0.029
 
 
 history:
