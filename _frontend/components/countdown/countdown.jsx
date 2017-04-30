@@ -108,7 +108,9 @@ export default class Countdown extends React.Component {
   render() {
     return (
       <time dateTime={this.state.endDate}>
-        {this.state.formattedTime}&nbsp;{this.props.message}
+        <a href={this.props.url} target='_blank'>
+          {this.state.formattedTime}&nbsp;{this.props.message}
+        </a>
       </time>
     );
   }
@@ -117,5 +119,6 @@ export default class Countdown extends React.Component {
 Countdown.propTypes = {
   endDate: PropTypes.string,
   verboseAfter: PropTypes.string,
-  message: PropTypes.string
+  message: PropTypes.string,
+  url: PropTypes.string
 };

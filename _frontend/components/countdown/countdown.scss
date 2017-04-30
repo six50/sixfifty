@@ -5,4 +5,9 @@ sixfifty-countdown {
   color: $highlight-color;
   border-radius: 3px;
   font-weight: 600;
+
+  a, a:hover {
+    text-decoration: none;
+    color: $highlight-color;
+  }
 }
