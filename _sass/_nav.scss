@@ -1,3 +1,5 @@
+@import 'utils';
+
 .site-nav {
   border-bottom: 1px solid $grey-color-light;
   height: $nav-height;
@@ -39,6 +41,26 @@
         padding-left: $nav-item-spacing / 2;
         padding-right: $nav-item-spacing / 2;
       }
+    }
+  }
+
+  sixfifty-countdown {
+    line-height: $nav-height;
+    margin-right: $spacing-unit / 4;
+
+    @include media-query($on-mobile) {
+      $countdown-height: $nav-height * 0.66;
+
+      float: none;
+      display: block;
+      width: 100%;
+      left: 0;
+      position: absolute;
+      height: $countdown-height;
+      line-height: $countdown-height;
+      border-radius: 0;
+      margin-top: $nav-height;
+      text-align: center;
     }
   }
 }
