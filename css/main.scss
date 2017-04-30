@@ -26,14 +26,7 @@ $grey-color-light: lighten($grey-color, 25%);
 $grey-color-dark:  darken($grey-color, 25%);
 
 // Width of the content area
-$on-palm:          600px;
-$on-:              800px;
-
-@mixin media-query($device) {
-  @media screen and (max-width: $device) {
-    @content;
-  }
-}
+$on-mobile:        600px;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import

@@ -1,3 +1,5 @@
+@import 'utils';
+
 .post-list {
   li {
     margin-bottom: $spacing-unit;
@@ -20,7 +22,7 @@
       font-size: $small-font-size;
       color: $grey-color;
     }
-    @include media-query($on-palm) {
+    @include media-query($on-mobile) {
       time {
         display: block;
         font-size: $small-font-size;

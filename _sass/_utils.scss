@@ -1,0 +1,17 @@
+@mixin media-query($device) {
+  @media screen and (max-width: $device) {
+    @content;
+  }
+}
+
+@mixin hidden-mobile {
+  @media screen and (max-width: $on-mobile) {
+    display: none;
+  }
+}
+
+@mixin hidden-desktop {
+  @media screen and (min-width: ($on-mobile + 1px)) {
+    display: none;
+  }
+}
