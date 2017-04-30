@@ -1,0 +1,10 @@
+$highlight-color: #FDA92E;
+
+sixfifty-countdown {
+  font-size: small;
+  padding: 5px 8px;
+  background-color: rgba($highlight-color, 0.2);
+  color: $highlight-color;
+  border-radius: 3px;
+  font-weight: 600;
+}
