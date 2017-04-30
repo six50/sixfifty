@@ -1,12 +1,2 @@
-sixfifty-countdown {
-  font-size: small;
-  padding: 5px 8px;
-  background-color: rgba(253, 169, 46, 0.2);
-  color: #FDA92E;
-  border-radius: 3px;
-  font-weight: 600; }
-  sixfifty-countdown a, sixfifty-countdown a:hover {
-    text-decoration: none;
-    color: #FDA92E; }
-
+sixfifty-countdown{font-size:small;padding:5px 8px;background-color:rgba(253,169,46,.2);color:#fda92e;border-radius:3px;font-weight:600}sixfifty-countdown a,sixfifty-countdown a:hover{text-decoration:none;color:#fda92e}
 /*# sourceMappingURL=index.css.map*/
