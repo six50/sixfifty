@@ -1,0 +1,41 @@
+.post-list {
+  li {
+    margin-bottom: $spacing-unit;
+    list-style-type: none;
+    margin-left: -2rem;
+
+    a,
+    a:hover {
+      color: $text-color;
+      font-size: larger;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .read-more {
+      font-size: small;
+    }
+
+    time {
+      font-size: $small-font-size;
+      color: $grey-color;
+    }
+    @include media-query($on-palm) {
+      time {
+        display: block;
+        font-size: $small-font-size;
+      }
+    }
+
+    .excerpt {
+      margin-top: $spacing-unit / 2;
+      font-size: $small-font-size;
+
+      a,
+      a:hover {
+        font-size: $small-font-size;
+      }
+    }
+
+  }
+}

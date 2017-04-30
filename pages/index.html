@@ -5,18 +5,22 @@ permalink: index.html
 <div class="home">
   <section class="site-header">
     {% include intro.html %}
-    <hr>
   </section>
   <section>
     <ul class="post-list">
       {% for post in site.posts %}
       <li>
-        <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        &nbsp;&nbsp; <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %d, %Y" }}</time>
-        <br><br>
-        <p>{{ post.excerpt }}</p>
-        <a href="{{ post.url | prepend: site.baseurl }}" class="read-more">Read more...</a>
-        <br><br>
+        <a href="{{ post.url | prepend: site.baseurl }}" class="post-title">
+          {{ post.title }}
+        </a>
+        &nbsp;&nbsp;
+        <time datetime="{{ post.date | date_to_xmlschema }}">
+          {{ post.date | date: "%b %d, %Y" }}
+        </time>
+        <p class="excerpt">{{ post.excerpt }}</p>
+        <a href="{{ post.url | prepend: site.baseurl }}" class="read-more">
+          Read more...
+        </a>
       </li>
       {% endfor %}
     </ul>
