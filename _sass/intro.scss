@@ -1,28 +1,22 @@
 @import 'utils';
 
-$logo-size: 4rem;
+$banner-size: 2rem;
 
 .site-intro {
   max-width: $max-width;
   border-bottom: 1px solid $grey-color-light;
   padding-bottom: 1rem;
 
-  .logo-banner {
+  .name-banner {
     @include hidden-mobile;
 
     border-bottom: 1px solid $grey-color-light;
     margin-bottom: $spacing-unit;
 
     h1 {
-      font-size: $logo-size;
-      line-height: $logo-size;
+      font-size: $banner-size;
       font-weight: 600;
-      margin-left: $logo-size + ($spacing-unit / 2);
-    }
-
-    sixfifty-logo {
-      width: $logo-size;
-      float: left;
+      margin-bottom: 0;
     }
   }
 
