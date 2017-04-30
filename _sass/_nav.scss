@@ -4,6 +4,10 @@
   border-bottom: 1px solid $grey-color-light;
   height: $nav-height;
 
+  a {
+    text-decoration: none;
+  }
+
   sixfifty-logo {
     width: $nav-height;
     height: $nav-height;
@@ -16,24 +20,18 @@
     }
   }
 
+  // Styles common to both main nav elements and dropdown elements
   ul {
-    display: inline-block;
     list-style: none;
     margin-left: 0;
+    background-color: $nav-background-color;
 
     li {
-      float: left;
-
       height: $nav-height;
       line-height: $nav-height;
 
-      border-left: 1px solid $grey-color-light;
-
-      &:last-child {
-        border-right: 1px solid $grey-color-light;
-      }
-
-      a {
+      & > a {
+        z-index: 10;
         display: inline-block;
         height: 100%;
         width: 100%;
@@ -42,6 +40,47 @@
         padding-right: $nav-item-spacing / 2;
       }
     }
+  }
+
+  // Styles specific to main nav elements
+  & > ul {
+    position: relative;
+    display: inline-block;
+
+    & > li {
+      float: left;
+      border-left: 1px solid $grey-color-light;
+
+      &:last-child {
+        border-right: 1px solid $grey-color-light;
+      }
+    }
+
+    .dropdown > a:after {
+      content: '▾';
+      margin-left: 0.5rem;
+    }
+  }
+
+  // Styles specific to dropdown nav elements
+  .dropdown > ul {
+    display: none;
+    position: absolute;
+    z-index: 9;
+    list-style: none;
+    border: 1px solid $grey-color-light;
+
+    & > li {
+      border-bottom: 1px solid $grey-color-light;
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+
+  .dropdown:hover > ul, .dropdown > ul:hover {
+    display: block;
   }
 
   sixfifty-countdown {

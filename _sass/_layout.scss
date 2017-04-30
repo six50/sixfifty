@@ -1,9 +1,15 @@
+@import 'utils';
+
 .page-content {
   position: relative;
   padding: ($spacing-unit * 0.5) ($spacing-unit * 0.75);
   margin: 1rem;
   box-sizing: border-box;
   max-width: $max-width;
+
+  @include media-query($on-mobile) {
+    margin-top: 3rem;
+  }
 }
 
 .home {

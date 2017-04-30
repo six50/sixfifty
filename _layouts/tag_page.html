@@ -2,20 +2,22 @@
 layout: page
 ---
 
-{% for post in site.posts %}
-  {% if post.tags contains page.tag %}
-    <li>
-      <a href="{{ post.url | prepend: site.baseurl }}" class="post-title">
-        {{ post.title }}
-      </a>
-      &nbsp;&nbsp;
-      <time datetime="{{ post.date | date_to_xmlschema }}">
-        {{ post.date | date: "%b %d, %Y" }}
-      </time>
-      <p class="excerpt">{{ post.excerpt }}</p>
-      <a href="{{ post.url | prepend: site.baseurl }}" class="read-more">
-        Read more...
-      </a>
-    </li>
-  {% endif %}
-{% endfor %}
+<ul class="post-list">
+  {% for post in site.posts %}
+    {% if post.tags contains page.tag %}
+      <li>
+        <a href="{{ post.url | prepend: site.baseurl }}" class="post-title">
+          {{ post.title }}
+        </a>
+        &nbsp;&nbsp;
+        <time datetime="{{ post.date | date_to_xmlschema }}">
+          {{ post.date | date: "%b %d, %Y" }}
+        </time>
+        <p class="excerpt">{{ post.excerpt }}</p>
+        <a href="{{ post.url | prepend: site.baseurl }}" class="read-more">
+          Read more...
+        </a>
+      </li>
+    {% endif %}
+  {% endfor %}
+</ul>
