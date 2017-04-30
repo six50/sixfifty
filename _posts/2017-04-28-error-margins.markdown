@@ -2,8 +2,9 @@
 layout: post
 title:  "Error Margins Explained In Three (±1) Minutes"
 date:   2017-04-28 18:00:00 +0100
-tags: explainer statistics polls cats
-intro: How is it possible that an opinion poll claims to know what the whole country thinks just by asking a few hundred people?
+author: john_sandall
+tags:   explainer statistics polls cats
+intro:  How is it possible that an opinion poll claims to know what the whole country thinks just by asking a few hundred people?
 excerpt: <em>How is it possible that an opinion poll claims to know what the whole country thinks just by asking a few hundred people?</em> <br><br> Ask a hundred people if they like cats and around 63% will say yes, give or take a few. If you want to be more accurate, you can even say that the number will be between 53 and 73. What if you asked a thousand people? Perhaps you’ll find 530 to 730 <a href="https://www.google.co.uk/search?q=ailurophile&tbm=isch">ailurophiles</a> this time? <br><br> &quot;<em>Wisdom is the daughter of experience</em>&quot;, according to Leonardo da Vinci, and experiencing more responses to our cat question means we can actually make a wiser guess - with a <em>sample size</em> of one thousand people you should find that 600 to 660 of them like cats.
 ---
 

@@ -12,7 +12,7 @@ permalink: index.html
       {% for post in site.posts %}
       <li>
         <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %d, %Y" }}</time>
+        &nbsp;&nbsp; <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %d, %Y" }}</time>
         <br><br>
         <p>{{ post.excerpt }}</p>
         <a href="{{ post.url | prepend: site.baseurl }}" class="read-more">Read more...</a>
