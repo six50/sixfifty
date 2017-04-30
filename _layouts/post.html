@@ -13,7 +13,11 @@ layout: default
         {% assign author = site.data.contributors[author_slug] %}
         <span itemprop="author" itemscope itemtype="http://schema.org/Person">
           <span itemprop="name">
-            <a href="{{ author.website }}" target="_blank">{{ author.name }}</a>{% unless forloop.last %},{% endunless %}
+            {% if author.website %}
+              <a href="{{ author.website }}" target="_blank">{{ author.name }}</a>{% unless forloop.last %},{% endunless %}
+            {% else %}
+              {{ author.name }}{% unless forloop.last %},{% endunless %}
+            {% endif %}
           </span>
         </span>
       {% endfor %}
