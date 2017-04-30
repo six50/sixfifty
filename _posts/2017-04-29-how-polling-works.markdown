@@ -38,7 +38,7 @@ The short answer is, yes. Even [Nate Silver finds it a challenge](https://fiveth
 
 3. Pollsters also have to contend with other issues, such as tactical voting (meaning that a voter may not vote with their preferred party) and factors such as the [Shy Tory Effect](https://en.wikipedia.org/wiki/Shy_Tory_Factor) (meaning that those polled might not reveal their true intentions). 
  
-By contract, US Presidential elections are much easier to predict (though [not without their difficulties](http://fivethirtyeight.com/features/election-update-why-our-model-is-more-bullish-than-others-on-trump/)). Polls are taken in all of the fifty states, and each contest is normally between two candidates only. Contrary to popular belief, Trump’s victory was actually within the predicted margin of error of the polls. The surprise was more a [failure of journalism](http://www.realclearpolitics.com/articles/2016/11/12/it_wasnt_the_polls_that_missed_it_was_the_pundits_132333.html) than of polling.
+By contrast, US Presidential elections are much easier to predict (though [not without their difficulties](http://fivethirtyeight.com/features/election-update-why-our-model-is-more-bullish-than-others-on-trump/)). Polls are taken in all of the fifty states, and each contest is normally between two candidates only. Contrary to popular belief, Trump’s victory was actually within the predicted margin of error of the polls. The surprise was more a [failure of journalism](http://www.realclearpolitics.com/articles/2016/11/12/it_wasnt_the_polls_that_missed_it_was_the_pundits_132333.html) than of polling.
  
 
 ### What else do polling companies need to consider?
