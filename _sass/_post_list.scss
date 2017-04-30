@@ -6,15 +6,18 @@
     list-style-type: none;
     margin-left: -2rem;
 
+    .post-title {
+      font-size: larger;
+    }
+
     a,
     a:hover {
       color: $text-color;
-      font-size: larger;
       font-weight: bold;
       text-decoration: none;
     }
 
-    .read-more {
+    .read-more, .read-more:hover {
       font-size: small;
     }
 
@@ -32,11 +35,6 @@
     .excerpt {
       margin-top: $spacing-unit / 2;
       font-size: $small-font-size;
-
-      a,
-      a:hover {
-        font-size: $small-font-size;
-      }
     }
 
   }
