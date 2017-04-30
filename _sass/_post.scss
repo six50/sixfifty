@@ -14,8 +14,8 @@
   .post-meta {
     font-size: $small-font-size;
     color: $grey-color;
-    a, a:visited {
-    color: $grey-color-dark;
+    a, a:visited, .no-link {
+      color: $grey-color-dark;
     }
   }
 

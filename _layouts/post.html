@@ -16,7 +16,7 @@ layout: default
             {% if author.website %}
               <a href="{{ author.website }}" target="_blank">{{ author.name }}</a>{% unless forloop.last %},{% endunless %}
             {% else %}
-              {{ author.name }}{% unless forloop.last %},{% endunless %}
+              <span class="no-link">{{ author.name }}</span>{% unless forloop.last %},{% endunless %}
             {% endif %}
           </span>
         </span>
