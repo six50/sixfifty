@@ -14,7 +14,7 @@ permalink: forecast
   <section>
     <sixfifty-model
       predictions='{% raw %}{{% endraw %}{{ site.data.model_prediction | jsonify }}{% raw %}}{% endraw %}'
-      colours='{% raw %}{{% endraw %}{{ site.data.colours.parties | jsonify }}{% raw %}}{% endraw %}'
+      colours='{% raw %}{{% endraw %}{{ site.data.constants.colours | jsonify }}{% raw %}}{% endraw %}'
     ></sixfifty-model>
   </section>
   <section>

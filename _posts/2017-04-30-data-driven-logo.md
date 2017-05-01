@@ -22,7 +22,7 @@ We’re not designers, so when it comes to logo design we have no idea what we�
     <!-- Equal distribution -->
     <sixfifty-logo
         data='{[{"name":"con","percentage":0.16666666667},{"name":"lab","percentage":0.16666666667},{"name":"ld","percentage":0.16666666667},{"name":"ukip","percentage":0.16666666667},{"name":"oth","percentage":0.16666666667},{"name":"grn","percentage":0.16666666667}]}'
-        colours='{% raw %}{{% endraw %}{{ site.data.colours.parties | jsonify }}{% raw %}}{% endraw %}'
+        colours='{% raw %}{{% endraw %}{{ site.data.constants.colours | jsonify }}{% raw %}}{% endraw %}'
     ></sixfifty-logo>
 </p>
 
@@ -34,7 +34,7 @@ We mocked up what it would look like for the current polls, and this was the res
     <!-- Polls 2017/04/20 -->
     <sixfifty-logo
         data='{[{"name":"con","percentage":0.45},{"name":"lab","percentage":0.26},{"name":"ld","percentage":0.11},{"name":"ukip","percentage":0.09},{"name":"oth","percentage":0.06},{"name":"grn","percentage":0.03}]}'
-        colours='{% raw %}{{% endraw %}{{ site.data.colours.parties | jsonify }}{% raw %}}{% endraw %}'
+        colours='{% raw %}{{% endraw %}{{ site.data.constants.colours | jsonify }}{% raw %}}{% endraw %}'
     ></sixfifty-logo>
 </p>
 
@@ -114,7 +114,7 @@ While this is a nice feature on our site, it’s impractical to upload new logos
     <!-- 2015 results -->
     <sixfifty-logo
         data='{% raw %}{{% endraw %}{{ site.data.votes_2015.results | jsonify }}{% raw %}}{% endraw %}'
-        colours='{% raw %}{{% endraw %}{{ site.data.colours.parties | jsonify }}{% raw %}}{% endraw %}'
+        colours='{% raw %}{{% endraw %}{{ site.data.constants.colours | jsonify }}{% raw %}}{% endraw %}'
     ></sixfifty-logo>
 </p>
 
