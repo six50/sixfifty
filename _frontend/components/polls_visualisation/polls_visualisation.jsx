@@ -43,7 +43,7 @@ export default class PollsVisualisation extends React.Component {
     return (
       <VictoryChart
         theme={SixFiftyTheme}
-        domainPadding={20}
+        domainPadding={{x: 1, y: 10}}
       >
         <VictoryAxis
           tickCount={dates.length}
