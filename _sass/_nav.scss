@@ -64,6 +64,8 @@
 
   // Styles specific to dropdown nav elements
   .dropdown > ul {
+    top: $nav-height;
+    margin-left: -1px;
     display: none;
     position: absolute;
     z-index: 9;
@@ -81,6 +83,30 @@
 
   .dropdown:hover > ul, .dropdown > ul:hover {
     display: block;
+  }
+
+  // Styling for the parties dropdown
+  .parties {
+    display: inline;
+
+    .party {
+      padding-left: $nav-item-spacing / 2;
+      padding-right: $nav-item-spacing / 2;
+
+      .colour {
+        display: inline-block;
+        height: $nav-height / 3;
+        width: $nav-height / 3;
+        border-radius: 50%;
+        margin-right: $nav-item-spacing / 2;
+        margin-left: -2px;
+      }
+
+      .percent {
+        margin-left: $nav-item-spacing / 2;
+        font-weight: 600;
+      }
+    }
   }
 
   sixfifty-countdown {
