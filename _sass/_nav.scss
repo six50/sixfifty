@@ -4,6 +4,12 @@
   border-bottom: 1px solid $grey-color-light;
   height: $nav-height;
 
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background-color: $nav-background-color;
+  z-index: 100;
+
   a {
     text-decoration: none;
   }
@@ -126,7 +132,8 @@
       border-radius: 0;
       margin-top: $nav-height;
       text-align: center;
-      border-bottom: 1px solid rgba($highlight-color, 0.3);
+      border-top: 1px solid lighten($highlight-color, 20%);
+      border-bottom: 1px solid lighten($highlight-color, 20%);
     }
   }
 }

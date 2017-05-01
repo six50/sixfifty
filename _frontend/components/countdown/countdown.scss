@@ -1,7 +1,7 @@
 sixfifty-countdown {
   font-size: small;
   padding: 5px 8px;
-  background-color: rgba($highlight-color, 0.2);
+  background-color: lighten($highlight-color, 30%);
   color: $highlight-color;
   border-radius: 3px;
   font-weight: 600;
