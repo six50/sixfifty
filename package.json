@@ -19,9 +19,11 @@
   },
   "dependencies": {
     "document-register-element": "^1.4.1",
+    "lodash.assign": "^4.2.0",
     "prop-types": "^15.5.8",
     "react": "^15.5.4",
-    "reactive-elements": "^0.6.7"
+    "reactive-elements": "^0.6.7",
+    "victory": "^0.18.4"
   },
   "devDependencies": {
     "babel-loader": "^6.4.1",
@@ -32,6 +34,7 @@
     "extract-text-webpack-plugin": "^2.1.0",
     "node-sass": "^4.5.2",
     "sass-loader": "^6.0.3",
+    "sass-variable-loader": "^0.1.2",
     "style-loader": "^0.16.1",
     "webpack": "^2.4.1"
   }
