@@ -9,7 +9,7 @@
   max-width: $max-width;
 
   @include media-query($on-mobile) {
-    margin-top: 3rem;
+    margin-top: 3rem + $nav-height;
   }
 }
 
