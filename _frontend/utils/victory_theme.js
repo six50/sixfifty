@@ -16,7 +16,6 @@ const charcoal = "#252525";
 
 // Typography
 const sansSerif = variables.baseFontFamily;
-console.log(variables);
 const letterSpacing = "normal";
 const fontSize = 14;
 
