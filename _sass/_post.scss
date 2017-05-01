@@ -55,6 +55,15 @@
     }
   }
 
+  img + em,
+  em.caption {
+    font-size: smaller;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
   .footnotes {
     font-size: small;
   }

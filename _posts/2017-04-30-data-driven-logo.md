@@ -13,6 +13,7 @@ We feel that data allows for better decision making, improves policies, and forc
 As with many UK electoral trackers, we thought a good starting point was to include the colours of the main parties. To many who are interested in politics these are instantly recognisable and help to convey what we’re trying to achieve.
 
 ![Election Tracker Logos]({% link images/post_images/logos.png %})
+*BBC and FT election trackers, and the Britain Elects poll aggregator logos*
 
 ### Ideas
 
@@ -21,9 +22,10 @@ We’re not designers, so when it comes to logo design we have no idea what we�
 <p class="text-center">
     <!-- Equal distribution -->
     <sixfifty-logo
-        data='{[{"name":"con","percentage":0.16666666667},{"name":"lab","percentage":0.16666666667},{"name":"ld","percentage":0.16666666667},{"name":"ukip","percentage":0.16666666667},{"name":"oth","percentage":0.16666666667},{"name":"grn","percentage":0.16666666667}]}'
+        data='{[{"name":"con","percentage":0.2},{"name":"lab","percentage":0.2},{"name":"ld","percentage":0.2},{"name":"ukip","percentage":0.2},{"name":"grn","percentage":0.2}]}'
         colours='{% raw %}{{% endraw %}{{ site.data.constants.colours | jsonify }}{% raw %}}{% endraw %}'
     ></sixfifty-logo>
+    <em class="caption">First draft of SixFifty logo with some party colours</em>
 </p>
 
 Then, being the sort of data-driven enthusiasts who model elections in their spare time,  we wondered – what if the logo changed based on the current polling data?
@@ -36,6 +38,7 @@ We mocked up what it would look like for the current polls, and this was the res
         data='{[{"name":"con","percentage":0.45},{"name":"lab","percentage":0.26},{"name":"ld","percentage":0.11},{"name":"ukip","percentage":0.09},{"name":"oth","percentage":0.06},{"name":"grn","percentage":0.03}]}'
         colours='{% raw %}{{% endraw %}{{ site.data.constants.colours | jsonify }}{% raw %}}{% endraw %}'
     ></sixfifty-logo>
+    <em class="caption">Logo with polls data from April 20th</em>
 </p>
 
 With the colours, it fits well with the other election trackers, and with the addition of the data and the fact that the logo will change over time, we feel this represents _us_.
@@ -116,6 +119,7 @@ While this is a nice feature on our site, it’s impractical to upload new logos
         data='{% raw %}{{% endraw %}{{ site.data.votes_2015.results | jsonify }}{% raw %}}{% endraw %}'
         colours='{% raw %}{{% endraw %}{{ site.data.constants.colours | jsonify }}{% raw %}}{% endraw %}'
     ></sixfifty-logo>
+    <em class="caption">Logo with 2015 election results data</em>
 </p>
 
 Without knowing it, we’ve apparently stumbled across the hottest new thing in brand design: the [living logo][living-logo]. Whether it’s [Seagate forging their logo][seagate-logo] from a constantly moving stream of objects stored on Seagate drives, or Google’s new G Dots - “[a dynamic and perpetually moving state of the logo][g-dots]” - brands are looking at ways to move beyond a static logo. In our case, this logo will evolve through time along with the nation’s sentiment about who they’ll be voting for on June 8th. We couldn’t think of anything that’s more emblematic of SixFifty’s mission.
