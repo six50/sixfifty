@@ -18,6 +18,7 @@
     "dev": "webpack --watch"
   },
   "dependencies": {
+    "d3": "^4.8.0",
     "dateformat": "^2.0.0",
     "document-register-element": "^1.4.1",
     "lodash.assign": "^4.2.0",
@@ -25,11 +26,11 @@
     "lodash.sortby": "^4.7.0",
     "prop-types": "^15.5.8",
     "react": "^15.5.4",
-    "reactive-elements": "^0.6.7",
-    "victory": "^0.18.4"
+    "reactive-elements": "^0.6.7"
   },
   "devDependencies": {
     "babel-loader": "^6.4.1",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
     "babel-preset-env": "^1.4.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
