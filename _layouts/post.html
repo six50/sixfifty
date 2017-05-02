@@ -1,16 +1,26 @@
 ---
 layout: default
 ---
-<section class="site-header">
-  {% include nav.html %}
-</section>
 
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post-header">
     <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
     <p class="post-meta">
       <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %d, %Y" }}</time>
-      {% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}
+      {% assign authors = page.authors|split:',' %}
+      {% for author_slug in authors %}
+        {% if forloop.first %} • {% endif %}
+        {% assign author = site.data.contributors[author_slug] %}
+        <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <span itemprop="name">
+            {% if author.website %}
+              <a href="{{ author.website }}" target="_blank">{{ author.name }}</a>{% unless forloop.last %},{% endunless %}
+            {% else %}
+              <span class="no-link">{{ author.name }}</span>{% unless forloop.last %},{% endunless %}
+            {% endif %}
+          </span>
+        </span>
+      {% endfor %}
 
       {% assign post = page %}
       {% if post.tags.size > 0 %}
@@ -18,13 +28,11 @@ layout: default
       {% assign tags_content = "" %}
       {% for post_tag in post.tags %}
         {% capture tags_content_temp %}
-          {{ tags_content }}<a href="{{ site.url }}{{ site.baseurl }}/tagged#{{ post_tag | slugify }}">#{{ post_tag }}</a>
+          {{ tags_content }}<a href="{{ site.url }}{{ site.baseurl }}/tags#{{ post_tag | slugify }}">#{{ post_tag }}</a>
         {% endcapture %}
         {% assign tags_content = tags_content_temp %}
       {% endfor %}
-
-      •  <span class="tags" itemprop="tags">{{ tags_content }}</span>
-
+        •  <span class="tags" itemprop="tags">{{ tags_content }}</span>
       {% endif %}
 
     </p>

@@ -3,40 +3,16 @@
 ---
 @charset "utf-8";
 
-// Our variables
-$base-font-family: 'Open Sans', sans-serif;
-$code-font-family: Inconsolata, Monaco, Consolas, monospace;
-$base-font-size:   16px;
-$base-font-weight: 300;
-$small-font-size:  0.875rem;
-$base-line-height: 1.5;
+@import 'variables';
 
-$spacing-unit:     2rem;
-$max-width:        48rem;
-
-$text-color:       #333;
-$background-color: #fff;
-$link-color:       #0645ad;
-
-$grey-color:       #aaa;
-$grey-color-light: lighten($grey-color, 25%);
-$grey-color-dark:  darken($grey-color, 25%);
-
-// Width of the content area
-$on-palm:          600px;
-$on-:              800px;
-
-@mixin media-query($device) {
-  @media screen and (max-width: $device) {
-    @content;
-  }
-}
-
-// Import partials from `sass_dir` (defaults to `_sass`)
 @import
-  url(https://fonts.googleapis.com/css?family=Open+Sans),
+  url(https://fonts.googleapis.com/css?family=Open+Sans:400,600),
   "base",
   "layout",
   "syntax-highlighting",
-  "logo"
+  "logo",
+  "post",
+  "post_list",
+  "nav",
+  "intro"
 ;

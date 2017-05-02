@@ -1,58 +1,87 @@
 # Alphabetical
-contributors:
-  - name: Sam Buddington
-    twitter: https://twitter.com/sambuddington
-  - name: Mark Medum Bundgaard
-    twitter: mmedum
-  - name: Rich Eden
-  - name: Tom Grainger
-    twitter: graingert
-    website: https://github.com/graingert
-  - name: Rae Hodge
-    twitter: RaeHodge
-  - name: Cormac Hollingsworth
-    twitter: CormacHolly
-  - name: Dan Howarth
-    website: https://www.linkedin.com/in/drhowarth
-  - name: Chris Howlin
-    twitter: cristohowlo
-  - name: Sophie Johnson
-    twitter: thesophie
-    website: http://hellocopywriting.co.uk/
-  - name: Matt Long
-    twitter: burythehammer
-  - name: Alistair Lynn
-    twitter: arplynn
-    website: http://alynn.co.uk/
-  - name: John Henry Mostyn
-    twitter: jhmostyn
-  - name: Glen Moutrie
-    twitter: gmoutrie
-    website: http://glenmoutrie.co.uk/
-  - name: Dan Palmer
-    twitter: danpalmer
-    website: https://danpalmer.me
-  - name: Tom Paskhalis
-    twitter: tpaskhalis
-    website: http://tom.paskhal.is/
-  - name: Andy Poulton
-    website: https://github.com/andrewPoulton
-  - name: Emma Salisbury
-  - name: John Sandall
-    twitter: john_sandall
-    website: http://www.artofinference.com/
-  - name: Marie Segger
-    twitter: MarieSegger
-  - name: Julius Šėporaitis
-    twitter: seporaitis
-    website: https://github.com/seporaitis
-  - name: Alex Shires
-    twitter: dralexshires
-  - name: Cale Tilford
-  - name: Paul Thomas
-    website: https://twitter.com/MaxThomais
-  - name: Tom Turner
-  - name: Tom Viner
-    twitter: tomviner
-    website: https://github.com/tomviner
-  - name: Andrew Weeks
+sam-buddington:
+  name: Sam Buddington
+  twitter: https://twitter.com/sambuddington
+mark-medum-bundgaard:
+  name: Mark Medum Bundgaard
+  twitter: mmedum
+rich-eden:
+  name: Rich Eden
+tom-grainger:
+  name: Tom Grainger
+  twitter: graingert
+  website: https://github.com/graingert
+rae-hodge:
+  name: Rae Hodge
+  twitter: RaeHodge
+cormac-hollingsworth:
+  name: Cormac Hollingsworth
+  twitter: CormacHolly
+dan-howarth:
+  name: Dan Howarth
+  website: https://www.linkedin.com/in/drhowarth
+chris-howlin:
+  name: Chris Howlin
+  twitter: cristohowlo
+sophie-johnson:
+  name: Sophie Johnson
+  twitter: thesophie
+  website: http://hellocopywriting.co.uk/
+matt-long:
+  name: Matt Long
+  twitter: burythehammer
+alistair-lynn:
+  name: Alistair Lynn
+  twitter: arplynn
+  website: http://alynn.co.uk/
+john-henry-mostyn:
+  name: John Henry Mostyn
+  twitter: jhmostyn
+glen-moutrie:
+  name: Glen Moutrie
+  twitter: gmoutrie
+  website: http://glenmoutrie.co.uk/
+dan-palmer:
+  name: Dan Palmer
+  twitter: danpalmer
+  website: https://danpalmer.me
+tom-paskhalis:
+  name: Tom Paskhalis
+  twitter: tpaskhalis
+  website: http://tom.paskhal.is/
+andy-poulton:
+  name: Andy Poulton
+  website: https://github.com/andrewPoulton
+emma-salisbury:
+  name: Emma Salisbury
+john-sandall:
+  name: John Sandall
+  twitter: john_sandall
+  website: http://www.artofinference.com/
+marie-segger:
+  name: Marie Segger
+  twitter: MarieSegger
+julius-seporaitis:
+  name: Julius Šėporaitis
+  twitter: seporaitis
+  website: https://github.com/seporaitis
+alex-shires:
+  name: Alex Shires
+  twitter: dralexshires
+shan-sun:
+  name: Shan Sun
+  twitter: shanxsun
+  website: https://www.linkedin.com/in/xiaoshan-sun-22991b32
+cale-tilford:
+  name: Cale Tilford
+paul-thomas:
+  name: Paul Thomas
+  website: https://twitter.com/MaxThomais
+tom-turner:
+  name: Tom Turner
+tom-viner:
+  name: Tom Viner
+  twitter: tomviner
+  website: https://github.com/tomviner
+andrew-weeks:
+  name: Andrew Weeks

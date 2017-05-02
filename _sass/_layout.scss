@@ -1,119 +1,43 @@
-/**
- * Site header
- */
-.site-header {
-    margin-top: -2rem;
-    max-width: $max-width;
-    p {
-      font-size: $small-font-size;
-    }
-}
+@import 'utils';
 
-.site-nav {
-    padding-bottom: 10px;
-    border-bottom: 1px solid $grey-color-light;
-}
-
-/**
- * Page content
- */
 .page-content {
-    position: relative;
-    padding: $spacing-unit ($spacing-unit * 0.75);
-    margin: 1rem;
-    box-sizing: border-box;
-    max-width: $max-width;
+  position: relative;
+  padding: ($spacing-unit * 0.5) ($spacing-unit * 0.75);
+  margin: 1rem;
+  margin-top: $nav-height;
+  box-sizing: border-box;
+  max-width: $max-width;
+
+  @include media-query($on-mobile) {
+    margin-top: 3rem + $nav-height;
+  }
 }
-/**
- * Pages
- */
+
 .home {
-    section + section {
-        margin-top: $spacing-unit;
-        max-width: $max-width;
-    }
-}
-
-.post-list > li {
-    margin-bottom: $spacing-unit / 4;
-    list-style-type: none;
-    margin-left: -2rem;
-
-    a,
-    a:hover {
-        color: $text-color;
-        font-weight: bold;
-        text-decoration: none;
-    }
-
-    time {
-        font-size: $small-font-size;
-        color: $grey-color;
-    }
-    @include media-query($on-palm) {
-        time {
-            display: block;
-            font-size: $small-font-size;
-        }
-    }
+  section + section {
+    margin-top: $spacing-unit;
+    max-width: $max-width;
+  }
 }
 
 .tag-title {
-    color: $link-color;
+  color: $link-color;
 }
 
-/**
- * Posts
- */
-.post-header {
-    margin-bottom: $spacing-unit;
+.pull-right {
+  float: right;
+}
+.pull-left {
+  float: left;
 }
 
-.post-title {
-    font-size: 2rem;
-    letter-spacing: -1px;
-    line-height: 1.2;
-    margin-bottom: 0.5rem;
-    font-weight: bold;
+.text-center {
+  text-align: center;
 }
 
-.post-meta {
-    font-size: $small-font-size;
-    color: $grey-color;
-    a, a:visited {
-      color: $grey-color-dark;
-    }
-}
-
-.post-content {
-    margin-bottom: $spacing-unit;
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        margin-top: 2rem;
-    }
-
-    h1,
-    h2 {
-        font-size: 2rem;
-    }
-
-    h3 {
-        font-size: 1.5rem;
-    }
-
-    h4 {
-        font-size: 1.25rem;
-    }
-
-    h5,
-    h6 {
-        font-size: 1rem;
-    }
+.twitter-tweet {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .footer {
@@ -124,24 +48,9 @@
 
   p {
     color: $grey-color;
+
     a, a:visited {
       color: $grey-color-dark;
     }
   }
-}
-
-.pull-right {
-  float: right;
-}
-.pull-left {
-  float: left;
-}
-
-/**
- * Content
- */
-
-.twitter-tweet {
-  margin-left: auto;
-  margin-right: auto;
 }

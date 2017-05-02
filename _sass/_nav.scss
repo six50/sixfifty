@@ -1,0 +1,139 @@
+@import 'utils';
+
+.site-nav {
+  border-bottom: 1px solid $grey-color-light;
+  height: $nav-height;
+
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background-color: $nav-background-color;
+  z-index: 100;
+
+  a {
+    text-decoration: none;
+  }
+
+  sixfifty-logo {
+    width: $nav-height;
+    height: $nav-height;
+    float: left;
+
+    .logo {
+      max-height: 60%;
+      max-width: 60%;
+      margin: 20% auto;
+    }
+  }
+
+  // Styles common to both main nav elements and dropdown elements
+  ul {
+    list-style: none;
+    margin-left: 0;
+    background-color: $nav-background-color;
+
+    li {
+      height: $nav-height;
+      line-height: $nav-height;
+
+      & > a {
+        z-index: 10;
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+
+        padding-left: $nav-item-spacing / 2;
+        padding-right: $nav-item-spacing / 2;
+      }
+    }
+  }
+
+  // Styles specific to main nav elements
+  & > ul {
+    position: relative;
+    display: inline-block;
+
+    & > li {
+      float: left;
+      border-left: 1px solid $grey-color-light;
+
+      &:last-child {
+        border-right: 1px solid $grey-color-light;
+      }
+    }
+
+    .dropdown > a:after {
+      content: '▾';
+      margin-left: 0.5rem;
+    }
+  }
+
+  // Styles specific to dropdown nav elements
+  .dropdown > ul {
+    top: $nav-height;
+    margin-left: -1px;
+    display: none;
+    position: absolute;
+    z-index: 9;
+    list-style: none;
+    border: 1px solid $grey-color-light;
+
+    & > li {
+      border-bottom: 1px solid $grey-color-light;
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+
+  .dropdown:hover > ul, .dropdown > ul:hover {
+    display: block;
+  }
+
+  // Styling for the parties dropdown
+  .parties {
+    display: inline;
+
+    .party {
+      padding-left: $nav-item-spacing / 2;
+      padding-right: $nav-item-spacing / 2;
+
+      .colour {
+        display: inline-block;
+        height: $nav-height / 3;
+        width: $nav-height / 3;
+        border-radius: 50%;
+        margin-right: $nav-item-spacing / 2;
+        margin-left: -2px;
+      }
+
+      .percent {
+        margin-left: $nav-item-spacing / 2;
+        font-weight: 600;
+      }
+    }
+  }
+
+  sixfifty-countdown {
+    line-height: $nav-height;
+    margin-right: $spacing-unit / 4;
+
+    @include media-query($on-mobile) {
+      $countdown-height: $nav-height * 0.66;
+
+      float: none;
+      display: block;
+      width: 100%;
+      left: 0;
+      position: absolute;
+      height: $countdown-height;
+      line-height: $countdown-height;
+      border-radius: 0;
+      margin-top: $nav-height;
+      text-align: center;
+      border-top: 1px solid lighten($highlight-color, 20%);
+      border-bottom: 1px solid lighten($highlight-color, 20%);
+    }
+  }
+}

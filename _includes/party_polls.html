@@ -1,0 +1,16 @@
+<ul class="parties">
+  {% for party in site.data.polls.current %}
+    <li class="party">
+      <span
+        class="colour"
+        style="background-color: {% for colour in site.data.constants.colours %}{% if colour[0] == party.name %}{{ colour[1] }}{% endif %}{% endfor %};"
+      ></span>
+      <span class="name">
+        {% for name in site.data.constants.names %}{% if name[0] == party.name %}{{ name[1] }}{% endif %}{% endfor %}
+      </span>
+      <span class="percent pull-right">
+        {{ party.percentage | times: 100 | round: 1 }}%
+      </span>
+    </li>
+  {% endfor %}
+</ul>

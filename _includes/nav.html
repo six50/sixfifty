@@ -1,9 +1,32 @@
-<p class="site-nav">
-  <sixfifty-logo
-    data='{% raw %}{{% endraw %}{{ site.data.polls.current | jsonify }}{% raw %}}{% endraw %}'
-    colours='{% raw %}{{% endraw %}{{ site.data.colours.parties | jsonify }}{% raw %}}{% endraw %}'
-  ></sixfifty-logo>
-    <a href="{{ '/' | prepend: site.baseurl | prepend: site.url }}">SixFifty</a>
-  / <a href="{{ '/about' | prepend: site.baseurl | prepend: site.url }}">About</a>
-  / <a href="{{ '/posts' | prepend: site.baseurl | prepend: site.url }}">Posts</a>
-</p>
+<nav class="site-nav">
+  <div class="dropdown">
+    <a href="{{ '/' | prepend: site.baseurl }}">
+      <sixfifty-logo
+        data='{% raw %}{{% endraw %}{{ site.data.polls.current | jsonify }}{% raw %}}{% endraw %}'
+        colours='{% raw %}{{% endraw %}{{ site.data.constants.colours | jsonify }}{% raw %}}{% endraw %}'
+      ></sixfifty-logo>
+    </a>
+    {% include party_polls.html %}
+  </div>
+  <ul>
+    <li><a href="{{ '/' | prepend: site.baseurl }}">SixFifty</a></li>
+    <li class="dropdown">
+      <a href="{{ '/articles' | prepend: site.baseurl }}">Articles</a>
+      <ul>
+        <li><a href="{{ '/articles' | prepend: site.baseurl }}">All</a></li>
+        <li><a href="{{ '/explainers' | prepend: site.baseurl }}">Explainers</a></li>
+        <!-- <li><a href="{{ '/forecasting' | prepend: site.baseurl }}">Forecasting</a></li> -->
+        <li><a href="{{ '/tech' | prepend: site.baseurl }}">Tech Blog</a></li>
+      </ul>
+    </li>
+    <li><a href="{{ '/about' | prepend: site.baseurl }}">About Us</a></li>
+  </ul>
+  <span class="pull-right">
+    <sixfifty-countdown
+      end-date='2017-06-08T07:00:00.000+01:00'
+      verbose-after='2017-06-02T07:00:00.000+01:00'
+      message='until polls open'
+      url='https://www.yourvotematters.co.uk/'
+    ></sixfifty-countdown>
+  </span>
+</nav>

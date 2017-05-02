@@ -1,0 +1,71 @@
+.post {
+  .post-header {
+    margin-bottom: $spacing-unit;
+  }
+
+  .post-title {
+    font-size: 2rem;
+    letter-spacing: -1px;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+
+  .post-meta {
+    font-size: $small-font-size;
+    color: $grey-color;
+    a, a:visited, .no-link {
+      color: $grey-color-dark;
+    }
+  }
+
+  .post-content {
+    margin-bottom: $spacing-unit;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin-top: 2rem;
+    }
+
+    h1,
+    h2 {
+      font-size: 2rem;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+    }
+
+    h4 {
+      font-size: 1.25rem;
+    }
+
+    h5,
+    h6 {
+      font-size: 1rem;
+    }
+
+    & > p > img {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  img + em,
+  em.caption {
+    font-size: smaller;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .footnotes {
+    font-size: small;
+  }
+
+}

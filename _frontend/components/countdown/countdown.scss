@@ -1,0 +1,14 @@
+sixfifty-countdown {
+  font-size: small;
+  padding: 5px 8px;
+  background-color: lighten($highlight-color, 30%);
+  color: $highlight-color;
+  border-radius: 3px;
+  font-weight: 600;
+  text-shadow: 0 1px 1px lighten($highlight-color, 40%);
+
+  a, a:hover {
+    text-decoration: none;
+    color: $highlight-color;
+  }
+}

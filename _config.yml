@@ -1,8 +1,8 @@
 # Site settings
 title: "SixFifty"
 description: ""
-baseurl: "http://sixfifty.org.uk"
-url: ""
+baseurl: "" # Should be the path-prefix on the domain
+url: "http://sixfifty.org.uk" # Should be the domain
 author: "SixFifty Contributors"
 
 # Build settings
@@ -17,6 +17,7 @@ exclude:
   - webpack.config.js
   - package.json
   - README.md
+  - node_modules
 
 # Third-party services
 # just leave empty to disable it
