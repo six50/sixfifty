@@ -3,6 +3,9 @@
 # Currently this is just an R script but may be transitioned to a R Package if the size of the work
 # requires it. Currently does a rudimentary analysis of the data
 
+library(foreign)
+library(nnet)
+library(reshape2)
 library(data.table)
 library(ggplot2)
 library(GGally)
@@ -62,7 +65,20 @@ ge.results <- lapply(ge.results, function(x) x[, Vote_Remain_Pct := pc.remain[x$
 setnames(ge.results$`2010`, "Con", "C")
 setnames(ge.results$`2015`, "Total number of valid votes counted", "Votes")
 
-getSwing <- function(elec.data, key.party.cols =  c("LD", "C", "Lab"), test.polling.numbers = c(0.10, 0.44, 0.26)) {
+key.party.cols <- c("LD", "C", "Lab")
+
+# Find the winner of the constituency
+getConstituencyWinner <- function(con.data, relevant.columns) {
+  winner <- apply(con.data[, relevant.columns, with = F], 1, which.max)
+  winner <- names(con.data)[relevant.columns][winner]
+  winner[!winner %in% key.party.cols] <- "OTHER"
+  winner
+}
+
+ge.results$`2015`[, Winner := getConstituencyWinner(ge.results$`2015`, 11:147)]
+ge.results$`2010`[, Winner := getConstituencyWinner(ge.results$`2010`, 7:144)]
+
+getSwing <- function(elec.data, test.polling.numbers = c(0.09, 0.35, 0.35)) {
 
   # Get the percentage of votes by party
   pc.v.names <- paste0(key.party.cols, "_PC_Vote")
@@ -109,55 +125,35 @@ getSwing <- function(elec.data, key.party.cols =  c("LD", "C", "Lab"), test.poll
 
 predictions <- lapply(ge.results, getSwing)
 
-#
-# # Get the percentage of votes by party
-# key.party.cols <- c("LD", "C", "Lab")
-# pc.v.names <- paste0(key.party.cols, "_PC_Vote")
-# getPercentage <- function(x) {x/ge.results.2015$`Total number of valid votes counted`}
-#
-# # Update the table accodingly
-# ge.results.2015[, (pc.v.names) := lapply(.SD, getPercentage), .SDcols = key.party.cols]
-# ge.results.2015[, OTHER_PC_VOTE :=  1 - apply(ge.results.2015[, pc.v.names, with = F],1,sum, na.rm = T)]
-#
-# # Update meta
-# key.party.cols <- c(key.party.cols, "OTHER")
-# pc.v.names <- c(pc.v.names, "OTHER_PC_VOTE")
-#
-# # Calculate the distance each constituency is from the mean
-# dis.mean <- paste0(key.party.cols, "_DIFF_MEAN")
-# getDistanceFromMean <- function(x) {x - mean(x, na.rm = T)}
-# ge.results.2015[, (dis.mean) := lapply(.SD, getDistanceFromMean), .SDcols = pc.v.names]
-#
-# # Test polling numbers (as of 20th of April 2010)
-# test.polling.numbers <- c(0.10, 0.44, 0.26)
-# test.polling.numbers <- c(test.polling.numbers, 1 - sum(test.polling.numbers))
-# names(test.polling.numbers) <- key.party.cols
-#
-# # Function which gets the winner (based on index)
-# getWinner <- function(dist.figs, polling.nums) {
-#   key.party.cols[which.max(polling.nums + as.vector(dist.figs))]
-# }
-#
-# getPercentage <- function(dist.figs, polling.nums) {
-#   polling.nums + as.vector(dist.figs)
-# }
-#
-# # Calculate the percentages by constituency
-# percentages <- t(apply(ge.results.2015[,dis.mean, with = F], 1,
-#                      getPercentage, polling.nums = test.polling.numbers))
-#
-# # Get the predictions
-# predictions <- data.table(constituency = ge.results.2015$`Constituency Name`,
-#                           winner = factor(apply(ge.results.2015[,dis.mean, with = F], 1,
-#                                                                getWinner, polling.nums = test.polling.numbers)),
-#                           LD_RESULT = percentages[,"LD"], C_RESULT = percentages[,"C"],
-#                           Lab_RESULT = percentages[,"Lab"], OTHER_RESULT = percentages[,"OTHER"])
+poll.2015 <- list(C = 35, Lab = 35, LD = 9, OTHER = 21)
+poll.2010 <- list(C = 37, Lab = 28, LD = 27, OTHER = 8)
+
+pred.data <- ge.results$`2010`[,c("Winner", "LD_DIFF_MEAN", "C_DIFF_MEAN", "Lab_DIFF_MEAN", "OTHER_DIFF_MEAN"), with = F]
+test.data <- copy(pred.data)
+
+pred.data[,(c("C_POLL", "Lab_POLL", "LD_POLL", "OTHER_POLL")) := lapply(poll.2015,rep, times = 651)]
+test.data[,(c("C_POLL", "Lab_POLL", "LD_POLL", "OTHER_POLL")) := lapply(poll.2010,rep, times = 651)]
+
+model.2010 <- multinom(Winner ~  LD_DIFF_MEAN + C_DIFF_MEAN + Lab_DIFF_MEAN + OTHER_DIFF_MEAN +
+                         C_POLL + Lab_POLL + LD_POLL + OTHER_POLL,
+                       data = test.data)
+
+pred.2015 <- predict(model.2010,newdata = pred.data)
+cat("\n\n")
+cat("Multinomial Logistic Prediciton\n")
+print(table(pred.2015))
+
+cat("\nSwingometer")
+print(table(predictions$`2010`$winner))
+
+cat("\nActual result")
+print(table(ge.results$`2015`$Winner))
 
 # Create a quick plot
-ggpairs(ge.results$`2015`[, c("Vote_Remain_Pct", pc.v.names), with = F])
-ggpairs(ge.results$`2010`[, c("Vote_Remain_Pct", pc.v.names), with = F])
-
-
-# Write the prediction to csv
-write.csv(x = predictions$`2015`,file =  "../../predictions_2015.csv", row.names =F)
-write.csv(x = predictions$`2015`,file =  "../../predictions_2010.csv", row.names =F)
+# ggpairs(ge.results$`2015`[, c("Vote_Remain_Pct", pc.v.names), with = F])
+# ggpairs(ge.results$`2010`[, c("Vote_Remain_Pct", pc.v.names), with = F])
+#
+#
+# # Write the prediction to csv
+# write.csv(x = predictions$`2015`,file =  "../../predictions_2015.csv", row.names =F)
+# write.csv(x = predictions$`2015`,file =  "../../predictions_2010.csv", row.names =F)
