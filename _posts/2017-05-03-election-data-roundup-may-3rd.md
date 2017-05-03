@@ -13,7 +13,7 @@ excerpt: <b>Labour losing support on three fronts. Is Wales the new Scotland? Wh
 In [_Warning Signs for Labour_](https://medium.com/@chrishanretty/warning-signs-for-labour-50b6cd1501d8), Chris Hanretty uses the latest release of the [British Election Study](http://britishelectionstudy.com/) to understand who the "new" Conservative voters are, given the consistent rise in Tory support. Hanretty forecasts the constituencies where this support will show up, addressing some of the weaknesses in current polling methodology discussed in our recent post on [_How Polls Work_](https://sixfifty.org.uk/2017/04/29/how-polling-works/), such as applying a national poll swing to individual seats.
 
 ![The consistent rise of Tory support]({% link images/post_images/polls_since_2016.png %})
-<center>_The consistent rise of Tory support_</center>
+<center><em>The consistent rise of Tory support</em></center>
 
 The results are not good for Labour. While the Tories may lose some support in seats they currently hold, this is offset by gains in Labour held constituencies. Furthermore, Labour is losing additional vote share as they leak Remain votes to the Lib Dems and Leave votes to UKIP, which could spell electoral disaster for the party.
 
