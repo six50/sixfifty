@@ -5,7 +5,7 @@ date:    2017-05-02 08:00:00 +0100
 tags:    roundup
 authors: dan-howarth
 intro:   Labour losing support on three fronts. Is Wales the new Scotland? What are the chances of a Le Pen victory in France?
-excerpt: <b>Labour losing support on three fronts. Is Wales the new Scotland? What are the chances of a Le Pen victory in France?</b>
+excerpt: Labour losing support on three fronts. Is Wales the new Scotland? What are the chances of a Le Pen victory in France?
 ---
 
 ### Labour losing support on three fronts
