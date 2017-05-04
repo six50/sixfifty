@@ -45,12 +45,37 @@
   font-size: $small-font-size;
   padding-top: 12px;
   border-top: 1px solid $grey-color-light;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+
+  .social-media {
+    order: 1;
+    float: left;
+  }
+
+  .disclaimer {
+    order: 2;
+    font-size: x-small;
+    width: 350px;
+    float: left;
+  }
+
+  .copyright {
+    order: 3;
+    margin-left: auto;
+    float: right;
+  }
 
   p {
+    padding-right: 20px;
     color: $grey-color;
 
     a, a:visited {
       color: $grey-color-dark;
     }
   }
+
+
 }
