@@ -121,14 +121,15 @@ export default class PollsTracker {
       .style("display", "none");
 
     for (const [partyKey, _] of DATA_NAME_MAP) {
-      this.focus.append('g')
-        .attr('class', partyKey)
-        .append('text')
+      const partyGroup = this.focus.append('g');
+      partyGroup.attr('class', partyKey);
+
+      partyGroup.append('circle')
+        .attr('r', 4.5);
+
+      partyGroup.append('text')
           .attr("x", 9)
-          .attr("dy", ".35em")
-          .exit()
-        .append('circle')
-          .attr('r', 4.5);
+          .attr("dy", ".35em");
     }
 
     this.g.append("rect")
