@@ -120,6 +120,11 @@ export default class PollsTracker {
       .attr("class", "focus")
       .style("display", "none");
 
+    this.scrubber = this.focus.append('rect')
+      .style('fill', 'rgba(255,255,255,0.9)')
+      .attr('width', this.width)
+      .attr('height', this.height);
+
     for (const [partyKey, _] of DATA_NAME_MAP) {
       const partyGroup = this.focus.append('g');
       partyGroup.attr('class', partyKey);
@@ -144,20 +149,30 @@ export default class PollsTracker {
     const self = this;
 
     function onMouseMove() {
-      var x0 = self.x.invert(d3.mouse(this)[0]),
-          i = bisectDate(self.data, x0, 1),
-          d0 = self.data[i - 1],
-          d1 = self.data[i],
-          d = x0 - d0.sampled_to > d1.sampled_to - x0 ? d1 : d0;
+      const x0 = self.x.invert(d3.mouse(this)[0]);
+      const i = bisectDate(self.data, x0, 1);
+      const d0 = self.data[i - 1];
+      const d1 = self.data[i];
+
+      let d = null;
+      if (d1) {
+        d = x0 - d0.sampled_to > d1.sampled_to - x0 ? d1 : d0;
+      } else {
+        d = d0;
+      }
+
+      const xLoc = self.x(d.sampled_to);
 
       for (const [partyKey, _] of DATA_NAME_MAP) {
         const dataKey = `${partyKey}_smooth`;
 
         self.focus.select(`g.${partyKey}`)
-          .attr('transform', translate(self.x(d.sampled_to), self.y(d[dataKey])))
+          .attr('transform', translate(xLoc, self.y(d[dataKey])))
           .select('text')
             .text(formatPercent(1, d[dataKey]));
       }
+
+      self.scrubber.attr('x', xLoc);
     }
   }
 }
