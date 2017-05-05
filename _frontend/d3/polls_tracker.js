@@ -118,11 +118,10 @@ export default class PollsTracker {
   }
 
   makeScrubber() {
-    const bisectDate = d3.bisector(d => d.sampled_to).left;
+    this.bisectDate = d3.bisector(d => d.sampled_to).left;
 
     this.focus = this.g.append('g')
-      .attr('class', 'focus')
-      .style('display', 'none');
+      .attr('class', 'focus');
 
     this.scrubber = this.focus.append('g');
 
@@ -153,42 +152,47 @@ export default class PollsTracker {
           .attr('font-size', '0.7rem');
     }
 
+    const self = this;
+
     this.g.append('rect')
       .attr('fill', 'none')
       .attr('pointer-events', 'all')
       .attr('width', this.width)
       .attr('height', this.height)
-      .on('mouseover', () => this.focus.style('display', null))
-      .on('mouseout', () => this.focus.style('display', 'none'))
-      .on('mousemove', onMouseMove);
+      .on('mouseout', () => this.resetScrubberToEnd())
+      .on('mousemove', function() {
+        const xLoc = self.x.invert(d3.mouse(this)[0]);
+        self.moveScrubberToLocation(xLoc);
+      });
+  }
 
-    const self = this;
+  resetScrubberToEnd() {
+    this.moveScrubberToLocation(this.data[this.data.length - 1].sampled_to);
+  }
 
-    function onMouseMove() {
-      const x0 = self.x.invert(d3.mouse(this)[0]);
-      const i = bisectDate(self.data, x0, 1);
-      const d0 = self.data[i - 1];
-      const d1 = self.data[i];
+  moveScrubberToLocation(_xLoc) {
+    const i = this.bisectDate(this.data, _xLoc, 1);
+    const d0 = this.data[i - 1];
+    const d1 = this.data[i];
 
-      let d = null;
-      if (d1) {
-        d = x0 - d0.sampled_to > d1.sampled_to - x0 ? d1 : d0;
-      } else {
-        d = d0;
-      }
-
-      const xLoc = self.x(d.sampled_to);
-
-      for (const [partyKey, nameKey] of DATA_NAME_MAP) {
-        const dataKey = `${partyKey}_smooth`;
-
-        self.focus.select(`g.${partyKey}`)
-          .attr('transform', translate(xLoc, self.y(d[dataKey])))
-          .select('text')
-            .text(`${formatPercent(1, d[dataKey])} ${NAMES[nameKey]}`);
-      }
-
-      self.scrubber.attr('transform', translate(xLoc, 0));
+    let d = null;
+    if (d1) {
+      d = _xLoc - d0.sampled_to > d1.sampled_to - _xLoc ? d1 : d0;
+    } else {
+      d = d0;
     }
+
+    const xLoc = this.x(d.sampled_to);
+
+    for (const [partyKey, nameKey] of DATA_NAME_MAP) {
+      const dataKey = `${partyKey}_smooth`;
+
+      this.focus.select(`g.${partyKey}`)
+        .attr('transform', translate(xLoc, this.y(d[dataKey])))
+        .select('text')
+          .text(`${formatPercent(1, d[dataKey])} ${NAMES[nameKey]}`);
+    }
+
+    this.scrubber.attr('transform', translate(xLoc, 0));
   }
 }
