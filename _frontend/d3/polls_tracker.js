@@ -14,7 +14,7 @@ const ELECTION_DAY = new Date(2017, 6, 8);
 const WIDTH = 600;
 const HEIGHT = 300;
 
-const _dateParse = d3.timeParse("%d %b %Y");
+const _dateParse = d3.timeParse('%d %b %Y');
 
 function dateParse(x) {
   return _dateParse(x.replace(/\-/g, ' '));
@@ -42,8 +42,8 @@ export default class PollsTracker {
     this.width = WIDTH - this.margin.left - this.margin.right;
     this.height = HEIGHT - this.margin.top - this.margin.bottom;
     this.g = this.svg
-      .append("g")
-      .attr("transform", translate(this.margin.left, this.margin.top));
+      .append('g')
+      .attr('transform', translate(this.margin.left, this.margin.top));
 
     // Parse Data
 
@@ -75,14 +75,14 @@ export default class PollsTracker {
     this.makeAxes();
 
     linesAndColours.map(([line, colour]) => {
-      this.g.append("path")
+      this.g.append('path')
         .datum(this.data)
-        .attr("fill", "none")
-        .attr("stroke", colour)
-        .attr("stroke-linejoin", "round")
-        .attr("stroke-linecap", "round")
-        .attr("stroke-width", 1.5)
-        .attr("d", line);
+        .attr('fill', 'none')
+        .attr('stroke', colour)
+        .attr('stroke-linejoin', 'round')
+        .attr('stroke-linecap', 'round')
+        .attr('stroke-width', 1.5)
+        .attr('d', line);
     });
 
     this.makeScrubber();
@@ -91,16 +91,16 @@ export default class PollsTracker {
   makeAxes() {
     const xAxis = d3.axisBottom(this.x);
 
-    this.g.append("g")
-      .attr("transform", translate(0, this.height))
+    this.g.append('g')
+      .attr('transform', translate(0, this.height))
       .call(xAxis)
-      .select(".domain")
+      .select('.domain')
         .remove();
 
     const yAxis = d3.axisLeft(this.y)
       .tickFormat(d => formatPercent(0, d));
 
-    this.g.append("g").call(yAxis);
+    this.g.append('g').call(yAxis);
   }
 
   makeLines({linesAndColours, xDomain, yDomain}, [partyKey, colourKey]) {
@@ -120,9 +120,9 @@ export default class PollsTracker {
   makeScrubber() {
     const bisectDate = d3.bisector(d => d.sampled_to).left;
 
-    this.focus = this.g.append("g")
-      .attr("class", "focus")
-      .style("display", "none");
+    this.focus = this.g.append('g')
+      .attr('class', 'focus')
+      .style('display', 'none');
 
     this.scrubber = this.focus.append('g');
 
@@ -148,19 +148,19 @@ export default class PollsTracker {
         .attr('fill', COLOURS[colourKey]);
 
       partyGroup.append('text')
-          .attr("x", 9)
-          .attr("dy", ".35em")
+          .attr('x', 9)
+          .attr('dy', '.35em')
           .attr('font-size', '0.7rem');
     }
 
-    this.g.append("rect")
-      .attr("fill", "none")
+    this.g.append('rect')
+      .attr('fill', 'none')
       .attr('pointer-events', 'all')
-      .attr("width", this.width)
-      .attr("height", this.height)
-      .on("mouseover", () => this.focus.style("display", null))
-      .on("mouseout", () => this.focus.style("display", "none"))
-      .on("mousemove", onMouseMove);
+      .attr('width', this.width)
+      .attr('height', this.height)
+      .on('mouseover', () => this.focus.style('display', null))
+      .on('mouseout', () => this.focus.style('display', 'none'))
+      .on('mousemove', onMouseMove);
 
     const self = this;
 
