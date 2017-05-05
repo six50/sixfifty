@@ -22,6 +22,10 @@ function formatPercent(n, d) {
   return `${(d * 100.0).toFixed(n)}%`;
 }
 
+function translate(x, y) {
+  return `translate(${x}, ${y})`;
+}
+
 export default class PollsTracker {
   constructor(elem) {
     // Set up SVG
@@ -37,7 +41,7 @@ export default class PollsTracker {
     this.height = HEIGHT - this.margin.top - this.margin.bottom;
     this.g = this.svg
       .append("g")
-      .attr("transform", "translate(" + this.margin.left + "," + this.margin.top + ")");
+      .attr("transform", translate(this.margin.left, this.margin.top));
 
     // Parse Data
 
@@ -84,7 +88,7 @@ export default class PollsTracker {
 
   makeAxes() {
     this.g.append("g")
-      .attr("transform", "translate(0," + this.height + ")")
+      .attr("transform", translate(0, this.height))
       .call(d3.axisBottom(this.x))
       .select(".domain")
         .remove();
@@ -116,12 +120,16 @@ export default class PollsTracker {
       .attr("class", "focus")
       .style("display", "none");
 
-    this.focus.append("circle")
-      .attr("r", 4.5);
-
-    this.focus.append("text")
-      .attr("x", 9)
-      .attr("dy", ".35em");
+    for (const [partyKey, _] of DATA_NAME_MAP) {
+      this.focus.append('g')
+        .attr('class', partyKey)
+        .append('text')
+          .attr("x", 9)
+          .attr("dy", ".35em")
+          .exit()
+        .append('circle')
+          .attr('r', 4.5);
+    }
 
     this.g.append("rect")
       .attr("fill", "none")
@@ -139,9 +147,16 @@ export default class PollsTracker {
           i = bisectDate(self.data, x0, 1),
           d0 = self.data[i - 1],
           d1 = self.data[i],
-          d = x0 - d0.date > d1.date - x0 ? d1 : d0;
-      self.focus.attr("transform", "translate(" + self.x(d.sampled_to) + "," + self.y(d.con_smooth) + ")");
-      self.focus.select("text").text(formatPercent(1, d.con_smooth));
+          d = x0 - d0.sampled_to > d1.sampled_to - x0 ? d1 : d0;
+
+      for (const [partyKey, _] of DATA_NAME_MAP) {
+        const dataKey = `${partyKey}_smooth`;
+
+        self.focus.select(`g.${partyKey}`)
+          .attr('transform', translate(self.x(d.sampled_to), self.y(d[dataKey])))
+          .select('text')
+            .text(formatPercent(1, d[dataKey]));
+      }
     }
   }
 }
