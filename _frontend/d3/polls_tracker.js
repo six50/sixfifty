@@ -18,83 +18,132 @@ function dateParse(x) {
   return _dateParse(x.replace(/\-/g, ' '));
 }
 
-module.exports = function(elem) {
-  // Set up SVG
-  const svg = d3.select(elem).append('svg');
+function formatPercent(n, d) {
+  return `${(d * 100.0).toFixed(n)}%`;
+}
 
-  svg
-    .attr('viewBox', `0 0 ${WIDTH} ${HEIGHT}`)
-    .attr('width', '100%')
-    .attr('height', '100%');
+export default class PollsTracker {
+  constructor(elem) {
+    // Set up SVG
+    this.svg = d3.select(elem).append('svg');
 
-  const margin = {top: 20, right: 20, bottom: 30, left: 50};
-  const width = WIDTH - margin.left - margin.right;
-  const height = HEIGHT - margin.top - margin.bottom;
-  const g = svg
-    .append("g")
-    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+    this.svg
+      .attr('viewBox', `0 0 ${WIDTH} ${HEIGHT}`)
+      .attr('width', '100%')
+      .attr('height', '100%');
 
-  // Parse Data
+    this.margin = {top: 20, right: 20, bottom: 30, left: 50};
+    this.width = WIDTH - this.margin.left - this.margin.right;
+    this.height = HEIGHT - this.margin.top - this.margin.bottom;
+    this.g = this.svg
+      .append("g")
+      .attr("transform", "translate(" + this.margin.left + "," + this.margin.top + ")");
 
-  const data = sortBy(map(DATA, x => ({
-    ...x,
-    sampled_from: dateParse(x.sampled_from),
-    sampled_to: dateParse(x.sampled_to)
-  })), x => x.sampled_to);
+    // Parse Data
 
-  // Render
-  const x = d3.scaleTime()
-    .rangeRound([0, width]);
+    this.data = sortBy(map(DATA, x => ({
+      ...x,
+      sampled_from: dateParse(x.sampled_from),
+      sampled_to: dateParse(x.sampled_to)
+    })), x => x.sampled_to);
 
-  const y = d3.scaleLinear()
-    .rangeRound([height, 0]);
+    // Render
+    this.x = d3.scaleTime()
+      .rangeRound([0, this.width]);
 
-  const {linesAndColours, xDomain, yDomain} = DATA_NAME_MAP.reduce(
-    makeLines.bind(this, data, x, y),
-    {
-      linesAndColours: [],
-      xDomain: [],
-      yDomain: [],
-    }
-  );
+    this.y = d3.scaleLinear()
+      .rangeRound([this.height, 0]);
 
-  console.log(xDomain, yDomain);
-  x.domain(xDomain);
-  y.domain(yDomain);
+    const {linesAndColours, xDomain, yDomain} = DATA_NAME_MAP.reduce(
+      this.makeLines.bind(this),
+      {
+        linesAndColours: [],
+        xDomain: [],
+        yDomain: [],
+      }
+    );
 
-  g.append("g")
-      .attr("transform", "translate(0," + height + ")")
-      .call(d3.axisBottom(x))
-    .select(".domain")
-      .remove();
+    this.x.domain(xDomain);
+    this.y.domain(d3.extent([...yDomain, 0]));
 
-  const yAxis = d3.axisLeft(y)
-    .tickFormat(d => `${(d * 100.0).toFixed(0)}%`);
+    this.makeAxes();
 
-  g.append("g").call(yAxis);
+    linesAndColours.map(([line, colour]) => {
+      this.g.append("path")
+        .datum(this.data)
+        .attr("fill", "none")
+        .attr("stroke", colour)
+        .attr("stroke-linejoin", "round")
+        .attr("stroke-linecap", "round")
+        .attr("stroke-width", 1.5)
+        .attr("d", line);
+    });
 
-  linesAndColours.map(([line, colour]) => {
-    g.append("path")
-      .datum(data)
+    this.makeScrubber();
+  }
+
+  makeAxes() {
+    this.g.append("g")
+      .attr("transform", "translate(0," + this.height + ")")
+      .call(d3.axisBottom(this.x))
+      .select(".domain")
+        .remove();
+
+    const yAxis = d3.axisLeft(this.y)
+      .tickFormat(d => formatPercent(0, d));
+
+    this.g.append("g").call(yAxis);
+  }
+
+  makeLines({linesAndColours, xDomain, yDomain}, [partyKey, colourKey]) {
+    const dataKey = `${partyKey}_smooth`;
+
+    const line = d3.line()
+      .x(d => this.x(d.sampled_to))
+      .y(d => this.y(d[dataKey]));
+
+    return {
+      linesAndColours: [...linesAndColours, [line, COLOURS[colourKey]]],
+      xDomain: d3.extent([...xDomain, ...d3.extent(this.data, d => d.sampled_to)]),
+      yDomain: d3.extent([...yDomain, ...d3.extent(this.data, d => d[dataKey])]),
+    };
+  }
+
+  makeScrubber() {
+    const bisectDate = d3.bisector(d => d.sampled_to).left;
+
+    this.focus = this.g.append("g")
+      .attr("class", "focus")
+      .style("display", "none");
+
+    this.focus.append("circle")
+      .attr("r", 4.5);
+
+    this.focus.append("text")
+      .attr("x", 9)
+      .attr("dy", ".35em");
+
+    this.g.append("rect")
       .attr("fill", "none")
-      .attr("stroke", colour)
-      .attr("stroke-linejoin", "round")
-      .attr("stroke-linecap", "round")
-      .attr("stroke-width", 1.5)
-      .attr("d", line);
-  });
+      .attr('pointer-events', 'all')
+      .attr("width", this.width)
+      .attr("height", this.height)
+      .on("mouseover", () => this.focus.style("display", null))
+      .on("mouseout", () => this.focus.style("display", "none"))
+      .on("mousemove", onMouseMove);
+
+    const self = this;
+
+    function onMouseMove() {
+      var x0 = self.x.invert(d3.mouse(this)[0]),
+          i = bisectDate(self.data, x0, 1),
+          d0 = self.data[i - 1],
+          d1 = self.data[i],
+          d = x0 - d0.date > d1.date - x0 ? d1 : d0;
+      self.focus.attr("transform", "translate(" + self.x(d.sampled_to) + "," + self.y(d.con_smooth) + ")");
+      self.focus.select("text").text(formatPercent(1, d.con_smooth));
+    }
+  }
 }
 
-function makeLines(data, x, y, {linesAndColours, xDomain, yDomain}, [partyKey, colourKey]) {
-  const dataKey = `${partyKey}_smooth`;
 
-  const line = d3.line()
-    .x(d => x(d.sampled_to))
-    .y(d => y(d[dataKey]));
-
-  return {
-    linesAndColours: [...linesAndColours, [line, COLOURS[colourKey]]],
-    xDomain: d3.extent([...xDomain, ...d3.extent(data, d => d.sampled_to)]),
-    yDomain: d3.extent([...yDomain, ...d3.extent(data, d => d[dataKey])]),
-  };
-}
