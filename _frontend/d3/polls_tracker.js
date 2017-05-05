@@ -78,8 +78,7 @@ export default class PollsTracker {
       }
     );
 
-    const yMax = d3.max(yDomain) * 1.05;
-    this.y.domain([0, yMax]);
+    this.y.domain(yDomain).nice();
     this.x.domain(d3.extent([...xDomain, ELECTION_DAY]));
 
     this.makeAxes();
