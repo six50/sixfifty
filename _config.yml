@@ -18,6 +18,7 @@ exclude:
   - package.json
   - README.md
   - node_modules
+  - _frontend
 
 # Third-party services
 # just leave empty to disable it
