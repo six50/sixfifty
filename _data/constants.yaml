@@ -27,3 +27,18 @@ names:
   sdlp: "Social Democratic and Labour Party"
   sf: "Sinn Féin"
   uup: "Ulster Unionist Party"
+
+names_short:
+  con: "Con"
+  lab: "Lab"
+  ld: "Lib Dem"
+  grn: "Green"
+  ukip: "UKIP"
+  snp: "SNP"
+  pc: "Plaid"
+  oth: "Other"
+  dup: "DUP"
+  ind: "Ind"
+  sdlp: "SDLP"
+  sf: "SF"
+  uup: "UUP"
