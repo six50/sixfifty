@@ -95,6 +95,7 @@ export default class PollsTracker {
     });
 
     this.makeElectionDayMarker();
+    this.makeDots();
     this.makeScrubber();
   }
 
@@ -239,5 +240,19 @@ export default class PollsTracker {
       .attr('font-size', '0.6rem')
       .attr('text-anchor', 'middle')
       .text('ELECTION');
+  }
+
+  makeDots() {
+    const group = this.g.selectAll(".dot").data(this.data);
+
+    for (const [partyKey, colourKey] of DATA_NAME_MAP) {
+      group.enter().append('circle')
+        .attr('class', 'dot')
+        .attr('r', 2)
+        .attr('opacity', 0.2)
+        .attr('cx', d => this.x(d.sampled_to))
+        .attr('cy', d => this.y(d[partyKey]))
+        .style('fill', this.colours[colourKey]);
+    }
   }
 }
