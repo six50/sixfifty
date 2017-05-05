@@ -49,25 +49,14 @@ module.exports = function(elem) {
   const y = d3.scaleLinear()
     .rangeRound([height, 0]);
 
-  function reducer({linesAndColours, xDomain, yDomain}, [partyKey, colourKey]) {
-    const dataKey = `${partyKey}_smooth`;
-
-    const line = d3.line()
-      .x(d => x(d.sampled_to))
-      .y(d => y(d[dataKey]));
-
-    return {
-      linesAndColours: [...linesAndColours, [line, COLOURS[colourKey]]],
-      xDomain: d3.extent([...xDomain, ...d3.extent(data, d => d.sampled_to)]),
-      yDomain: d3.extent([...yDomain, ...d3.extent(data, d => d[dataKey])]),
-    };
-  }
-
-  const {linesAndColours, xDomain, yDomain} = DATA_NAME_MAP.reduce(reducer, {
-    linesAndColours: [],
-    xDomain: [],
-    yDomain: [],
-  });
+  const {linesAndColours, xDomain, yDomain} = DATA_NAME_MAP.reduce(
+    makeLines.bind(this, data, x, y),
+    {
+      linesAndColours: [],
+      xDomain: [],
+      yDomain: [],
+    }
+  );
 
   console.log(xDomain, yDomain);
   x.domain(xDomain);
@@ -79,15 +68,10 @@ module.exports = function(elem) {
     .select(".domain")
       .remove();
 
-  g.append("g")
-      .call(d3.axisLeft(y))
-    .append("text")
-      .attr("fill", "#000")
-      .attr("transform", "rotate(-90)")
-      .attr("y", 6)
-      .attr("dy", "0.71em")
-      .attr("text-anchor", "end")
-      .text("Percentage");
+  const yAxis = d3.axisLeft(y)
+    .tickFormat(d => `${(d * 100.0).toFixed(0)}%`);
+
+  g.append("g").call(yAxis);
 
   linesAndColours.map(([line, colour]) => {
     g.append("path")
@@ -99,4 +83,18 @@ module.exports = function(elem) {
       .attr("stroke-width", 1.5)
       .attr("d", line);
   });
+}
+
+function makeLines(data, x, y, {linesAndColours, xDomain, yDomain}, [partyKey, colourKey]) {
+  const dataKey = `${partyKey}_smooth`;
+
+  const line = d3.line()
+    .x(d => x(d.sampled_to))
+    .y(d => y(d[dataKey]));
+
+  return {
+    linesAndColours: [...linesAndColours, [line, COLOURS[colourKey]]],
+    xDomain: d3.extent([...xDomain, ...d3.extent(data, d => d.sampled_to)]),
+    yDomain: d3.extent([...yDomain, ...d3.extent(data, d => d[dataKey])]),
+  };
 }
