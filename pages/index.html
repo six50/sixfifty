@@ -4,16 +4,9 @@ permalink: index.html
 ---
 <div class="home">
   <section class="site-header hidden-mobile">
-    <div
-      id="polls-tracker"
-      data-colours="{{ site.data.constants.colours | jsonify | escape_once }}"
-      data-names="{{ site.data.constants.names_short | jsonify | escape_once }}"
-    ></div>
     {% include intro.html %}
   </section>
-  <section class="poll-tracker">
-    {% include poll_tracker.html %}
-  </section>
+  {% include poll_tracker.html %}
   <section>
     {% include articles_list.html %}
   </section>

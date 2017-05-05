@@ -1,0 +1,9 @@
+.poll-tracker {
+  max-width: $max-width;
+  border-bottom: 1px solid $grey-color-light;
+  padding-bottom: 1rem;
+
+  .links {
+    text-align: right;
+  }
+}
