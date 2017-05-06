@@ -52,8 +52,7 @@ export default class Model extends React.Component {
                 <td>{poll.sample_size.toFixed(0)}</td>
                 <td>{poll.method}</td>
                 <td>
-                  <a className='source-link' href={poll.source}></a>
-                  {poll.pdf && <a className='pdf-link' href={poll.pdf}></a>}
+                  {poll.pdf && <a className='doc-link' href={poll.pdf}></a>}
                 </td>
                 {DATA_NAME_MAP.map(([partyKey, colourKey], key2) => (
                   <td
