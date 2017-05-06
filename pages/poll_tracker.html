@@ -1,0 +1,15 @@
+---
+layout: default
+permalink: poll-tracker
+---
+<section class="poll-tracker">
+  <h1>UK General Election 2017 Poll Tracker</h1>
+  <div
+    id="polls-tracker"
+    data-colours="{{ site.data.constants.colours | jsonify | escape_once }}"
+    data-names="{{ site.data.constants.names_short | jsonify | escape_once }}"
+  >
+    <div class="graph"></div>
+    <div class="table"></div>
+  </div>
+</section>
