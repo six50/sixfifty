@@ -1,8 +1,7 @@
 import dateFormat from 'dateformat';
 import * as d3 from 'd3'
 
-const DATA_NAME_MAP = Object.entries({con: 'con', lab: 'lab', lib: 'ld', ukip: 'ukip', green: 'grn'});
-const ELECTION_DAY = new Date(2017, 6, 8);
+const ELECTION_DAY = new Date(2017, 6, 7);
 
 const WIDTH = 600;
 const HEIGHT = 300;
@@ -18,11 +17,14 @@ function translate(x, y) {
 }
 
 export default class Graph {
-  constructor(elem, colours, names, data) {
+  constructor(elem, colours, names, parties, data) {
     this.elem = elem;
     this.colours = colours;
     this.names = names;
-    this.data = data;
+    this.parties = parties;
+
+    this.polls = data[0];
+    this.dataSmoothed = data[1];
 
     this.render();
   }
@@ -50,7 +52,7 @@ export default class Graph {
     this.y = d3.scaleLinear()
       .rangeRound([this.height, 0]);
 
-    const {linesAndColours, xDomain, yDomain} = DATA_NAME_MAP.reduce(
+    const {linesAndColours, xDomain, yDomain} = this.parties.reduce(
       this.makeLines.bind(this),
       {
         linesAndColours: [],
@@ -66,7 +68,7 @@ export default class Graph {
 
     linesAndColours.map(([line, colour]) => {
       this.g.append('path')
-        .datum(this.data)
+        .datum(this.dataSmoothed)
         .attr('fill', 'none')
         .attr('stroke', colour)
         .attr('stroke-linejoin', 'round')
@@ -104,22 +106,20 @@ export default class Graph {
       .attr('stroke-width', 0.5);
   }
 
-  makeLines({linesAndColours, xDomain, yDomain}, [partyKey, colourKey]) {
-    const dataKey = `${partyKey}_smooth`;
-
+  makeLines({linesAndColours, xDomain, yDomain}, partyKey) {
     const line = d3.line()
-      .x(d => this.x(d.sampled_to))
-      .y(d => this.y(d[dataKey]));
+      .x(d => this.x(d.date))
+      .y(d => this.y(d[partyKey]));
 
     return {
-      linesAndColours: [...linesAndColours, [line, this.colours[colourKey]]],
-      xDomain: d3.extent([...xDomain, ...d3.extent(this.data, d => d.sampled_to)]),
-      yDomain: d3.extent([...yDomain, ...d3.extent(this.data, d => d[dataKey])]),
+      linesAndColours: [...linesAndColours, [line, this.colours[partyKey]]],
+      xDomain: d3.extent([...xDomain, ...d3.extent(this.dataSmoothed, d => d.date)]),
+      yDomain: d3.extent([...yDomain, ...d3.extent(this.dataSmoothed, d => d[partyKey])]),
     };
   }
 
   makeScrubber() {
-    this.bisectDate = d3.bisector(d => d.sampled_to).left;
+    this.bisectDate = d3.bisector(d => d.date).left;
 
     this.focus = this.g.append('g')
       .attr('class', 'focus');
@@ -143,7 +143,7 @@ export default class Graph {
       .attr('dy', '1rem')
       .attr('text-anchor', 'middle');
 
-    for (const [partyKey, colourKey] of DATA_NAME_MAP) {
+    for (const partyKey of this.parties) {
       const partyGroup = this.focus.append('g');
       partyGroup.attr('class', partyKey);
 
@@ -151,7 +151,7 @@ export default class Graph {
         .attr('r', 3)
         .attr('stroke', 'white')
         .attr('stroke-width', 1)
-        .attr('fill', this.colours[colourKey]);
+        .attr('fill', this.colours[partyKey]);
 
       partyGroup.append('text')
           .attr('x', 9)
@@ -177,7 +177,7 @@ export default class Graph {
   }
 
   resetScrubberToEnd() {
-    this.moveScrubberToLocation(this.data[this.data.length - 1].sampled_to);
+    this.moveScrubberToLocation(this.dataSmoothed[this.dataSmoothed.length - 1].date);
     this.xAxis.attr('display', null);
     this.scrubberDate.attr('display', 'none');
   }
@@ -185,32 +185,30 @@ export default class Graph {
   moveScrubberToLocation(_xLoc) {
     this.xAxis.attr('display', 'none');
 
-    const i = this.bisectDate(this.data, _xLoc, 1);
-    const d0 = this.data[i - 1];
-    const d1 = this.data[i];
+    const i = this.bisectDate(this.dataSmoothed, _xLoc, 1);
+    const d0 = this.dataSmoothed[i - 1];
+    const d1 = this.dataSmoothed[i];
 
     let d = null;
     if (d1) {
-      d = _xLoc - d0.sampled_to > d1.sampled_to - _xLoc ? d1 : d0;
+      d = _xLoc - d0.date > d1.date - _xLoc ? d1 : d0;
     } else {
       d = d0;
     }
 
-    const xLoc = this.x(d.sampled_to);
+    const xLoc = this.x(d.date);
 
-    for (const [partyKey, nameKey] of DATA_NAME_MAP) {
-      const dataKey = `${partyKey}_smooth`;
-
+    for (const partyKey of this.parties) {
       this.focus.select(`g.${partyKey}`)
-        .attr('transform', translate(xLoc, this.y(d[dataKey])))
+        .attr('transform', translate(xLoc, this.y(d[partyKey])))
         .select('text')
-          .text(`${formatPercent(1, d[dataKey])} ${this.names[nameKey]}`);
+          .text(`${formatPercent(1, d[partyKey])} ${this.names[partyKey]}`);
     }
 
     this.scrubber.attr('transform', translate(xLoc, 0));
     this.scrubberDate
       .attr('display', null)
-      .text(formatDate(d.sampled_to));
+      .text(formatDate(d.date));
   }
 
   makeElectionDayMarker() {
@@ -233,16 +231,16 @@ export default class Graph {
   }
 
   makeDots() {
-    const group = this.g.selectAll(".dot").data(this.data);
+    const group = this.g.selectAll(".dot").data(this.polls);
 
-    for (const [partyKey, colourKey] of DATA_NAME_MAP) {
+    for (const partyKey of this.parties) {
       group.enter().append('circle')
         .attr('class', 'dot')
         .attr('r', 2)
         .attr('opacity', 0.2)
-        .attr('cx', d => this.x(d.sampled_to))
+        .attr('cx', d => this.x(d.to))
         .attr('cy', d => this.y(d[partyKey]))
-        .style('fill', this.colours[colourKey]);
+        .style('fill', this.colours[partyKey]);
     }
   }
 }
