@@ -33,20 +33,27 @@ export default class PollsTracker {
     this.elem = elem;
 
     // Parse/clean data
-    this.polls = [[], []];
+    d3.json(elem.dataset.url, (error, data) => {
+      if (error) {
+        this.handleError(error);
+        return;
+      }
 
-    this.polls[0] = sortBy(map(POLLS[0], x => ({
-      ...x,
-      from: dateParse(x.from),
-      to: dateParse(x.to)
-    })), x => x.to);
+      this.polls = [[], []];
 
-    this.polls[1] = sortBy(map(POLLS[1], x => ({
-      ...x,
-      date: dateParse(x.date),
-    })), x => x.date);
+      this.polls[0] = sortBy(map(data[0], x => ({
+        ...x,
+        from: dateParse(x.from),
+        to: dateParse(x.to)
+      })), x => x.to);
 
-    this.render();
+      this.polls[1] = sortBy(map(data[1], x => ({
+        ...x,
+        date: dateParse(x.date),
+      })), x => x.date);
+
+      this.render();
+    });
   }
 
   render() {
@@ -67,5 +74,18 @@ export default class PollsTracker {
         tableElem
       );
     }
+  }
+
+  handleError(error) {
+    // Clear the element
+    while (this.elem.firstChild) {
+      this.elem.removeChild(this.elem.firstChild);
+    }
+
+    // Add an error element
+    const errElem = document.createElement('div');
+    errElem.innerText = "There was an error loading the data. Retry later or in a different browser.";
+    errElem.className = 'error';
+    this.elem.appendChild(errElem);
   }
 }
