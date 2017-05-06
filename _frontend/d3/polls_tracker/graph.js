@@ -107,6 +107,11 @@ export default class Graph {
   }
 
   makeLines({linesAndColours, xDomain, yDomain}, partyKey) {
+    // Handle parties with no smoothed data
+    if (!this.dataSmoothed[0][partyKey]) {
+      return {linesAndColours, xDomain, yDomain};
+    }
+
     const line = d3.line()
       .x(d => this.x(d.date))
       .y(d => this.y(d[partyKey]));
@@ -199,6 +204,8 @@ export default class Graph {
     const xLoc = this.x(d.date);
 
     for (const partyKey of this.parties) {
+      if (!d[partyKey]) continue;
+
       this.focus.select(`g.${partyKey}`)
         .attr('transform', translate(xLoc, this.y(d[partyKey])))
         .select('text')
