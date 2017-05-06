@@ -1,7 +1,7 @@
 import dateFormat from 'dateformat';
 import * as d3 from 'd3'
 
-const ELECTION_DAY = new Date(2017, 6, 7);
+const ELECTION_DAY = new Date('2017-06-08');
 
 const WIDTH = 600;
 const HEIGHT = 300;
