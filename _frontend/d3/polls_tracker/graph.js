@@ -1,5 +1,3 @@
-import map from 'lodash.map';
-import sortBy from 'lodash.sortby';
 import dateFormat from 'dateformat';
 import * as d3 from 'd3'
 
@@ -8,12 +6,6 @@ const ELECTION_DAY = new Date(2017, 6, 8);
 
 const WIDTH = 600;
 const HEIGHT = 300;
-
-const _dateParse = d3.timeParse('%d %b %Y');
-
-function dateParse(x) {
-  return _dateParse(x.replace(/\-/g, ' '));
-}
 
 function formatPercent(n, d) {
   return `${(d * 100.0).toFixed(n)}%`;
@@ -30,18 +22,9 @@ export default class Graph {
     this.elem = elem;
     this.colours = colours;
     this.names = names;
-
-    this.setData(data);
+    this.data = data;
 
     this.render();
-  }
-
-  setData(data) {
-    this.data = sortBy(map(data, x => ({
-      ...x,
-      sampled_from: dateParse(x.sampled_from),
-      sampled_to: dateParse(x.sampled_to)
-    })), x => x.sampled_to);
   }
 
   render() {
