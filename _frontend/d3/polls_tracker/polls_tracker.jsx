@@ -61,7 +61,8 @@ export default class PollsTracker {
         <PollsList
           names={this.names}
           colours={this.colours}
-          polls={this.polls}
+          parties={PARTIES}
+          polls={this.polls[0]}
         />,
         tableElem
       );
