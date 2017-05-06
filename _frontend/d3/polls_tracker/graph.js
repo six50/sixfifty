@@ -88,11 +88,20 @@ export default class Graph {
       .call(xAxis);
 
     this.xAxis.select('.domain').remove();
+    this.xAxis.selectAll('.tick line')
+      .attr('stroke', 'darkgray')
+      .attr('stroke-width', 0.5);
 
     const yAxis = d3.axisLeft(this.y)
-      .tickFormat(d => formatPercent(0, d));
+      .tickFormat(d => formatPercent(0, d))
+      .ticks(5);
 
     this.yAxis = this.g.append('g').call(yAxis);
+    this.yAxis.select('.domain').remove();
+    this.yAxis.select('.tick').remove();
+    this.yAxis.selectAll('.tick line')
+      .attr('stroke', 'darkgray')
+      .attr('stroke-width', 0.5);
   }
 
   makeLines({linesAndColours, xDomain, yDomain}, [partyKey, colourKey]) {
