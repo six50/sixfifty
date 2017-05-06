@@ -10,7 +10,7 @@ import Countdown from './components/countdown/countdown';
 import ConstituencyMap from './components/constituency_map/constituency_map';
 
 // D3
-import PollsTracker from './d3/polls_tracker';
+import PollsTracker from './d3/polls_tracker/polls_tracker';
 
 // Utils
 import randomiseLists from './utils/randomise_lists';

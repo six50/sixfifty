@@ -1,5 +1,3 @@
-import './polls_tracker.scss';
-
 import map from 'lodash.map';
 import sortBy from 'lodash.sortby';
 import dateFormat from 'dateformat';
@@ -28,12 +26,11 @@ function translate(x, y) {
   return `translate(${x}, ${y})`;
 }
 
-export default class PollsTracker {
-  constructor(elem) {
+export default class Graph {
+  constructor(elem, colours, names) {
     this.elem = elem;
-
-    this.colours = JSON.parse(this.elem.dataset.colours);
-    this.names = JSON.parse(this.elem.dataset.names);
+    this.colours = colours;
+    this.names = names;
 
     this.render();
   }
