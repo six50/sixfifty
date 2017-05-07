@@ -69,7 +69,8 @@
   }
 
   // Styles specific to dropdown nav elements
-  .dropdown > ul {
+  .dropdown > ul,
+  .dropdown > div sixfifty-current-polls ul {
     top: $nav-height;
     margin-left: -1px;
     display: none;
@@ -87,7 +88,10 @@
     }
   }
 
-  .dropdown:hover > ul, .dropdown > ul:hover {
+  .dropdown:hover > ul,
+  .dropdown > ul:hover,
+  .dropdown:hover > div sixfifty-current-polls ul,
+  .dropdown > div sixfifty-current-polls ul:hover, {
     display: block;
   }
 

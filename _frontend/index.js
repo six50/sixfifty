@@ -7,6 +7,7 @@ import 'reactive-elements';
 import Logo from './components/logo/logo';
 import Model from './components/model_visualisation/model_visualisation';
 import Countdown from './components/countdown/countdown';
+import CurrrentPolls from './components/current_polls/current_polls';
 import ConstituencyMap from './components/constituency_map/constituency_map';
 
 // D3
@@ -14,7 +15,13 @@ import PollsTracker from './d3/polls_tracker/polls_tracker';
 
 // Utils
 import randomiseLists from './utils/randomise_lists';
+import './utils/data_hub';
 
+// Promise Polyfill
+import Promise from 'promise-polyfill';
+if (!window.Promise) {
+  window.Promise = Promise;
+}
 
 randomiseLists();
 
@@ -23,6 +30,10 @@ document.registerReact('sixfifty-model', Model);
 document.registerReact('sixfifty-logo', Logo);
 document.registerReact('sixfifty-countdown', Countdown);
 document.registerReact('sixfifty-map', ConstituencyMap);
+document.registerReact('sixfifty-current-polls', CurrrentPolls);
 
 // Initialise D3 visualisations
-new PollsTracker(document.querySelector('#polls-tracker'));
+const pollsTracker = document.querySelector('#polls-tracker');
+if (pollsTracker) {
+  new PollsTracker(pollsTracker);
+}

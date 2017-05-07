@@ -22,7 +22,7 @@ We’re not designers, so when it comes to logo design we have no idea what we�
 <p class="text-center">
     <!-- Equal distribution -->
     <sixfifty-logo
-        data='{[{"name":"con","percentage":0.2},{"name":"lab","percentage":0.2},{"name":"ld","percentage":0.2},{"name":"ukip","percentage":0.2},{"name":"grn","percentage":0.2}]}'
+        data='{% raw %}{{{% endraw %}"con":0.2,"lab":0.2,"ld":0.2,"ukip":0.2,"grn":0.2{% raw %}}}{% endraw %}'
         colours='{% raw %}{{% endraw %}{{ site.data.constants.colours | jsonify }}{% raw %}}{% endraw %}'
     ></sixfifty-logo>
     <em class="caption">First draft of SixFifty logo with some party colours</em>
@@ -35,7 +35,7 @@ We mocked up what it would look like for the current polls, and this was the res
 <p class="text-center">
     <!-- Polls 2017/04/20 -->
     <sixfifty-logo
-        data='{[{"name":"con","percentage":0.45},{"name":"lab","percentage":0.26},{"name":"ld","percentage":0.11},{"name":"ukip","percentage":0.09},{"name":"oth","percentage":0.06},{"name":"grn","percentage":0.03}]}'
+        data='{% raw %}{{{% endraw %}"con":0.45,"lab":0.26,"ld":0.11,"ukip":0.09,"oth":0.06,"grn":0.03{% raw %}}}{% endraw %}'
         colours='{% raw %}{{% endraw %}{{ site.data.constants.colours | jsonify }}{% raw %}}{% endraw %}'
     ></sixfifty-logo>
     <em class="caption">Logo with polls data from April 20th</em>
@@ -72,15 +72,13 @@ Using our component was now as easy as adding this HTML to any page.
 
 ```html
 <sixfifty-logo
-    data='{[
-        {"name":"con","percentage":0.369},
-        {"name":"lab","percentage":0.304},
-        {"name":"ukip","percentage":0.126},
-        {"name":"ld","percentage":0.079},
-        {"name":"snp","percentage":0.047},
-        {"name":"grn","percentage":0.038},
-        {"name":"oth","percentage":0.037}
-    ]}'
+    data='{
+        "con":0.45,
+        "lab":0.26,
+        "ld":0.11,
+        "ukip":0.09,
+        "grn":0.03
+    }'
     colours='{% raw %}{{{% endraw %}
         "con":"#0F80D6",
         "lab":"#D20004",
@@ -97,18 +95,11 @@ The last thing we did was to centralise the data so that it can be updated easil
 
 ```yaml
 current:
-  - name: con
-    percentage: 0.45
-  - name: lab
-    percentage: 0.26
-  - name: ld
-    percentage: 0.11
-  - name: ukip
-    percentage: 0.09
-  - name: oth
-    percentage: 0.06
-  - name: grn
-    percentage: 0.03
+  con: 0.45
+  lab: 0.26
+  ld: 0.11
+  ukip: 0.09
+  grn: 0.03
 ```
 
 While this is a nice feature on our site, it’s impractical to upload new logos to Twitter and other social-media platforms every day, so for those places that are hard to update we’ve decided to go with the 2015 election data.

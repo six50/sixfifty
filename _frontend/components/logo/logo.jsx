@@ -1,12 +1,48 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import { PARTIES } from '../../utils/election';
+
 const RENDER_SIZE = 100;
 
 
 export default class Logo extends React.Component {
+  constructor(props) {
+    super(props);
+    if (props.data) {
+      this.state = {data: this.formatData(props.data)};
+    } else {
+      this.state = {data: {}};
+    }
+  }
+
+  componentWillMount() {
+    if (this.props.url) {
+      window.dataHub.get(this.props.url, {}, (response) => {
+        response.json().then((data) => {
+          const datum = data[1][data[1].length - 1];
+          this.setState({data: this.formatData(datum)});
+        });
+      });
+    }
+  }
+
+  formatData(data) {
+    let oth = 1.0;
+
+    for (const key of PARTIES) {
+      oth -= data[key];
+    }
+
+    if (oth < 0.000001) {
+      // Protect against crappy JS numbers
+      oth = 0;
+    }
+
+    return {...data, oth: oth};
+  }
+
   calculateSectors() {
-    var sectors = [];
     const colours = this.props.colours;
 
     var l = RENDER_SIZE / 2;
@@ -21,8 +57,11 @@ export default class Logo extends React.Component {
     var R = 0; // Rotation
     var arcSweep = 0;
 
-    return this.props.data.map(function(item, key) {
-      a = 360 * item.percentage;
+    const parties = [...PARTIES, 'oth'];
+
+    return parties.map((key) => {
+      const percentage = this.state.data[key];
+      a = 360 * percentage;
       aCalc = (a > 180) ? 360 - a : a;
       aRad = aCalc * Math.PI / 180;
       z = Math.sqrt(2 * l * l - (2 * l * l * Math.cos(aRad)));
@@ -48,10 +87,13 @@ export default class Logo extends React.Component {
       const Rout = R;
       R = R + a;
 
+      if (isNaN(Y)) {
+        debugger;
+      }
+
       return {
-        percentage: item.percentage,
-        label: item.label,
-        colour: colours[item.name],
+        percentage: this.state.data[key],
+        colour: colours[key],
         arcSweep: arcSweep,
         L: l,
         X: X,
@@ -59,8 +101,6 @@ export default class Logo extends React.Component {
         R: Rout
       };
     });
-
-    return sectors;
   }
 
   renderSector(sector, key) {
@@ -92,6 +132,7 @@ export default class Logo extends React.Component {
 }
 
 Logo.propTypes = {
-  data: PropTypes.array,
-  colours: PropTypes.object
+  data: PropTypes.object,
+  colours: PropTypes.object,
+  url: PropTypes.string
 };
