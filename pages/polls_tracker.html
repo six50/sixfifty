@@ -1,9 +1,9 @@
 ---
-layout: default
-permalink: poll-tracker
+layout: page
+permalink: polls
+title: UK General Election 2017 Polls Tracker
 ---
-<section class="poll-tracker">
-  <h1>UK General Election 2017 Poll Tracker</h1>
+<section class="polls-tracker">
   <div
     id="polls-tracker"
     data-colours="{{ site.data.constants.colours | jsonify | escape_once }}"
@@ -11,6 +11,9 @@ permalink: poll-tracker
     data-url="https://s3-eu-west-1.amazonaws.com/sixfifty/poll_tracker.json"
   >
     <div class="graph"></div>
+    <p class="links">
+      <a href="https://github.com/six50/pipeline/tree/master/data/polls">Raw data</a>
+    </p>
     <div class="table"></div>
   </div>
 </section>
