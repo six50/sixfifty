@@ -2,7 +2,7 @@
 title: "SixFifty"
 description: ""
 baseurl: "" # Should be the path-prefix on the domain
-url: "http://sixfifty.org.uk" # Should be the domain
+url: "https://sixfifty.org.uk" # Should be the domain
 author: "SixFifty Contributors"
 
 # Build settings
