@@ -9,7 +9,7 @@
   max-width: $max-width;
 
   @include media-query($on-mobile) {
-    margin-top: 3rem + $nav-height;
+    margin-top: 1rem + $nav-height;
   }
 }
 
@@ -17,6 +17,16 @@
   section + section {
     margin-top: $spacing-unit;
     max-width: $max-width;
+  }
+}
+
+.site-header {
+  h1 {
+    font-size: 2rem;
+    letter-spacing: -1px;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
   }
 }
 

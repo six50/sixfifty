@@ -1,24 +1,7 @@
-@import 'utils';
-
-$banner-size: 2rem;
-
 .site-intro {
   max-width: $max-width;
   border-bottom: 1px solid $grey-color-light;
   padding-bottom: 1rem;
-
-  .name-banner {
-    @include hidden-mobile;
-
-    border-bottom: 1px solid $grey-color-light;
-    margin-bottom: $spacing-unit;
-
-    h1 {
-      font-size: $banner-size;
-      font-weight: 600;
-      margin-bottom: 0;
-    }
-  }
 
   p {
     font-style: italic;
