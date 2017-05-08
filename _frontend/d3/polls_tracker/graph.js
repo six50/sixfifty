@@ -38,7 +38,10 @@ export default class Graph {
       .attr('width', '100%')
       .attr('height', '100%');
 
-    this.margin = {top: 20, right: 80, bottom: 30, left: 30};
+    const sizes = this.getSizes();
+
+    this.margin = sizes.margin;
+    this.fontSize = sizes.fontSize;
     this.width = WIDTH - this.margin.left - this.margin.right;
     this.height = HEIGHT - this.margin.top - this.margin.bottom;
     this.g = this.svg
@@ -87,7 +90,8 @@ export default class Graph {
 
     this.xAxis = this.g.append('g')
       .attr('transform', translate(0, this.height))
-      .call(xAxis);
+      .call(xAxis)
+      .attr('font-size', this.fontSize);
 
     this.xAxis.select('.domain').remove();
     this.xAxis.selectAll('.tick line')
@@ -98,7 +102,10 @@ export default class Graph {
       .tickFormat(d => formatPercent(0, d))
       .ticks(5);
 
-    this.yAxis = this.g.append('g').call(yAxis);
+    this.yAxis = this.g.append('g')
+      .call(yAxis)
+      .attr('font-size', this.fontSize);
+
     this.yAxis.select('.domain').remove();
     this.yAxis.select('.tick').remove();
     this.yAxis.selectAll('.tick line')
@@ -143,7 +150,7 @@ export default class Graph {
       .attr('stroke-dasharray', '2, 3');
 
     this.scrubberDate = this.scrubber.append('text')
-      .attr('font-size', '0.6rem')
+      .attr('font-size', this.fontSize)
       .attr('y', this.height)
       .attr('dy', '1rem')
       .attr('text-anchor', 'middle');
@@ -161,7 +168,7 @@ export default class Graph {
       partyGroup.append('text')
           .attr('x', 9)
           .attr('dy', '.35em')
-          .attr('font-size', '0.7rem')
+          .attr('font-size', this.fontSize)
           .attr('text-shadow', '0 0 1px white');
     }
 
@@ -232,7 +239,7 @@ export default class Graph {
       .attr('x', xLoc)
       .attr('dx', '0.1rem')
       .attr('dy', '-0.2rem')
-      .attr('font-size', '0.6rem')
+      .attr('font-size', this.fontSize)
       .attr('text-anchor', 'middle')
       .text('ELECTION');
   }
@@ -249,5 +256,19 @@ export default class Graph {
         .attr('cy', d => this.y(d[partyKey]))
         .style('fill', this.colours[partyKey]);
     }
+  }
+
+  getSizes() {
+    if (window.innerWidth >= 600) {
+      return {
+        fontSize: '0.7rem',
+        margin: {top: 20, right: 80, bottom: 30, left: 35}
+      };
+    }
+
+    return {
+      fontSize: '1.4rem',
+      margin: {top: 20, right: 80, bottom: 30, left: 55}
+    };
   }
 }
