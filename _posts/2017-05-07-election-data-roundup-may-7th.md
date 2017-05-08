@@ -2,7 +2,7 @@
 layout:  post
 title:   Election Data Journalism Roundup (7th May 2017)
 date:    2017-05-07 18:00:00 +0100
-tags:    roundup
+tags:    roundup somerset scotland twitter
 authors: dan-howarth
 intro:   What do this week's local election results mean for general election forecasts? The Conservatives' conquest of local councils is turning some parts of Britain blue for the first time. Labour might be winning the battle on social media, but does it matter?
 excerpt: What do this week's local election results mean for general election forecasts? The Conservatives' conquest of local councils is turning some parts of Britain blue for the first time. Labour might be winning the battle on social media, but does it matter?

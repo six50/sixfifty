@@ -2,7 +2,7 @@
 layout:  post
 title:   Election Data Journalism Roundup (3rd May 2017)
 date:    2017-05-02 08:00:00 +0100
-tags:    roundup
+tags:    roundup wales scotland france
 authors: dan-howarth
 intro:   Labour losing support on three fronts. Is Wales the new Scotland? What are the chances of a Le Pen victory in France?
 excerpt: Labour losing support on three fronts. Is Wales the new Scotland? What are the chances of a Le Pen victory in France?
