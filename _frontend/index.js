@@ -7,9 +7,9 @@ import 'reactive-elements';
 import Logo from './components/logo/logo';
 import Model from './components/model_visualisation/model_visualisation';
 import Countdown from './components/countdown/countdown';
+import Prediction from './components/prediction/prediction';
 import CurrrentPolls from './components/current_polls/current_polls';
 import ConstituencyMap from './components/constituency_map/constituency_map';
-import SeatDistribution from './components/seat_distribution/seat_distribution';
 
 // D3
 import PollsTracker from './d3/polls_tracker/polls_tracker';
@@ -32,7 +32,7 @@ document.registerReact('sixfifty-logo', Logo);
 document.registerReact('sixfifty-countdown', Countdown);
 document.registerReact('sixfifty-map', ConstituencyMap);
 document.registerReact('sixfifty-current-polls', CurrrentPolls);
-document.registerReact('sixfifty-seat-distribution', SeatDistribution);
+document.registerReact('sixfifty-prediction', Prediction);
 
 // Initialise D3 visualisations
 const pollsTracker = document.querySelector('#polls-tracker');

@@ -1,0 +1,22 @@
+$spacing: 0.6rem;
+
+.prediction {
+  .summary {
+    list-style: none;
+    width: 100%;
+    margin: 0;
+
+    li {
+      float: left;
+      margin-right: $spacing;
+
+      .colour {
+        display: inline-block;
+        height: 0.8rem;
+        width: 0.8rem;
+        border-radius: 50%;
+        margin-right: $spacing / 2;
+      }
+    }
+  }
+}
