@@ -56,7 +56,7 @@ export default class Prediction extends React.Component {
         />
         <ul className="summary">
           {partySeats.map(([party, seats], key) => (
-            <li>
+            <li key={key}>
               <span className="colour" style={{backgroundColor: this.props.colours[party] || this.props.colours['oth']}}></span>
               {this.props.names[party] || 'Other'} {seats}
             </li>
