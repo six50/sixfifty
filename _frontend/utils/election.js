@@ -1,3 +1,3 @@
 module.exports = {
-  PARTIES: ['con', 'lab', 'ld', 'grn', 'ukip']
+  PARTIES: ['con', 'lab', 'ld', 'snp', 'ukip', 'grn']
 };
