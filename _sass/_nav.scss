@@ -44,6 +44,11 @@
 
         padding-left: $nav-item-spacing / 2;
         padding-right: $nav-item-spacing / 2;
+
+        @include media-query($on-mobile) {
+          padding-left: $nav-item-spacing / 3;
+          padding-right: $nav-item-spacing / 3;
+        }
       }
     }
   }

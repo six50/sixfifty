@@ -17,7 +17,13 @@
     </div>
   </div>
   <ul>
-    <li><a href="{{ '/' | prepend: site.baseurl }}">SixFifty</a></li>
+    <li class="dropdown">
+      <a href="{{ '/' | prepend: site.baseurl }}">SixFifty</a>
+      <ul>
+        <li><a href="{{ '/about' | prepend: site.baseurl }}">About</a></li>
+        <li><a href="https://twitter.com/sixfiftydata">Twitter @SixFiftyData</a></li>
+      </ul>
+    </li>
     <li><a href="{{ '/polls' | prepend: site.baseurl }}">Polls</a></li>
     <li class="dropdown">
       <a href="{{ '/articles' | prepend: site.baseurl }}">Articles</a>
@@ -28,7 +34,6 @@
         <li><a href="{{ '/tech' | prepend: site.baseurl }}">Tech Blog</a></li>
       </ul>
     </li>
-    <li><a href="{{ '/about' | prepend: site.baseurl }}">About</a></li>
   </ul>
   <span class="pull-right">
     <sixfifty-countdown
