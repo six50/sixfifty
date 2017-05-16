@@ -4,8 +4,8 @@ title:   Election Data Journalism Roundup (16th May 2017)
 date:    2017-05-16 09:00:00 +0100
 tags:    roundup polling battlegrounds releavers
 authors: dan-howarth
-intro:   Is there evidence for pollster "herding" in current polling? Tories are due for a large victory in Scotland if local election success translates into general election votes. A new category of voter, the "Re-Leaver", is defined. Why polls are imperfect predictors of election results.
-excerpt: Is there evidence for pollster "herding" in current polling? Tories are due for a large victory in Scotland if local election success translates into general election votes. A new category of voter, the "Re-Leaver", is defined. Why polls are imperfect predictors of election results.
+intro:   Is there evidence for pollster herding in current polling? Tories are due for a large victory in Scotland if local election success translates into general election votes. A new category of voter, the Re-Leaver, is defined. Why polls are imperfect predictors of election results.
+excerpt: Is there evidence for pollster herding in current polling? Tories are due for a large victory in Scotland if local election success translates into general election votes. A new category of voter, the "Re-Leaver", is defined. Why polls are imperfect predictors of election results.
 ---
 
 _Is there evidence for pollster "herding" in current polling? Tories are due for a large victory in Scotland if local election success translates into general election votes. A new category of voter, the "Re-Leaver", is defined. Why polls are imperfect predictors of election results._
