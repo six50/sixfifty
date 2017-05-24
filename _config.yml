@@ -5,6 +5,13 @@ baseurl: "" # Should be the path-prefix on the domain
 url: "https://sixfifty.org.uk" # Should be the domain
 author: "SixFifty Contributors"
 
+# Social media
+twitter_username: SixFiftyData
+github_username: six50
+facebook_username: SixFiftyData
+medium_username: SixFiftyData
+instagram_username: sixfiftydata
+
 # Build settings
 kramdown:
   input: GFM

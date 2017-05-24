@@ -17,20 +17,41 @@
     </div>
   </div>
   <ul>
-    <li class="dropdown">
-      <a href="{{ '/' | prepend: site.baseurl }}">SixFifty</a>
-      <ul>
-        <li><a href="{{ '/about' | prepend: site.baseurl }}">About</a></li>
-        <li><a href="https://twitter.com/sixfiftydata">Twitter @SixFiftyData</a></li>
-      </ul>
-    </li>
-    <li><a href="{{ '/polls' | prepend: site.baseurl }}">Polls</a></li>
-    <li class="dropdown">
+    <li class="hidden-mobile"><a href="{{ '/' | prepend: site.baseurl }}">SixFifty</a></li>
+    <li class="hidden-mobile"><a href="{{ '/polls' | prepend: site.baseurl }}">Polls</a></li>
+    <li class="dropdown hidden-mobile">
       <a href="{{ '/articles' | prepend: site.baseurl }}">Articles</a>
       <ul>
         <li><a href="{{ '/articles' | prepend: site.baseurl }}">All</a></li>
         <li><a href="{{ '/explainers' | prepend: site.baseurl }}">Explainers</a></li>
-        <!-- <li><a href="{{ '/forecasting' | prepend: site.baseurl }}">Forecasting</a></li> -->
+      </ul>
+    </li>
+    <li class="hidden-mobile"><a href="{{ '/tech' | prepend: site.baseurl }}">Tech Blog</a></li>
+    <li class="hidden-mobile"><a href="{{ '/about' | prepend: site.baseurl }}">About</a></li>
+    {% if site.twitter_username %}<li class="hidden-mobile"><a href="https://twitter.com/{{ site.twitter_username }}"><i class="fa fa-twitter"></i></a></li>{% endif %}    
+    {% if site.facebook_username %}<li class="hidden-mobile"><a href="https://www.facebook.com/{{ site.facebook_username }}"><i class="fa fa-facebook"></i></a></li>{% endif %}
+    {% if site.instagram_username %}<li class="hidden-mobile"><a href="https://www.instagram.com/{{ site.instagram_username }}/"><i class="fa fa-instagram"></i></a></li>{% endif %}
+    {% if site.medium_username %}<li class="hidden-mobile"><a href="https://medium.com/@{{ site.medium_username }}"><i class="fa fa-medium"></i></a></li>{% endif %}
+    {% if site.github_username %}<li class="hidden-mobile"><a href="https://github.com/{{ site.github_username }}"><i class="fa fa-github"></i></a></li>{% endif %}
+  </ul>
+  <ul>
+    <li class="dropdown hidden-desktop">
+      <a href="{{ '/' | prepend: site.baseurl }}">SixFifty</a>
+      <ul>
+        <li><a href="{{ '/about' | prepend: site.baseurl }}">About</a></li>
+        {% if site.twitter_username %}<li><a href="https://twitter.com/{{ site.twitter_username }}"><i class="fa fa-twitter"></i> Twitter</a></li>{% endif %}    
+        {% if site.facebook_username %}<li><a href="https://www.facebook.com/{{ site.facebook_username }}"><i class="fa fa-facebook"></i> Facebook</a></li>{% endif %}
+        {% if site.instagram_username %}<li><a href="https://www.instagram.com/{{ site.instagram_username }}/"><i class="fa fa-instagram"></i> Instagram</a></li>{% endif %}
+        {% if site.medium_username %}<li><a href="https://medium.com/@{{ site.medium_username }}"><i class="fa fa-medium"></i> Medium</a></li>{% endif %}
+        {% if site.github_username %}<li><a href="https://github.com/{{ site.github_username }}"><i class="fa fa-github"></i> Github</a></li>{% endif %}
+      </ul>
+    </li>
+    <li class="hidden-desktop"><a href="{{ '/polls' | prepend: site.baseurl }}">Polls</a></li>
+    <li class="dropdown hidden-desktop">
+      <a href="{{ '/articles' | prepend: site.baseurl }}">Articles</a>
+      <ul>
+        <li><a href="{{ '/articles' | prepend: site.baseurl }}">All</a></li>
+        <li><a href="{{ '/explainers' | prepend: site.baseurl }}">Explainers</a></li>
         <li><a href="{{ '/tech' | prepend: site.baseurl }}">Tech Blog</a></li>
       </ul>
     </li>
