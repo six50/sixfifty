@@ -1,3 +1,4 @@
+# Define new colours from here https://en.wikipedia.org/wiki/Category:United_Kingdom_political_party_colour_templates
 colours:
   con: "#0F80D6"
   lab: "#D20004"
@@ -12,6 +13,12 @@ colours:
   sdlp: "#99FF66"
   sf: "#008800"
   uup: "#9999FF"
+  bnp: "#2e3b74"
+  respect: "#46801c"
+  apni: "#F6CB2F"
+  pbp: "#660000"
+  tuv: "#0095B6"
+  pup: "#022A68"
 
 names:
   con: "Conservative"
@@ -27,6 +34,12 @@ names:
   sdlp: "Social Democratic and Labour Party"
   sf: "Sinn Féin"
   uup: "Ulster Unionist Party"
+  bnp: "British National Party"
+  respect: "Respect Party"
+  apni: "Alliance Party of Northern Ireland"
+  pbp: "People Before Profit Alliance"
+  tuv: "Traditional Unionist Voice"
+  pup: "Progressive Unionist Party"
 
 names_short:
   con: "Con"
@@ -42,3 +55,9 @@ names_short:
   sdlp: "SDLP"
   sf: "SF"
   uup: "UUP"
+  bnp: "BNP"
+  respect: "Respect"
+  apni: "Alliance"
+  pbp: "PBP"
+  tuv: "TUV"
+  pup: "PUP"
